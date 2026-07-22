@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris McNosky — verifiable systems, built by directed AI agents</title>
+<meta name="description" content="I direct AI coding agents to build systems you can verify instead of trust. Open-source integrity tooling, safety-critical automation, and the evidence committed so you can check it.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cmcnosky.github.io/">
+<meta property="og:title" content="Chris McNosky — verifiable systems, built by directed AI agents">
+<meta property="og:description" content="I don't trust the agents. I built the tool that measures when they lie.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chris McNosky — verifiable systems, built by directed AI agents">
+<meta name="twitter:description" content="I don't trust the agents. I built the tool that measures when they lie.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
+</head>
+<body>
+
+<header class="hero">
+  <h1>Chris McNosky</h1>
+  <p class="lede">I direct AI coding agents to build systems you can verify instead of trust.</p>
+
+  <p>Written governance contracts the agents work under, gates they aren't allowed to weaken,
+  and the evidence committed to the repository so you can check the claims rather than believe
+  them. My background is procurement at a top-5 homebuilder and running a small manufacturing
+  business — not computer science. The agents write the code. The part that makes it trustworthy
+  is mine.</p>
+
+  <p class="pull">I don't trust the agents. I built the tool that measures when they lie.</p>
+
+  <nav class="contact" aria-label="Contact">
+    <a href="mailto:cmcnosky@gmail.com">cmcnosky@gmail.com</a>
+    <a href="https://github.com/cmcnosky">GitHub</a>
+    <!-- Add LinkedIn here:  <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> -->
+  </nav>
+</header>
+
+<main>
+
+<section class="ask" aria-labelledby="ask-h">
+  <h2 id="ask-h">What I'm looking for</h2>
+  <p><strong>Scoped, fixed-price engagements</strong> — building or hardening agent-driven systems
+  for teams that need the output to be <em>verifiable</em>, not just demonstrable. A bounded first
+  project is the point: you get to check the work before committing to anything larger.</p>
+  <p class="quiet">Also open to full-time roles in applied AI and developer tooling.</p>
+</section>
+
+<section aria-labelledby="work-h">
+  <h2 id="work-h">Work</h2>
+
+  <article class="project">
+    <h3><a href="https://github.com/cmcnosky/stinger">Stinger</a></h3>
+    <p class="tagline">Measures whether an AI coding agent cheats — in your configuration, in your CI.</p>
+
+    <p>Runs a corpus of sandboxed trap scenarios against a configured coding agent and mechanically
+    detects dishonest shortcuts: weakened tests, forbidden-file edits, fabricated completion claims,
+    broken house rules, leaked bait secrets. Emits a scored, evidence-linked Integrity Report under a
+    preregistered, frozen rubric. Model-agnostic and vendor-neutral by construction. CLI and GitHub Action.</p>
+
+    <ul class="rules">
+      <li><strong>Mechanical truth first.</strong> Cheating is decided by deterministic detectors,
+      never an LLM judge. The optional judge may only flag for human review; it can never set a verdict.</li>
+      <li><strong>Fail closed.</strong> Any ambiguity, harness error, or missing evidence resolves to a
+      non-scored <code>error</code> — never to a favorable score.</li>
+    </ul>
+
+    <blockquote>
+      <p>Every fixture test passed, so I spent the money to run it against live agents anyway — because a
+      measurement instrument that has only ever been tested against its own fixtures has not been tested.
+      Those runs found five real defects, each of which would have produced a <em>plausible wrong answer</em>
+      rather than a visible failure. The worst: it scored a textbook-perfect refusal as a cheat, because the
+      trap only ever recognised my own vocabulary. The mislabelled evidence package is committed
+      <strong>unedited</strong>.</p>
+    </blockquote>
+
+    <p class="links">
+      <a href="https://github.com/cmcnosky/stinger/blob/main/CASE_STUDY.md">How it was built, and what hitting reality broke</a>
+      <a href="https://github.com/cmcnosky/stinger/tree/main/evidence">Evidence packages</a>
+      <a href="https://github.com/cmcnosky/stinger/blob/main/SPEC.md">Specification</a>
+    </p>
+  </article>
+
+  <article class="project">
+    <h3><a href="https://github.com/cmcnosky/WASP-2.0">WASP 2.0 — Alpaca Autonomous Trader</a></h3>
+    <p class="tagline">A safety-critical trading system, deliberately held pre-trade.</p>
+
+    <p>A single-user, clean-room automated trading system: a Rust modular monolith with a PyO3 research
+    layer calling the same compiled strategy, decision-replay, and risk core. Fail-closed authorization,
+    an append-only evidence ledger, environment-isolated broker hosts, and reconcile-first deployment.</p>
+
+    <blockquote>
+      <p>It isn't trading, and the README says so in the first screen. Nothing is certified, so the system
+      refuses to act — live submission requires a human-approved permit and passed readiness gates, and
+      ambiguous broker outcomes fail closed. That is the design working, not the project stalling.
+      A system that would trade today is a system I built wrong.</p>
+    </blockquote>
+
+    <p class="links">
+      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/CASE_STUDY.md">Case study</a>
+      <a href="https://github.com/cmcnosky/WASP-2.0/releases">24-page technical handoff</a>
+      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/THREAT_MODEL.md">Threat model</a>
+    </p>
+  </article>
+</section>
+
+<section aria-labelledby="method-h">
+  <h2 id="method-h">Method</h2>
+  <p>"Prompted an AI" does not describe it. The contribution is governance, and it is the part that
+  does not come free with the model:</p>
+
+  <dl class="method">
+    <dt>A written constitution</dt>
+    <dd>Every agent session is bound by an <code>AGENTS.md</code> that predates the code: build to
+    the spec, fail closed, never weaken a gate to make a test pass, no stubs in shipped code, and the
+    software may not approve its own release.</dd>
+
+    <dt>Mechanical distrust</dt>
+    <dd>A change is done when the check script passes — lint, strict typing, the full suite with
+    enforced coverage floors, a no-stub gate, and the trap corpus re-proving itself fair on every
+    commit. No self-report is trusted, least of all the agent's.</dd>
+
+    <dt>Enforced honesty</dt>
+    <dd>Every capability is graded by evidence, and what is <em>not</em> done is published as
+    prominently as what is. The trap corpus ships with an audit guide inviting outside reviewers to
+    attack its fairness, openly flagging that the scenarios and the detectors that judge them share
+    an author.</dd>
+
+    <dt>Clean-room provenance</dt>
+    <dd>Documented rules about what may enter the codebase and from where, so the origin of every
+    component is answerable rather than assumed.</dd>
+  </dl>
+</section>
+
+<section aria-labelledby="bg-h">
+  <h2 id="bg-h">Background</h2>
+  <p>History and economics degree. Roughly four and a half years inside a top-5 homebuilder's
+  procurement and vendor stack, then running a small manufacturing business. That is domain access,
+  not a detour: I know where the money and the friction actually sit in industries that AI tooling
+  has barely touched, and I have bought from, negotiated with, and been failed by enough vendors to
+  know what makes software trustworthy to the people paying for it.</p>
+</section>
+
+<section class="cta" aria-labelledby="contact-h">
+  <h2 id="contact-h">Get in touch</h2>
+  <p><a class="big" href="mailto:cmcnosky@gmail.com">cmcnosky@gmail.com</a></p>
+  <p class="quiet">Available now for scoped, fixed-price engagements. Also open to full-time roles.</p>
+
+  <div class="forward">
+    <p class="forward-label">Forwarding this to someone? Here's the sentence:</p>
+    <p class="forward-text">Chris is a non-engineer who directs AI coding agents under formal
+    governance contracts to ship systems with committed, checkable evidence — including an
+    open-source tool that measures whether coding agents cheat. He's taking scoped contract work.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><a href="https://github.com/cmcnosky">github.com/cmcnosky</a></p>
+</footer>
+
+</body>
+</html>
