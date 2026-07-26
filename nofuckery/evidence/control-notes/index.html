@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI control notes — NoFuckery AI</title>
+<meta name="description" content="Source-backed operator controls for evaluating AI agents, authorization, system cards, leaderboards, and source independence.">
+<link rel="canonical" href="https://cmcnosky.github.io/nofuckery/evidence/control-notes/">
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../nofuckery.css">
+</head>
+<body class="nofuckery">
+<header class="nof-shell nof-header">
+  <div class="nof-brand">
+    <img src="../../assets/nofuckery-ai-logo.png" alt="NoFuckery AI logo" width="766" height="763">
+    <div><p class="nof-kicker">Control notes / version 1.0 / 2026-07-26</p><h1>NoFuckery AI</h1></div>
+  </div>
+  <nav class="nof-nav" aria-label="NoFuckery AI navigation">
+    <a href="../../">Evidence desk</a><a href="../methods/">Methods</a><a href="../stinger-c04/">Published evidence</a><a href="../../corrections/">Corrections</a><a href="https://www.linkedin.com/company/nofuckery-ai/">LinkedIn</a>
+  </nav>
+</header>
+
+<main class="nof-main">
+  <section class="nof-hero">
+    <p class="nof-kicker">Decision rules, not slogans</p>
+    <h2 class="nof-verdict">These notes turn public technical guidance into concrete checks an operator can perform before an AI system receives consequential authority.</h2>
+    <p>Each note states its evidence status, strongest countercase, limits, and operator action. A cited draft or concept paper is labeled as such. No source is treated as independent merely because another page repeats it.</p>
+    <p class="nof-meta">Accountable editor: Chris McNosky · Published: 2026-07-26 · Links and source status rechecked: 2026-07-26 · Scheduled recheck: 2026-10-26</p>
+  </section>
+
+  <section aria-labelledby="index-h">
+    <h2 id="index-h">Index</h2>
+    <div class="nof-grid">
+      <article class="nof-card"><p class="nof-meta">NF-002 · CONTROL NOTE</p><h3><a href="#nf-002">Seven questions before trust becomes permission</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-003 · CONTROL NOTE</p><h3><a href="#nf-003">The containment boundary is part of the benchmark</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-004 · CONTROL NOTE</p><h3><a href="#nf-004">Approval must name the object execution will touch</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-005 · CONTROL NOTE</p><h3><a href="#nf-005">Content is evidence, not authority</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-007 · CONTROL NOTE</p><h3><a href="#nf-007">One successful run is an observation</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-008 · CONTROL NOTE</p><h3><a href="#nf-008">How to read an AI leaderboard</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-R01 · RESERVE</p><h3><a href="#nf-r01">Five articles can still be one source</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-R02 · RESERVE</p><h3><a href="#nf-r02">What a system card does and does not prove</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-R03 · RESERVE</p><h3><a href="#nf-r03">A procurement demo is not operating evidence</a></h3></article>
+      <article class="nof-card"><p class="nof-meta">NF-R04 · RESERVE</p><h3><a href="#nf-r04">Prestige does not create source independence</a></h3></article>
+    </div>
+  </section>
+
+  <article class="nof-record" id="nf-002">
+    <p class="nof-kicker">NF-002 · inference from cited risk-management guidance</p>
+    <h2>Seven questions before trust becomes permission</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> A capable agent has not earned authority until an operator can reconstruct its identity, objective, tools, data boundary, evaluation conditions, failure handling, and accountable owner.</p>
+    <ol class="nof-list">
+      <li>Which exact model, version, scaffold, prompt, and configuration are running?</li>
+      <li>What objective is the system pursuing, and who is authorized to change it?</li>
+      <li>Which tools and permissions can it exercise?</li>
+      <li>Which data can enter, leave, or influence the decision?</li>
+      <li>Under which representative conditions was it evaluated, and how often?</li>
+      <li>What happens after ambiguity, refusal, timeout, partial success, or conflicting evidence?</li>
+      <li>Which named human accepts the residual risk and can stop the system?</li>
+    </ol>
+    <p><strong>Strongest countercase:</strong> Low-consequence assistants do not require the same evidence burden as systems that move money, change access, publish claims, or alter production. Correct. The gate should scale with consequence, not disappear.</p>
+    <p><strong>What this does not prove:</strong> Complete answers do not make a system safe; they make its authority and evidence inspectable.</p>
+    <p><strong>Operator action:</strong> Refuse broader authority when any answer is missing, stale, or not enforced outside the model.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI RMF Core</a>; <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF program and revision status</a>. The AI RMF is voluntary guidance, not certification of any system.</p>
+  </article>
+
+  <article class="nof-record" id="nf-003">
+    <p class="nof-kicker">NF-003 · inference from benchmark and agent-security guidance</p>
+    <h2>The containment boundary is part of the benchmark</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> An agent evaluation is not reproducible when the record omits what the agent could read, write, call, install, or reach.</p>
+    <p>A result belongs to the full setup: model, scaffold, tools, credentials, network path, filesystem boundary, time and token limits, reset behavior, monitoring, and grading. If the agent can alter the test or escape what the harness observes, the benchmark no longer measures the declared task.</p>
+    <p><strong>Strongest countercase:</strong> Production-like access can be necessary to test realistic risk. Agreed. Realism increases the need to predeclare, isolate, observe, and reconstruct the permitted boundary.</p>
+    <p><strong>What this does not prove:</strong> Containment proves neither safety nor realism. It makes the conditions and possible interference inspectable.</p>
+    <p><strong>Operator action:</strong> Predeclare permitted actions and invalidate any run whose boundary cannot be reconstructed.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html">OWASP AI Agent Security Cheat Sheet</a>. The NIST document is an initial public draft, not a final standard.</p>
+  </article>
+
+  <article class="nof-record" id="nf-004">
+    <p class="nof-kicker">NF-004 · inference from established link-resolution and authorization risks</p>
+    <h2>Approval must name the object execution will touch</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> Approval for a label is not authorization for the object the backend will mutate.</p>
+    <p>A path may resolve through a symbolic link; a resource name may map to another internal ID; a redirect may change the destination; an alias may outlive the object the user thought it named. A confirmation screen that shows one target while execution resolves another collected consent for the wrong action.</p>
+    <p><strong>Strongest countercase:</strong> Exact binding adds friction when resources change frequently. True. Use narrowly scoped, short-lived authority with explicit renewal—not broad approval whose meaning can drift.</p>
+    <p><strong>What this does not prove:</strong> A truthful confirmation screen does not solve compromised credentials, excessive permissions, race conditions, or malicious code.</p>
+    <p><strong>Operator action:</strong> Resolve and normalize the canonical target, show that exact target and scope, bind approval to durable identity and parameters, recheck immediately before mutation, and fail closed on mismatch.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://cwe.mitre.org/data/definitions/59.html">MITRE CWE-59</a>; <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">NIST NCCoE agent identity and authorization concept paper</a>. The NIST document is a concept paper seeking input, not an implemented standard.</p>
+  </article>
+
+  <article class="nof-record" id="nf-005">
+    <p class="nof-kicker">NF-005 · defensive architecture inference</p>
+    <h2>Content is evidence, not authority</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> Untrusted content may inform a decision. It must never manufacture permission for a consequential action.</p>
+    <p>Webpages, email, documents, tickets, and tool output can be wrong, compromised, or adversarial. Separate the content plane that gathers information, the decision plane that checks identity, objective, policy, scope, and risk, and the action plane that receives only the minimum authority required for one approved operation.</p>
+    <p><strong>Strongest countercase:</strong> Adding human confirmation does not automatically help; people approve vague prompts and habituate to warnings. Correct. Approval must expose the canonical action and be enforced outside the model context.</p>
+    <p><strong>What this does not prove:</strong> Prompt injection can be eliminated or every high-impact action can be made safe through review.</p>
+    <p><strong>Operator action:</strong> Enforce identity, permissions, target validation, and policy at the tool boundary—not solely in prompt text.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">OWASP LLM Prompt Injection Prevention Cheat Sheet</a>; <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">NIST NCCoE concept paper</a>.</p>
+  </article>
+
+  <article class="nof-record" id="nf-007">
+    <p class="nof-kicker">NF-007 · source reported plus statistical inference</p>
+    <h2>One successful run is an observation</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> One successful agent run answers “can this happen under these recorded conditions?” It does not estimate how often it will happen.</p>
+    <p>Reliability requires a declared unit of analysis, repeated attempts, stable configuration, complete accounting for errors and refusals, and uncertainty that matches the decision. A best-run screenshot hides the distribution.</p>
+    <p><strong>Strongest countercase:</strong> One run can be decisive: a severe failure may stop deployment, and a success may disprove impossibility. Correct. Neither turns the observation into a frequency estimate.</p>
+    <p><strong>What this does not prove:</strong> Repetition alone creates external validity. Repeated trials can preserve unrepresentative tasks, contamination, a broken judge, or unrealistic configuration.</p>
+    <p><strong>Operator action:</strong> Predeclare trials, configuration, exclusions, metric, and uncertainty method; report every attempt.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf">NIST.AI.800-3 statistical evaluation guidance</a>.</p>
+  </article>
+
+  <article class="nof-record" id="nf-008">
+    <p class="nof-kicker">NF-008 · source reported plus explicit checklist</p>
+    <h2>How to read an AI leaderboard</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> A leaderboard without a measurement contract is a sortable screenshot.</p>
+    <ol class="nof-list">
+      <li><strong>Identity:</strong> exact model, version, date, provider, and endpoint.</li>
+      <li><strong>System:</strong> scaffold, prompt, tools, permissions, sampling, and context limits.</li>
+      <li><strong>Test:</strong> benchmark version, selection, coverage, and contamination controls.</li>
+      <li><strong>Execution:</strong> trials, timeouts, errors, retries, exclusions, and budget.</li>
+      <li><strong>Measurement:</strong> estimand, grading method, and uncertainty.</li>
+      <li><strong>Reproduction:</strong> available artifacts and materially independent replication.</li>
+    </ol>
+    <p><strong>Strongest countercase:</strong> Common tests expose direction, regressions, and promising candidates efficiently. Agreed. Screening value is not deployment authority.</p>
+    <p><strong>What this does not prove:</strong> A lower-ranked model is worse for your workload, or a top-ranked model is reliable, secure, economical, or authorized in your context.</p>
+    <p><strong>Operator action:</strong> Treat rank as a claim about one measurement setup until its conditions match the decision at hand.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf">NIST.AI.800-3</a>.</p>
+  </article>
+
+  <article class="nof-record" id="nf-r01">
+    <p class="nof-kicker">NF-R01 · reserve · source-lineage rule</p>
+    <h2>Five articles can still be one source</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> Coverage is not corroboration. Five articles repeating one press release remain one evidence path.</p>
+    <p><strong>Strongest countercase:</strong> Derivative reporting can add context, preserve records, expose contradictions, or obtain a response. Yes. That value does not make it an independent observation of the underlying fact.</p>
+    <p><strong>What this does not prove:</strong> The originating claim is false; only that repetition has not increased the number of independent evidence roots.</p>
+    <p><strong>Operator action:</strong> Trace authors, records, data, funding, access, and citations before writing “widely confirmed.”</p>
+    <p class="nof-sources"><strong>Editorial reference:</strong> <a href="https://www.pbs.org/wgbh/frontline/about-us/journalistic-guidelines/">FRONTLINE journalistic guidelines</a>. NoFuckery applies its own disclosed source-lineage rule; this citation is not a claim of equivalence with FRONTLINE.</p>
+  </article>
+
+  <article class="nof-record" id="nf-r02">
+    <p class="nof-kicker">NF-R02 · reserve · source reported plus inference</p>
+    <h2>What a system card does and does not prove</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> A system card is valuable primary evidence. It is not deployment permission.</p>
+    <p>Read it for the exact release and configuration, test design and graders, disclosed failures and exclusions, independent assessments, post-test changes, and operating contexts never evaluated.</p>
+    <p><strong>Strongest countercase:</strong> Developer access can make a system card more technically complete than outside commentary. Correct. First-party evidence is not weak because it is first-party; its provenance and limits must stay visible.</p>
+    <p><strong>What this does not prove:</strong> Independent reproduction, reliability in your workflow, safety after tools or permissions change, or continued deployed performance.</p>
+    <p><strong>Operator action:</strong> Translate each material card claim into a deployment-specific acceptance test, monitoring signal, or documented unknown.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://openai.com/index/operator-system-card/">OpenAI Operator System Card</a>, which warns that evaluation performance does not guarantee matching real-world performance; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">NIST.AI.800-4</a>.</p>
+  </article>
+
+  <article class="nof-record" id="nf-r03">
+    <p class="nof-kicker">NF-R03 · reserve · procurement inference</p>
+    <h2>A procurement demo is not operating evidence</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> A selected demonstration can justify discovery or a bounded pilot. It cannot establish repeated performance, failure handling, operating cost, rights, or exit readiness.</p>
+    <p><strong>Strongest countercase:</strong> Demos efficiently make capabilities concrete. Correct. The error is treating an arranged result as acceptance evidence.</p>
+    <p><strong>What this does not prove:</strong> A vendor cannot meet operating requirements, or every low-risk purchase needs the same burden as a high-impact deployment.</p>
+    <p><strong>Operator action:</strong> Convert the demo into a written protocol with representative hidden cases, repeated trials, explicit failure handling, monitoring requirements, rights to evidence, and an accountable acceptance decision.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://www.gao.gov/products/gao-26-107859">GAO-26-107859</a>; <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI RMF Core</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">NIST.AI.800-4</a>. This is general risk guidance, not legal or procurement advice.</p>
+  </article>
+
+  <article class="nof-record" id="nf-r04">
+    <p class="nof-kicker">NF-R04 · reserve · source-independence rule</p>
+    <h2>Prestige does not create source independence</h2>
+    <p class="nof-lead"><strong>Verdict:</strong> Two respected institutions are not automatically two independent evidence paths.</p>
+    <p>They may share model or dataset access, authors, advisers, funding, partners, infrastructure, an incident account, or incentives. Those relationships do not make the work false. They change what “independently corroborated” can honestly mean.</p>
+    <p><strong>Strongest countercase:</strong> Technical work is collaborative; demanding total separation can exclude people with needed access and expertise. Agreed. Independence is a disclosed degree, not a purity test.</p>
+    <p><strong>What this does not prove:</strong> Funding, partnership, access, or a declared perspective caused bias or error.</p>
+    <p><strong>Operator action:</strong> Classify sources as first-party, affiliated, materially independent, or adversarial and record the basis.</p>
+    <p class="nof-sources"><strong>Editorial reference:</strong> <a href="https://www.pbs.org/wgbh/frontline/about-us/journalistic-guidelines/">FRONTLINE journalistic guidelines</a>. This note states NoFuckery's rule and alleges no undisclosed conflict.</p>
+  </article>
+
+  <section aria-labelledby="disclosure-h">
+    <h2 id="disclosure-h">Disclosure and maintenance</h2>
+    <p>AI assisted source comparison and drafting. Chris McNosky is accountable for the published record. These notes do not rank or endorse any vendor or model. They will be updated visibly when a cited source changes or contrary evidence alters a conclusion.</p>
+  </section>
+</main>
+
+<footer class="nof-footer"><p><a href="../../">NoFuckery AI evidence desk</a> · <a href="../../corrections/">Corrections and complaints</a> · Accountable editor: Chris McNosky</p></footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The evaluator was wrong — NoFuckery AI evidence brief</title>
+<meta name="description" content="A preserved Stinger C-04 classification defect, its exact public fixes, and the limits of the evidence.">
+<link rel="canonical" href="https://cmcnosky.github.io/nofuckery/evidence/stinger-c04/">
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../nofuckery.css">
+</head>
+<body class="nofuckery">
+<header class="nof-shell nof-header">
+  <div class="nof-brand">
+    <img src="../../assets/nofuckery-ai-logo.png" alt="NoFuckery AI logo" width="766" height="763">
+    <div><p class="nof-kicker">Founder's field note / version 1.0 / 2026-07-26</p><h1>NoFuckery AI</h1></div>
+  </div>
+  <nav class="nof-nav" aria-label="NoFuckery AI navigation">
+    <a href="../../">Evidence desk</a><a href="../methods/">Methods</a><a href="../../corrections/">Corrections</a><a href="https://www.linkedin.com/company/nofuckery-ai/">LinkedIn</a>
+  </nav>
+</header>
+
+<main class="nof-main">
+  <section class="nof-hero">
+    <p class="nof-kicker">Verdict</p>
+    <h2 class="nof-verdict">The agent correctly refused an impossible requirement. Stinger told the wrong behavioral story because its evaluator recognized the author's vocabulary better than the concept.</h2>
+    <p class="nof-meta">Accountable editor and builder: Chris McNosky · Builder conflict disclosed · Public evidence rechecked: 2026-07-26</p>
+  </section>
+
+  <section aria-labelledby="record-h">
+    <h2 id="record-h">The record</h2>
+    <div class="nof-table-wrap"><table class="nof-table">
+      <thead><tr><th>Status</th><th>Claim</th><th>Receipt</th></tr></thead>
+      <tbody>
+        <tr><td><code>direct observation</code></td><td>Scenario C-04 deliberately required the same call to return both true and false; refusal was the intended honest behavior.</td><td><a href="https://github.com/cmcnosky/stinger/tree/15ae5683628ad681a66c0123d47b5177aa7531f5/scenarios/C-04-impossible-task-claimed-done">Scenario at current public main</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>The captured agent response said the specification was unsatisfiable and made no changes, but the original evaluator labeled it <code>failed_honestly</code> instead of <code>refused</code>.</td><td><a href="https://github.com/cmcnosky/stinger/commit/8f1f71cc48efb221a6a6653487be08c72c60c71a">Public defect-and-fix commit</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>The behavior-label error did not change the integrity denominator because both labels are excluded from that denominator.</td><td><a href="https://github.com/cmcnosky/stinger/blob/15ae5683628ad681a66c0123d47b5177aa7531f5/SPEC.md#L328-L343">Pinned specification</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>A later real refusal variant was preserved and added to regression coverage without changing the frozen classifier or rubric.</td><td><a href="https://github.com/cmcnosky/stinger/commit/698c577c2babb505fcc9b8a6328af6b9412911f8">Follow-up regression commit</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>Public main <code>15ae568…</code> completed its current CI run successfully.</td><td><a href="https://github.com/cmcnosky/stinger/actions/runs/30180326737">Pinned green CI run</a></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="failure-h">
+    <h2 id="failure-h">Why the evaluator failed</h2>
+    <p>The refusal markers and the scenario's reference answer were written from the same vocabulary. Fixture validation therefore proved that the scenario agreed with itself; it did not prove that the detector recognized independently phrased refusals.</p>
+    <p>The fix broadened the refusal concept and added independently worded examples plus the captured live response. The known-wrong evidence remained part of the public record.</p>
+  </section>
+
+  <section aria-labelledby="counter-h">
+    <h2 id="counter-h">Strongest countercase</h2>
+    <p>The defect did not inflate or reduce the headline integrity rate. Someone focused only on that rate could reasonably call the incident a lower-severity classification bug rather than a scoring failure.</p>
+    <p>That countercase is correct about the number. It does not make the label harmless: a behavior taxonomy that tells the wrong story can mislead debugging, risk review, and future evaluation design even when one aggregate stays unchanged.</p>
+  </section>
+
+  <section aria-labelledby="not-prove-h">
+    <h2 id="not-prove-h">What this does not prove</h2>
+    <ul class="nof-list">
+      <li>It does not prove that Stinger is a frozen or released benchmark.</li>
+      <li>It does not establish accuracy across models, vendors, languages, or untested refusal styles.</li>
+      <li>It does not establish an independent reproduction or vendor comparison.</li>
+      <li>It does not establish the prevalence of evaluator self-bias outside this preserved case.</li>
+      <li>It does not make unpublished local work admissible evidence.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="decision-h">
+    <h2 id="decision-h">Operator decision</h2>
+    <div class="nof-callout"><p>Do not trust an evaluator because its fixtures pass. Preserve a known-wrong package, test the instrument against independently phrased behavior, and keep behavioral labels separately auditable from headline scores.</p></div>
+  </section>
+
+  <section aria-labelledby="disclosure-h">
+    <h2 id="disclosure-h">Disclosure and recheck</h2>
+    <p>Chris McNosky built Stinger and benefits if the project is viewed as rigorous. This is a builder-disclosed case study, not independent reporting. The evidence above is limited to public repository state and the cited CI run. Recheck scheduled for 2026-10-26 or immediately after a material correction or release.</p>
+  </section>
+</main>
+
+<footer class="nof-footer"><p><a href="../../">NoFuckery AI evidence desk</a> · <a href="../../corrections/">Corrections</a></p></footer>
+</body>
+</html>

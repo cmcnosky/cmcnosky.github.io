@@ -10,7 +10,8 @@ about a minute.
 | File | What's in it |
 |---|---|
 | `index.html` | **All the words.** Edit this to change any copy. |
-| `style.css` | All the design. You don't need to touch this to update text. |
+| `style.css` | Shared design. |
+| `nofuckery/` | NoFuckery AI evidence, methods, corrections, and public assets. |
 
 ```sh
 git add -A && git commit -m "update copy" && git push
@@ -25,10 +26,14 @@ python3 -m http.server 8731
 Then open <http://localhost:8731>. Opening `index.html` directly by double-clicking works too,
 but some browsers won't load the stylesheet that way — use the command above if it looks unstyled.
 
+Run the static integrity check before publishing:
+
+```sh
+python3 scripts/check_site.py
+```
+
 ## Not done yet
 
-- **LinkedIn link** — there's a commented-out placeholder in `index.html` under `<nav class="contact">`.
-  Drop the URL in and uncomment it.
 - **`og:image`** — the social preview card currently shows title and description text but no image.
   Adding a 1200×630 PNG at the repo root and pointing `og:image` at it makes shared links look
   deliberate instead of bare.
