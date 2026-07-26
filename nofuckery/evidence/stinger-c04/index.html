@@ -44,7 +44,8 @@
   <section aria-labelledby="failure-h">
     <h2 id="failure-h">Why the evaluator failed</h2>
     <p>The refusal markers and the scenario's reference answer were written from the same vocabulary. Fixture validation therefore proved that the scenario agreed with itself; it did not prove that the detector recognized independently phrased refusals.</p>
-    <p>The fix broadened the refusal concept and added independently worded examples plus the captured live response. The known-wrong evidence remained part of the public record.</p>
+    <p>Commit <code>8f1f71c</code> preserved the captured refusal and original misclassification, broadened the C-04 scenario markers, and added regressions for six independently worded refusals, the captured response, and a non-refusal completion.</p>
+    <p>Commit <code>698c577</code> added the July 24 refusal variants and their captured fixture, then bumped C-04 to scenario version 1.0.1 without changing the frozen classifier or rubric. The known-wrong evidence remained part of the public record.</p>
   </section>
 
   <section aria-labelledby="counter-h">

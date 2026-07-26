@@ -60,7 +60,7 @@
     <p><strong>Strongest countercase:</strong> Low-consequence assistants do not require the same evidence burden as systems that move money, change access, publish claims, or alter production. Correct. The gate should scale with consequence, not disappear.</p>
     <p><strong>What this does not prove:</strong> Complete answers do not make a system safe; they make its authority and evidence inspectable.</p>
     <p><strong>Operator action:</strong> Refuse broader authority when any answer is missing, stale, or not enforced outside the model.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI RMF Core</a>; <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF program and revision status</a>. The AI RMF is voluntary guidance, not certification of any system.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://doi.org/10.6028/NIST.AI.100-1">NIST AI RMF 1.0</a>; <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">AI RMF Core companion</a>; <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST revision status</a>. This is a founder-authored inference: NIST says the Core’s actions are not a checklist or ordered sequence, the framework is voluntary rather than certification, and AI RMF 1.0 is being revised.</p>
   </article>
 
   <article class="nof-record" id="nf-003">
@@ -71,7 +71,7 @@
     <p><strong>Strongest countercase:</strong> Production-like access can be necessary to test realistic risk. Agreed. Realism increases the need to predeclare, isolate, observe, and reconstruct the permitted boundary.</p>
     <p><strong>What this does not prove:</strong> Containment proves neither safety nor realism. It makes the conditions and possible interference inspectable.</p>
     <p><strong>Operator action:</strong> Predeclare permitted actions and invalidate any run whose boundary cannot be reconstructed.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html">OWASP AI Agent Security Cheat Sheet</a>. The NIST document is an initial public draft, not a final standard.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>, specifically Practice 2.1, Table 2.2, and Practice 2.2; <a href="https://github.com/OWASP/CheatSheetSeries/blob/9feea5a6b5afdeb3277ad5f49262a62f86e018fb/cheatsheets/AI_Agent_Security_Cheat_Sheet.md">OWASP AI Agent Security at commit 9feea5a</a>, specifically Tool Security and Least Privilege, Monitoring and Observability, and Secure Agent Testing and Adversarial Validation. NIST AI 800-2 is an initial public draft, not a final standard.</p>
   </article>
 
   <article class="nof-record" id="nf-004">
@@ -82,7 +82,7 @@
     <p><strong>Strongest countercase:</strong> Exact binding adds friction when resources change frequently. True. Use narrowly scoped, short-lived authority with explicit renewal—not broad approval whose meaning can drift.</p>
     <p><strong>What this does not prove:</strong> A truthful confirmation screen does not solve compromised credentials, excessive permissions, race conditions, or malicious code.</p>
     <p><strong>Operator action:</strong> Resolve and normalize the canonical target, show that exact target and scope, bind approval to durable identity and parameters, recheck immediately before mutation, and fail closed on mismatch.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://cwe.mitre.org/data/definitions/59.html">MITRE CWE-59</a>; <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">NIST NCCoE agent identity and authorization concept paper</a>. The NIST document is a concept paper seeking input, not an implemented standard.</p>
+    <p class="nof-sources"><strong>Primary records and scope:</strong> <a href="https://cwe.mitre.org/data/definitions/59.html">MITRE CWE-59</a> establishes only the link-following risk; <a href="https://www.nccoe.nist.gov/publications/other/accelerating-adoption-software-and-ai-agent-identity-and-authorization-concept">NIST’s canonical Draft status page</a> and <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">concept paper</a> frame specific-action authority, intent, human authorization, and audit questions; <a href="https://github.com/OWASP/CheatSheetSeries/blob/9feea5a6b5afdeb3277ad5f49262a62f86e018fb/cheatsheets/AI_Agent_Security_Cheat_Sheet.md">OWASP at commit 9feea5a</a> supplies the exact-action approval and fail-closed pattern. The complete control remains a NoFuckery inference, not a claim that any source proves it sufficient.</p>
   </article>
 
   <article class="nof-record" id="nf-005">
@@ -93,43 +93,44 @@
     <p><strong>Strongest countercase:</strong> Adding human confirmation does not automatically help; people approve vague prompts and habituate to warnings. Correct. Approval must expose the canonical action and be enforced outside the model context.</p>
     <p><strong>What this does not prove:</strong> Prompt injection can be eliminated or every high-impact action can be made safe through review.</p>
     <p><strong>Operator action:</strong> Enforce identity, permissions, target validation, and policy at the tool boundary—not solely in prompt text.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html">OWASP LLM Prompt Injection Prevention Cheat Sheet</a>; <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">NIST NCCoE concept paper</a>.</p>
+    <p class="nof-sources"><strong>Primary records and scope:</strong> <a href="https://github.com/OWASP/CheatSheetSeries/blob/3b50b149db79717c14fca003670c27a2ddb7df40/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.md">OWASP LLM Prompt Injection Prevention at commit 3b50b14</a>, specifically Remote Content Sanitization, Agent-Specific Defenses, Least Privilege, and Model-Based Guardrails; <a href="https://www.nccoe.nist.gov/publications/other/accelerating-adoption-software-and-ai-agent-identity-and-authorization-concept">NIST’s canonical Draft status page</a> and <a href="https://www.nccoe.nist.gov/sites/default/files/2026-02/accelerating-the-adoption-of-software-and-ai-agent-identity-and-authorization-concept-paper.pdf">concept paper</a>, which frame authorization and prompt-injection questions. The three-plane split is a NoFuckery inference; neither source proves it sufficient.</p>
   </article>
 
   <article class="nof-record" id="nf-007">
     <p class="nof-kicker">NF-007 · source reported plus statistical inference</p>
     <h2>One successful run is an observation</h2>
-    <p class="nof-lead"><strong>Verdict:</strong> One successful agent run answers “can this happen under these recorded conditions?” It does not estimate how often it will happen.</p>
-    <p>Reliability requires a declared unit of analysis, repeated attempts, stable configuration, complete accounting for errors and refusals, and uncertainty that matches the decision. A best-run screenshot hides the distribution.</p>
-    <p><strong>Strongest countercase:</strong> One run can be decisive: a severe failure may stop deployment, and a success may disprove impossibility. Correct. Neither turns the observation into a frequency estimate.</p>
+    <p class="nof-lead"><strong>Verdict:</strong> One successful agent run is evidence that the outcome occurred under the recorded conditions. By itself, it does not establish a defensible reliability or failure-rate estimate.</p>
+    <p>One outcome can be a data point in an estimator under explicit assumptions. It cannot quantify frequency or uncertainty from the observed data by itself. A defensible reliability claim requires a declared estimand, unit of analysis, sampling model, repeated attempts, stable configuration, complete accounting for errors and refusals, and uncertainty that matches the decision.</p>
+    <p><strong>Strongest countercase:</strong> One run can still be decisive: a severe failure may stop deployment, a success may disprove impossibility, and one outcome can contribute to an estimate under declared assumptions. Correct. None of those facts makes the estimate precise, generalizable, or decision-ready.</p>
     <p><strong>What this does not prove:</strong> Repetition alone creates external validity. Repeated trials can preserve unrepresentative tasks, contamination, a broken judge, or unrealistic configuration.</p>
     <p><strong>Operator action:</strong> Predeclare trials, configuration, exclusions, metric, and uncertainty method; report every attempt.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf">NIST.AI.800-3 statistical evaluation guidance</a>.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>, released 2026-01-30 and still labeled an initial public draft; <a href="https://doi.org/10.6028/NIST.AI.800-3">NIST.AI.800-3 statistical evaluation guidance</a>, published 2026-02-17.</p>
   </article>
 
   <article class="nof-record" id="nf-008">
     <p class="nof-kicker">NF-008 · source reported plus explicit checklist</p>
     <h2>How to read an AI leaderboard</h2>
-    <p class="nof-lead"><strong>Verdict:</strong> A leaderboard without a measurement contract is a sortable screenshot.</p>
+    <p class="nof-lead"><strong>Verdict:</strong> A leaderboard without a measurement contract is screening evidence—not a purchasing or deployment decision record.</p>
+    <p>NoFuckery’s six-field reading checklist, derived from the cited NIST evaluation guidance:</p>
     <ol class="nof-list">
       <li><strong>Identity:</strong> exact model, version, date, provider, and endpoint.</li>
       <li><strong>System:</strong> scaffold, prompt, tools, permissions, sampling, and context limits.</li>
       <li><strong>Test:</strong> benchmark version, selection, coverage, and contamination controls.</li>
       <li><strong>Execution:</strong> trials, timeouts, errors, retries, exclusions, and budget.</li>
       <li><strong>Measurement:</strong> estimand, grading method, and uncertainty.</li>
-      <li><strong>Reproduction:</strong> available artifacts and materially independent replication.</li>
+      <li><strong>Reproduction:</strong> available artifacts and, as a NoFuckery decision criterion, whether a materially independent party replicated the result.</li>
     </ol>
     <p><strong>Strongest countercase:</strong> Common tests expose direction, regressions, and promising candidates efficiently. Agreed. Screening value is not deployment authority.</p>
     <p><strong>What this does not prove:</strong> A lower-ranked model is worse for your workload, or a top-ranked model is reliable, secure, economical, or authorized in your context.</p>
     <p><strong>Operator action:</strong> Treat rank as a claim about one measurement setup until its conditions match the decision at hand.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf">NIST.AI.800-3</a>.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-2.ipd.pdf">NIST.AI.800-2 Initial Public Draft</a>, released 2026-01-30 and still labeled an initial public draft; <a href="https://doi.org/10.6028/NIST.AI.800-3">NIST.AI.800-3</a>, published 2026-02-17. NIST does not prescribe this exact six-field sequence.</p>
   </article>
 
   <article class="nof-record" id="nf-r01">
     <p class="nof-kicker">NF-R01 · reserve · source-lineage rule</p>
     <h2>Five articles can still be one source</h2>
     <p class="nof-lead"><strong>Verdict:</strong> Coverage is not corroboration. Five articles repeating one press release remain one evidence path.</p>
-    <p><strong>Strongest countercase:</strong> Derivative reporting can add context, preserve records, expose contradictions, or obtain a response. Yes. That value does not make it an independent observation of the underlying fact.</p>
+    <p><strong>Strongest countercase:</strong> Derivative reporting can add context, preserve records, expose contradictions, or obtain a response. If a later outlet independently inspects a primary record or gathers new evidence, that portion becomes a new evidence root. Simple repetition does not.</p>
     <p><strong>What this does not prove:</strong> The originating claim is false; only that repetition has not increased the number of independent evidence roots.</p>
     <p><strong>Operator action:</strong> Trace authors, records, data, funding, access, and citations before writing “widely confirmed.”</p>
     <p class="nof-sources"><strong>Editorial reference:</strong> <a href="https://www.pbs.org/wgbh/frontline/about-us/journalistic-guidelines/">FRONTLINE journalistic guidelines</a>. NoFuckery applies its own disclosed source-lineage rule; this citation is not a claim of equivalence with FRONTLINE.</p>
@@ -138,22 +139,22 @@
   <article class="nof-record" id="nf-r02">
     <p class="nof-kicker">NF-R02 · reserve · source reported plus inference</p>
     <h2>What a system card does and does not prove</h2>
-    <p class="nof-lead"><strong>Verdict:</strong> A system card is valuable primary evidence. It is not deployment permission.</p>
+    <p class="nof-lead"><strong>Verdict:</strong> A developer-authored system card is valuable first-party evidence. It is not deployment permission.</p>
     <p>Read it for the exact release and configuration, test design and graders, disclosed failures and exclusions, independent assessments, post-test changes, and operating contexts never evaluated.</p>
     <p><strong>Strongest countercase:</strong> Developer access can make a system card more technically complete than outside commentary. Correct. First-party evidence is not weak because it is first-party; its provenance and limits must stay visible.</p>
-    <p><strong>What this does not prove:</strong> Independent reproduction, reliability in your workflow, safety after tools or permissions change, or continued deployed performance.</p>
+    <p><strong>What this does not prove:</strong> The developer-authored card alone does not establish independent reproduction or fitness in your deployment context unless it links to inspectable independent evidence.</p>
     <p><strong>Operator action:</strong> Translate each material card claim into a deployment-specific acceptance test, monitoring signal, or documented unknown.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://openai.com/index/operator-system-card/">OpenAI Operator System Card</a>, which warns that evaluation performance does not guarantee matching real-world performance; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">NIST.AI.800-4</a>.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> In OpenAI’s <a href="https://cdn.openai.com/operator_system_card.pdf">January 2025 Operator System Card</a>—a historical record for the then-research-preview CUA—OpenAI warned that perfect evaluation performance would not guarantee matching real-world deployment performance. OpenAI later <a href="https://openai.com/index/introducing-operator/">integrated Operator into ChatGPT agent and sunset the standalone experience</a>. See also <a href="https://doi.org/10.6028/NIST.AI.800-4">NIST.AI.800-4</a>, published 2026-03-06. This note does not imply that the historical card describes OpenAI’s current browser-agent product.</p>
   </article>
 
   <article class="nof-record" id="nf-r03">
     <p class="nof-kicker">NF-R03 · reserve · procurement inference</p>
     <h2>A procurement demo is not operating evidence</h2>
-    <p class="nof-lead"><strong>Verdict:</strong> A selected demonstration can justify discovery or a bounded pilot. It cannot establish repeated performance, failure handling, operating cost, rights, or exit readiness.</p>
+    <p class="nof-lead"><strong>Verdict:</strong> At most, a polished demo is evidence of a result under arranged conditions. Without an inspectable record of the system, inputs, operator interventions, and execution, it may not establish even that.</p>
     <p><strong>Strongest countercase:</strong> Demos efficiently make capabilities concrete. Correct. The error is treating an arranged result as acceptance evidence.</p>
     <p><strong>What this does not prove:</strong> A vendor cannot meet operating requirements, or every low-risk purchase needs the same burden as a high-impact deployment.</p>
-    <p><strong>Operator action:</strong> Convert the demo into a written protocol with representative hidden cases, repeated trials, explicit failure handling, monitoring requirements, rights to evidence, and an accountable acceptance decision.</p>
-    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://www.gao.gov/products/gao-26-107859">GAO-26-107859</a>; <a href="https://airc.nist.gov/airmf-resources/airmf/5-sec-core/">NIST AI RMF Core</a>; <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf">NIST.AI.800-4</a>. This is general risk guidance, not legal or procurement advice.</p>
+    <p><strong>Operator action:</strong> Convert the demo into a written acceptance protocol using representative, vendor-inaccessible cases; repeatable testing; explicit failure handling; monitoring requirements; contractual access to evidence; and an accountable acceptance decision.</p>
+    <p class="nof-sources"><strong>Primary records:</strong> <a href="https://www.gao.gov/products/gao-26-107859">GAO-26-107859</a>; <a href="https://doi.org/10.6028/NIST.AI.100-1">NIST AI RMF 1.0</a>; <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF revision status</a>; <a href="https://doi.org/10.6028/NIST.AI.800-4">NIST.AI.800-4</a>. AI RMF 1.0 is voluntary and currently under revision. This is general risk guidance, not legal or procurement advice.</p>
   </article>
 
   <article class="nof-record" id="nf-r04">
@@ -161,9 +162,10 @@
     <h2>Prestige does not create source independence</h2>
     <p class="nof-lead"><strong>Verdict:</strong> Two respected institutions are not automatically two independent evidence paths.</p>
     <p>They may share model or dataset access, authors, advisers, funding, partners, infrastructure, an incident account, or incentives. Those relationships do not make the work false. They change what “independently corroborated” can honestly mean.</p>
+    <p>Independence belongs to an evidence path for a particular claim, not permanently to an institution.</p>
     <p><strong>Strongest countercase:</strong> Technical work is collaborative; demanding total separation can exclude people with needed access and expertise. Agreed. Independence is a disclosed degree, not a purity test.</p>
     <p><strong>What this does not prove:</strong> Funding, partnership, access, or a declared perspective caused bias or error.</p>
-    <p><strong>Operator action:</strong> Classify sources as first-party, affiliated, materially independent, or adversarial and record the basis.</p>
+    <p><strong>Operator action:</strong> Record two separate dimensions for each material claim: evidence lineage—first-party, affiliated, or materially independent—and incentive or stance, including supportive, neutral, or adversarial. Do not use adversarial posture as a substitute for provenance.</p>
     <p class="nof-sources"><strong>Editorial reference:</strong> <a href="https://www.pbs.org/wgbh/frontline/about-us/journalistic-guidelines/">FRONTLINE journalistic guidelines</a>. This note states NoFuckery's rule and alleges no undisclosed conflict.</p>
   </article>
 
