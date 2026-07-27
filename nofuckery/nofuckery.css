@@ -189,6 +189,36 @@ body.nofuckery {
   line-height: 1.25;
 }
 
+.nof-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #111313;
+}
+
+.nof-section-label {
+  margin: 1.55rem 0 0.55rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.nof-story-index {
+  margin-top: 1.5rem;
+}
+
+.nof-story-index li {
+  margin-bottom: 0.45rem;
+}
+
+.nof-source-list {
+  overflow-wrap: anywhere;
+}
+
 .nof-lead {
   font-size: 1.08rem;
 }
