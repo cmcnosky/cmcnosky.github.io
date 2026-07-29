@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude found the flaw. HAWK left NIST. — NoFuckery AI</title>
+<meta name="description" content="What Claude-assisted cryptanalysis established about HAWK, what it did not establish about AES, and why reproducible evidence remains the gate.">
+<link rel="canonical" href="https://cmcnosky.github.io/nofuckery/evidence/claude-hawk/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cmcnosky.github.io/nofuckery/evidence/claude-hawk/">
+<meta property="og:title" content="Claude found the flaw. HAWK left NIST.">
+<meta property="og:description" content="HAWK's designers confirmed the attack and withdrew the undeployed candidate. Production AES was not broken.">
+<meta property="og:image" content="https://cmcnosky.github.io/nofuckery/assets/nofuckery-ai-logo.png">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="../../../style.css">
+<link rel="stylesheet" href="../../nofuckery.css?v=20260729">
+</head>
+<body class="nofuckery">
+<header class="nof-shell nof-header">
+  <div class="nof-brand">
+    <img src="../../assets/nofuckery-ai-logo.png" alt="NoFuckery AI logo" width="766" height="763">
+    <div><p class="nof-kicker">NF-021 / evidence brief / published 2026-07-29</p><h1>NoFuckery AI</h1></div>
+  </div>
+  <nav class="nof-nav" aria-label="NoFuckery AI navigation">
+    <a href="../../">Evidence desk</a><a href="../methods/">Methods</a><a href="../../corrections/">Corrections</a><a href="https://www.linkedin.com/company/nofuckery-ai/">LinkedIn</a>
+  </nav>
+</header>
+
+<main class="nof-main">
+  <section class="nof-hero">
+    <p class="nof-kicker">Verdict</p>
+    <h2 class="nof-verdict">CLAUDE FOUND THE FLAW. HAWK LEFT NIST.</h2>
+    <p class="nof-lead">Claude-assisted cryptanalysis produced a consequential HAWK attack that the scheme's designers confirmed before withdrawing the undeployed candidate. It did not break production AES.</p>
+    <p class="nof-meta">Accountable editor: Chris McNosky · Evidence rechecked: 2026-07-29 · Published: 2026-07-29</p>
+    <div class="nof-statusline" role="list" aria-label="Evidence status">
+      <span class="nof-chip" role="listitem">Primary sources linked</span>
+      <span class="nof-chip" role="listitem">Limits explicit</span>
+      <span class="nof-chip published" role="listitem">Published</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="record-h">
+    <h2 id="record-h">The record</h2>
+    <div class="nof-table-wrap"><table class="nof-table">
+      <thead><tr><th>Status</th><th>Claim</th><th>Receipt</th></tr></thead>
+      <tbody>
+        <tr><td><code>source reported</code></td><td>HAWK's designers confirmed the attack and withdrew HAWK. NIST records the candidate as withdrawn.</td><td><a href="https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/2r2u6SbHun4/m/0_I2KOZ_CQAJ">HAWK team</a> · <a href="https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures">NIST</a></td></tr>
+        <tr><td><code>source reported</code></td><td>Under the paper's gate-count model, estimated HAWK-512 key-recovery cost fell from 2<sup>150</sup> to at most 2<sup>108</sup>; HAWK-1024 fell from 2<sup>288</sup> to at most 2<sup>182</sup>. Both remain impractical.</td><td><a href="https://anthropic.com/document/hawk_key_recovery.pdf">HAWK attack paper</a></td></tr>
+        <tr><td><code>source reported</code></td><td>The released implementation recovered an equivalent signing key only for HAWK-256, an intentionally small challenge parameter below NIST's submission threshold.</td><td><a href="https://github.com/anthropics/cryptography-research-demo/tree/main/HAWK">Demonstration repository</a></td></tr>
+        <tr><td><code>source reported</code></td><td>Anthropic attributes about 60 hours and approximately $100,000 in API cost to finding, developing, and verifying the HAWK result.</td><td><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Anthropic disclosure</a></td></tr>
+        <tr><td><code>inference</code></td><td>Model output is a candidate claim. Reproducible evidence, expert review, and responsible disclosure determine whether it earns trust.</td><td><a href="../methods/">NoFuckery method</a></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section aria-labelledby="workflow-h">
+    <h2 id="workflow-h">The workflow matters</h2>
+    <p>Anthropic describes a semi-autonomous, multi-agent process using literature, tools, computational experiments, scaffolding, occasional human direction, and later expert review. The time and cost are Anthropic's estimates, not independent measurements.</p>
+    <p>HAWK's designers publicly confirmed the central weakness. Their response and NIST's status record are separate from Anthropic's institutional account, but the paper, disclosure, and executable demonstration share one Anthropic research lineage.</p>
+  </section>
+
+  <section aria-labelledby="aes-h">
+    <h2 id="aes-h">The separate AES result</h2>
+    <p>Claude-assisted research also improved an impractical attack on seven-round AES-128 by roughly 200–800 times. Full AES-128 has ten rounds and remains unaffected.</p>
+    <p>The reduced-round attack assumes 2<sup>105</sup> chosen plaintexts and could not be executed end to end at full scale. Anthropic reports that the model produced the main idea in roughly a week, while two researchers then spent several hundred hours and nearly a month gaining confidence in it. That supports a validation-bottleneck concern. It does not turn the result into a break of production AES.</p>
+  </section>
+
+  <section aria-labelledby="counter-h">
+    <h2 id="counter-h">Strongest countercase</h2>
+    <p>The HAWK attack remains exponential, standard-sized parameters remain impractical to attack, and HAWK was never deployed. The withdrawal also shows the public standardization process doing its job: finding a consequential weakness before adoption.</p>
+  </section>
+
+  <section aria-labelledby="limits-h">
+    <h2 id="limits-h">What this does not prove</h2>
+    <ul class="nof-list">
+      <li>It does not prove that Claude worked alone or that AI can generally replace cryptographers.</li>
+      <li>It does not show that a deployed HAWK system or any other NIST post-quantum candidate was compromised.</li>
+      <li>It does not weaken full ten-round AES-128.</li>
+      <li>It does not independently reproduce the HAWK-512 or HAWK-1024 estimates.</li>
+      <li>It does not establish that every AI-generated research claim will survive expert review.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="stinger-h">
+    <h2 id="stinger-h">Where Stinger is relevant—and where it is not</h2>
+    <p>Stinger did not evaluate the mathematics. Its relevance is procedural: treat a model's answer as a candidate claim and require inspectable evidence before allowing that claim to authorize a score, release, or decision.</p>
+    <p class="nof-meta">Conflict disclosure: Chris McNosky built Stinger. Its use here is a disclosed methodological analogy, not evidence that Stinger evaluated or validated the cryptanalysis.</p>
+  </section>
+
+  <section aria-labelledby="decision-h">
+    <h2 id="decision-h">Operator decision</h2>
+    <div class="nof-callout"><p><strong>Keep AI-generated research claims at candidate/HOLD until reproducible evidence, expert review, and responsible disclosure support them.</strong></p></div>
+  </section>
+
+  <section aria-labelledby="sources-h">
+    <h2 id="sources-h">Primary sources and exact limits</h2>
+    <div class="nof-table-wrap"><table class="nof-table">
+      <thead><tr><th>Source</th><th>What it supports</th><th>Limit</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Anthropic disclosure</a></td><td>Workflow, time, cost, human role, HAWK scope, reduced-round AES scope, and validation burden.</td><td>First-party research account; broad capability conclusions are Anthropic's interpretation.</td></tr>
+        <tr><td><a href="https://csrc.nist.gov/projects/pqc-dig-sig/round-3-additional-signatures">NIST Round 3 status</a></td><td>HAWK is recorded as withdrawn.</td><td>NIST did not reject HAWK or independently publish the attack analysis.</td></tr>
+        <tr><td><a href="https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/2r2u6SbHun4/m/0_I2KOZ_CQAJ">HAWK-team statement</a></td><td>Confirmation, consequence, and withdrawal.</td><td>Statement from the scheme's own submission team, not an independent implementation report.</td></tr>
+        <tr><td><a href="https://anthropic.com/document/hawk_key_recovery.pdf">HAWK attack paper</a></td><td>Attack construction and exact gate-count estimates.</td><td>Author paper; standard-sized attacks are modeled and remain impractical.</td></tr>
+        <tr><td><a href="https://github.com/anthropics/cryptography-research-demo/tree/main/HAWK">HAWK demonstration</a></td><td>Executable HAWK-256 equivalent-key recovery and reference verification.</td><td>Challenge parameter only; not a HAWK-512 or HAWK-1024 recovery.</td></tr>
+        <tr><td><a href="https://anthropic.com/document/aes_mobius_bridge.pdf">Reduced-round AES paper</a></td><td>Seven-round attack, 2<sup>105</sup> chosen-plaintext assumption, and modeled improvement.</td><td>Full-scale attack is impractical and was not run end to end; full AES-128 is unaffected.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="nof-meta">Source access date: 2026-07-29. Every mutable source must be rechecked within 24 hours of any approved publication.</p>
+  </section>
+</main>
+
+<footer class="nof-footer"><p><a href="../../">NoFuckery AI evidence desk</a> · <a href="../../corrections/">Corrections</a> · Chris McNosky is accountable for publication.</p></footer>
+</body>
+</html>
