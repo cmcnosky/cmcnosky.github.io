@@ -23,7 +23,7 @@
 <main class="nof-main">
   <section class="nof-hero">
     <p class="nof-kicker">Verdict</p>
-    <h2 class="nof-verdict">The same forecast scores 3% error or 33% depending on where it is aggregated. The vendor picks which one gets published, and the published figures do not say which was used.</h2>
+    <h2 class="nof-verdict">Aggregation level, not forecast quality, can move an accuracy number by an order of magnitude. RELEX&rsquo;s own guide illustrates the same dataset at 3% or 33%. The published figures across this category do not say which level produced them.</h2>
     <p class="nof-meta">Accountable editor: Chris McNosky · No commercial relationship with any vendor named · Primary records read: 2026-08-05</p>
     <p class="nof-meta">Scope: four published claims from two vendors. This is a measurement argument, not a product verdict.</p>
   </section>
@@ -33,11 +33,12 @@
     <div class="nof-table-wrap"><table class="nof-table">
       <thead><tr><th>Status</th><th>Claim</th><th>Receipt</th></tr></thead>
       <tbody>
-        <tr><td><code>direct observation</code></td><td>RELEX publishes that the same dataset yields roughly 3% MAPE aggregated to group level and 33% when product-level MAPEs are averaged: &ldquo;Neither is wrong, but each tells a very different story.&rdquo;</td><td><a href="https://www.relexsolutions.com/resources/measuring-forecast-accuracy/">Measuring forecast accuracy: The complete guide</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>RELEX illustrates the effect with a worked example, not a measured customer result: calculating MAPE on aggregated group-level data &ldquo;may produce a result of 3%,&rdquo; while calculating at product level and averaging &ldquo;could yield 33% for the same dataset.&rdquo; It adds: &ldquo;Neither is wrong, but each tells a very different story.&rdquo;</td><td><a href="https://www.relexsolutions.com/resources/measuring-forecast-accuracy/">Measuring forecast accuracy: The complete guide</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>The underlying effect is stated by RELEX as fact rather than hypothesis: &ldquo;Group-level MAPE is far lower when calculated on aggregated sales and forecasts than when averaging individual product MAPEs.&rdquo;</td><td><a href="https://www.relexsolutions.com/resources/measuring-forecast-accuracy/">Same guide, Fig. 3</a></td></tr>
         <tr><td><code>direct observation</code></td><td>The same guide states the two figures &ldquo;answer different questions and should never be compared,&rdquo; and that &ldquo;choosing the wrong aggregation level can distort the interpretation of results, making performance appear better or worse than the accuracy that actually influenced planning decisions.&rdquo;</td><td><a href="https://www.relexsolutions.com/resources/measuring-forecast-accuracy/">Same guide</a></td></tr>
         <tr><td><code>direct observation</code></td><td>RELEX publishes: &ldquo;Biyoute has achieved weekly forecast accuracy of 89% at the regional level, with grocery forecasts exceeding 92%.&rdquo; Aggregation and period are stated. The metric definition and a baseline are not.</td><td><a href="https://www.relexsolutions.com/news/biyoute-trading-improves-forecast-accuracy-and-availability-with-relex-solutions/">Biyoute Trading announcement</a></td></tr>
-        <tr><td><code>source reported</code></td><td>A UNFI executive is quoted on RELEX&rsquo;s site: &ldquo;about a five percent reduction in our out of stocks and a twenty five percent improvement in our forecast <em>error rate</em>.&rdquo; This is a customer statement about error rate, not a vendor-measured accuracy figure.</td><td><a href="https://www.relexsolutions.com/resources/unfi-reduces-out-of-stocks-forecast-accuracy-relex/">UNFI case study</a></td></tr>
-        <tr><td><code>direct observation</code></td><td>Blue Yonder publishes: &ldquo;businesses can achieve a 12% improvement in forecast accuracy,&rdquo; and &ldquo;a 75% improvement in planner efficiency and a 50% reduction in costs and expenses.&rdquo; No metric definition, aggregation level, baseline, or period accompanies them.</td><td><a href="https://blueyonder.com/solutions/supply-chain-planning/demand-planning">Blue Yonder Demand Planning</a></td></tr>
+        <tr><td><code>source reported</code></td><td>A UNFI speaker is quoted on RELEX&rsquo;s site: &ldquo;about a five percent reduction in our out of stocks and a twenty five percent improvement in our forecast <em>error rate</em>.&rdquo; This is a customer statement about error rate, not a vendor-measured accuracy figure, and the same speaker adds: &ldquo;It&rsquo;s still early, though.&rdquo;</td><td><a href="https://www.relexsolutions.com/resources/unfi-reduces-out-of-stocks-forecast-accuracy-relex/">UNFI case study</a></td></tr>
+        <tr><td><code>direct observation</code></td><td>Blue Yonder presents its figures as attainable outcomes rather than measured results, under the heading &ldquo;Key Benefits &mdash; This is what you could achieve&rdquo;: businesses &ldquo;can achieve a 12% improvement in forecast accuracy,&rdquo; and Demand Planning &ldquo;leads to a 75% improvement in planner efficiency and a 50% reduction in costs and expenses.&rdquo; No metric definition, aggregation level, baseline, or period accompanies them.</td><td><a href="https://blueyonder.com/solutions/supply-chain-planning/demand-planning">Blue Yonder Demand Planning</a></td></tr>
         <tr><td><code>inference</code></td><td>As published, none of the four figures above can be checked, reproduced, or compared against each other, because the information needed to interpret them is absent.</td><td>Follows from the rows above.</td></tr>
       </tbody>
     </table></div>
@@ -71,6 +72,9 @@
       <li>It does not establish that undisclosed methodology exists or does not exist behind these pages.</li>
       <li>It does not examine o9, Kinaxis, SAP IBP, ToolsGroup, or Manhattan Associates. Their absence is a limit of this brief, not a finding about them.</li>
       <li>It does not rest on any test, benchmark, or reproduction run by NoFuckery AI. No forecast was evaluated here.</li>
+      <li>The 3% and 33% figures are RELEX&rsquo;s illustrative example, not a measured result from a named customer. The order-of-magnitude effect they illustrate is separately asserted by RELEX as fact; the specific figures are not.</li>
+      <li>It does not establish that detailed methodology is withheld during procurement. It addresses published figures only.</li>
+      <li>This brief was written and reviewed by the same person. It has not received independent adversarial review.</li>
     </ul>
   </section>
 
@@ -81,9 +85,10 @@
       <li>At what aggregation level was it calculated: item/location/day, or DC/region/week?</li>
       <li>What is the baseline — the prior system, or a naive forecast?</li>
       <li>Over what period, and does it include peak season?</li>
-      <li>Would you restate the same number at item level?</li>
+      <li>Would you restate this at the level the replenishment decision is made &mdash; and if percentage error is unstable there, which metric do you use instead?</li>
     </ol>
     <p>The fifth question is the one that settles it. The first four can be answered by anyone. The fifth asks whether the headline survives contact with the level at which inventory decisions are actually made.</p>
+    <p>The second half of that question matters. MAPE degrades badly on intermittent and slow-moving demand, where small absolute errors produce enormous percentages and near-zero actuals break the calculation entirely &mdash; RELEX&rsquo;s own guide makes this point. So &ldquo;restate it at item level&rdquo; is not a demand for item-level MAPE. It is a demand that the vendor name a metric that remains meaningful at the level where the system actually commits stock. A vendor who cannot is describing a number that does not correspond to the decision being automated.</p>
   </section>
 
   <section aria-labelledby="decision-h">
