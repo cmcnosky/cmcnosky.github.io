@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">Chris McNosky — See how I work</title>
+  <desc id="desc">A direct way to evaluate fit: set the criteria, give me a time-boxed problem, and judge the work.</desc>
+  <rect width="1280" height="640" fill="#f7f4ec"/>
+  <rect x="80" y="70" width="6" height="500" fill="#b8441d"/>
+  <text x="118" y="132" fill="#555149" font-family="Baskerville, Georgia, serif" font-size="24" letter-spacing="6">CHRIS McNOSKY</text>
+  <text x="112" y="286" fill="#1a1a18" font-family="Baskerville, Georgia, serif" font-size="92">See how I work.</text>
+  <line x1="114" y1="340" x2="322" y2="340" stroke="#aaa497" stroke-width="2"/>
+  <text x="112" y="418" fill="#1a1a18" font-family="Baskerville, Georgia, serif" font-size="39" font-style="italic">A direct way to evaluate fit.</text>
+  <text x="112" y="478" fill="#555149" font-family="Baskerville, Georgia, serif" font-size="28">Set the criteria. Give me a time-boxed problem. Judge the work.</text>
+  <text x="112" y="558" fill="#555149" font-family="Baskerville, Georgia, serif" font-size="22" letter-spacing="1.5">cmcnosky.github.io/why-hire</text>
+</svg>
