@@ -77,6 +77,17 @@
         <div>
           <h2 id="proof-heading">The record decides whether the work moves.</h2>
           <div class="caseGrid caseGridTwo">
+            <article class="caseCard caseCardFeatured">
+              <p class="caseTag">Upstream Rust contribution</p>
+              <h3>Tokio PR: 83 executed CI checks passed.</h3>
+              <p>For Tokio issue #3974, I converted two earlier closed implementation attempts into an exact design contract and directed the agentic Rust change. The contribution removes cfg-disabled <code>select!</code> branches before generated storage and scheduling, preserving dense branch indices and randomized fairness.</p>
+
+              <p><strong>My work:</strong> prior-art analysis, invariant and acceptance contract, adversarial design review, regression matrix, implementation direction, evidence review, and the submission decision.</p>
+
+              <p><strong>Status:</strong> submitted upstream and ready for maintainer review. All 83 executed checks passed; six checks were skipped and two were neutral.</p>
+              <a href="https://github.com/tokio-rs/tokio/pull/8374" target="_blank" rel="noreferrer">Inspect the pull request and checks <span aria-hidden="true">↗</span></a>
+            </article>
+
             <article class="caseCard">
               <p class="caseTag">False-pass review</p>
               <h3>1,336 tests passed. The integration decision stayed HOLD.</h3>
