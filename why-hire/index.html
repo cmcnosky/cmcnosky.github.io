@@ -80,7 +80,7 @@
             <article class="caseCard caseCardFeatured">
               <p class="caseTag">Upstream Rust contribution</p>
               <h3>Took a difficult Tokio issue to a non-draft upstream PR.</h3>
-              <p>For Tokio issue #3974, I converted the failure modes from two earlier contributor attempts into an exact design contract and directed the AI-assisted Rust change. The contribution removes cfg-disabled <code>select!</code> branches before generated storage and scheduling, preserving dense branch indices and randomized fairness.</p>
+              <p>For Tokio issue #3974, I converted the failure modes from two earlier contributor attempts into an exact design contract and directed the Rust change. The contribution removes cfg-disabled <code>select!</code> branches before generated storage and scheduling, preserving dense branch indices and randomized fairness.</p>
 
               <p><strong>My work:</strong> prior-art analysis, invariant and acceptance contract, adversarial design review, regression matrix, implementation direction, evidence review, and the submission decision.</p>
 
@@ -91,7 +91,7 @@
             <article class="caseCard">
               <p class="caseTag">False-pass review</p>
               <h3>1,336 tests passed. The integration decision stayed HOLD.</h3>
-              <p>In a private Side Effects Lab review, I directed a separate adversarial review of an exact agent-produced commit after all 1,336 tests passed. The review found two high-priority cases where the pass/fail logic could incorrectly approve the behavior, so I kept the candidate out of integration.</p>
+              <p>In a private Side Effects Lab review, I directed a separate adversarial review of a candidate commit after all 1,336 tests passed. The review found two high-priority cases where the pass/fail logic could incorrectly approve the behavior, so I kept the candidate out of integration.</p>
               <p><strong>My work:</strong> problem definition, review direction, acceptance criteria, evidence review, correction requirements, and the integration decision.</p>
               <a href="https://github.com/cmcnosky/side-effects-lab" target="_blank" rel="noreferrer">View public project context <span aria-hidden="true">↗</span></a>
             </article>
@@ -127,8 +127,8 @@
       <section class="section ownership" aria-labelledby="ownership-heading">
         <p class="sectionNumber">04 / How I work</p>
         <div>
-          <h2 id="ownership-heading">AI-assisted. Human-accountable.</h2>
-          <p class="ownershipLead">I use AI tools under written acceptance criteria. Agents assist with implementation and bounded research. I own problem definition, evaluation design, evidence review, correction requirements, approval gates, and the final decision.</p>
+          <h2 id="ownership-heading">Evidence-led. Accountable.</h2>
+          <p class="ownershipLead">I work from written acceptance criteria and inspect the evidence before release. I own problem definition, evaluation design, evidence review, correction requirements, approval gates, and the final decision.</p>
           <p class="ownershipLead">I inspect transcripts, files, diffs, tests, logs, reports, and source material directly. A tool's completion report never substitutes for the record.</p>
         </div>
       </section>
