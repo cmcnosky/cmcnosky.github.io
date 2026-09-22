@@ -1,41 +1,43 @@
-# cmcnosky.github.io
+# Chris McNosky · Project portfolio
 
-The personal site. Live at **https://cmcnosky.github.io**
+[Live portfolio](https://cmcnosky.github.io/) · [Career profile and résumé](https://cmcnosky.github.io/why-hire/) · [GitHub profile](https://github.com/cmcnosky)
 
-## How to change it
+A static portfolio for full stack web development, AI evaluation, and agent
+reliability work. Project entries link to live applications, source code, tests,
+and evidence records.
 
-Two files, no build step, no dependencies. Edit, commit, push — the live site updates in
-about a minute.
+## Featured work
 
-| File | What's in it |
-|---|---|
-| `index.html` | **All the words.** Edit this to change any copy. |
-| `style.css` | Shared design. |
-| `nofuckery/` | NoFuckery AI evidence, methods, corrections, and public assets. |
+- **Read Shruti:** a released author website built with Next.js, TypeScript, Cloudflare Workers, and D1.
+- **Stinger:** a Python CLI and reusable GitHub Actions workflow for coding-agent integrity evaluation.
+- **Tokio contribution:** a submitted Rust implementation of conditional `select!` branches, with regression tests.
+- **WASP 2.0:** Rust/Python trading-system research with documented order-safety and readiness controls.
 
-```sh
-git add -A && git commit -m "update copy" && git push
-```
+## Local preview
 
-## Preview locally before pushing
+No build step is required. From a clone of this repository:
 
 ```sh
 python3 -m http.server 8731
 ```
 
-Then open <http://localhost:8731>. Opening `index.html` directly by double-clicking works too,
-but some browsers won't load the stylesheet that way — use the command above if it looks unstyled.
-
-Run the static integrity check before publishing:
+Open <http://localhost:8731>. Before publishing, run the static integrity check:
 
 ```sh
 python3 scripts/check_site.py
 ```
 
-## Not done yet
+The check inspects HTML titles, language attributes, duplicate IDs, local links,
+and image alternative text. Review the rendered pages as well.
 
-- **`og:image`** — the social preview card currently shows title and description text but no image.
-  Adding a 1200×630 PNG at the repo root and pointing `og:image` at it makes shared links look
-  deliberate instead of bare.
-- **Custom domain** — if `chrismcnosky.com` gets registered: add a file named `CNAME` containing
-  just `chrismcnosky.com`, point the DNS at GitHub Pages, then update the `og:url` meta tag.
+## Repository map
+
+| Path | Purpose |
+|---|---|
+| `index.html`, `style.css` | Main portfolio and its styles |
+| `why-hire/` | Career profile, résumé download, and social-preview image |
+| `nofuckery/` | Technical evidence briefs, methods, corrections, and supporting assets |
+| `scripts/check_site.py` | Static page-integrity checks |
+
+GitHub Pages publishes the root of `main`. After a change, verify the Pages build
+and the rendered live page.

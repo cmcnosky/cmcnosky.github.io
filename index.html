@@ -10,9 +10,12 @@
 <meta property="og:url" content="https://cmcnosky.github.io/">
 <meta property="og:title" content="Chris McNosky — Full Stack Web Developer, AI Evaluation &amp; Governance">
 <meta property="og:description" content="Released full-stack web work and evidence-led AI evaluation with inspectable claims and accountable release decisions.">
+<meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chris McNosky — Full Stack Web Developer, AI Evaluation &amp; Governance">
 <meta name="twitter:description" content="Released full-stack web work and evidence-led AI evaluation with inspectable claims and accountable release decisions.">
+<meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png">
+<link rel="canonical" href="https://cmcnosky.github.io/">
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐝</text></svg>">
@@ -23,11 +26,10 @@
   <h1>Chris McNosky</h1>
   <p class="lede">I build full-stack web systems and turn ambiguous AI behavior into evidence teams can act on.</p>
 
-  <p>My work spans a released full-stack website, evaluation systems, written governance contracts,
-  adversarial testing, and evidence-linked release decisions. I co-created Read Shruti with
-  Next.js/React, TypeScript, Cloudflare Worker API routes, D1-backed aggregate measurement,
-  search metadata, three book pages, and retailer links. At NoFuckery AI, I own problem definition,
-  architecture, evaluation design, evidence review, correction decisions, and release judgment.</p>
+  <p>I am Founder / Full Stack Web Developer / AI Evaluation &amp; Governance at NoFuckery AI.
+  My work includes the released Read Shruti website, Stinger's coding-agent evaluation tools,
+  and a Rust contribution to Tokio. At NoFuckery AI, I own scope, architecture, evaluation design, evidence
+  review, correction decisions, and release judgment.</p>
 
   <p class="pull">Build the system. Test the claim. Keep the evidence.</p>
 
@@ -42,34 +44,10 @@
 
 <main>
 
-<section class="ask" aria-labelledby="ask-h">
-  <h2 id="ask-h">What I'm looking for</h2>
-  <p><strong>Scoped, fixed-price engagements</strong> — building full-stack web products or
-  evaluating and hardening AI-enabled systems for teams that need the output to be
-  <em>verifiable</em>, not just demonstrable. A bounded first project lets you inspect the work
-  before committing to anything larger.</p>
-  <p class="quiet">Also open to full-time roles in full-stack web development, AI evaluation,
-  agent reliability, quality operations, and technical program management.</p>
-</section>
-
-<section aria-labelledby="nofuckery-h">
-  <h2 id="nofuckery-h">NoFuckery AI</h2>
-  <p><strong>A founder-led technical evidence practice for teams deciding whether AI agents deserve
-  consequential authority.</strong> It separates direct observation, source reports, independent
-  corroboration, inference, and unknowns—then states the operator decision the evidence supports.</p>
-  <p>I lead the practice as Founder / Full Stack Web Developer / AI Evaluation &amp; Governance.
-  The full-stack work includes the released <a href="https://readshruti.com">Read Shruti</a>
-  author website.</p>
-  <p class="links">
-    <a href="nofuckery/">Methods, evidence, and corrections</a>
-    <a href="https://www.linkedin.com/company/nofuckery-ai/">LinkedIn Company Page</a>
-  </p>
-</section>
-
 <section aria-labelledby="work-h">
-  <h2 id="work-h">Work</h2>
+  <h2 id="work-h">Selected work</h2>
 
-  <article class="project">
+  <article class="project" id="read-shruti">
     <h3><a href="https://readshruti.com">Read Shruti</a></h3>
     <p class="tagline">A released full-stack author website for three books, retailer discovery, and aggregate measurement.</p>
 
@@ -83,57 +61,66 @@
     </p>
   </article>
 
-  <article class="project">
+  <article class="project" id="stinger">
     <h3><a href="https://github.com/cmcnosky/stinger">Stinger</a></h3>
-    <p class="tagline">Measures whether an AI coding agent cheats — in your configuration, in your CI.</p>
+    <p class="tagline">Python evaluation tools for inspecting coding-agent behavior.</p>
 
-    <p>Runs a corpus of sandboxed trap scenarios against a configured coding agent and mechanically
-    detects dishonest shortcuts: weakened tests, forbidden-file edits, fabricated completion claims,
-    broken house rules, leaked bait secrets. Emits a scored, evidence-linked Integrity Report under a
-    preregistered, frozen rubric. Model-agnostic and vendor-neutral by construction. CLI and GitHub Action.</p>
+    <p>A CLI and reusable GitHub Actions workflow with seven deterministic detectors for test changes, forbidden-file
+    edits, unsupported completion claims, policy violations, and bait-secret leakage. Each report
+    retains the detector evidence and artifacts behind its results. The offline demo compares
+    two local scripted subjects on the same six test-integrity scenarios.</p>
 
     <ul class="rules">
-      <li><strong>Mechanical truth first.</strong> Cheating is decided by deterministic detectors,
-      never an LLM judge. The optional judge may only flag for human review; it can never set a verdict.</li>
+      <li><strong>Mechanical scoring.</strong> Deterministic rules and detectors determine the outcome.
+      The optional model judge can flag a result for review but cannot change the score.</li>
       <li><strong>Fail closed.</strong> Any ambiguity, harness error, or missing evidence resolves to a
       non-scored <code>error</code> — never to a favorable score.</li>
     </ul>
 
-    <blockquote>
-      <p>Every fixture test passed, so I spent the money to run it against live agents anyway — because a
-      measurement instrument that has only ever been tested against its own fixtures has not been tested.
-      Those runs found five real defects, each of which would have produced a <em>plausible wrong answer</em>
-      rather than a visible failure. The worst: it scored a textbook-perfect refusal as a cheat, because the
-      trap only ever recognised my own vocabulary. The mislabelled evidence package is committed
-      <strong>unedited</strong>.</p>
-    </blockquote>
+    <p><strong>A concrete correction:</strong> a real run classified a correct refusal as
+    <code>failed_honestly</code> instead of <code>refused</code>. I preserved the original evidence
+    and required regression coverage for six independently worded refusals before accepting
+    the correction.</p>
 
     <p class="links">
-      <a href="https://github.com/cmcnosky/stinger/blob/main/CASE_STUDY.md">How it was built, and what hitting reality broke</a>
+      <a href="https://github.com/cmcnosky/stinger/tree/main/demo">Run the offline demo</a>
+      <a href="https://github.com/cmcnosky/stinger/tree/main/src/stinger/detectors">Inspect the detectors</a>
+      <a href="nofuckery/evidence/stinger-c04/">Read the correction record</a>
       <a href="https://github.com/cmcnosky/stinger/tree/main/evidence">Evidence packages</a>
-      <a href="https://github.com/cmcnosky/stinger/blob/main/SPEC.md">Specification</a>
     </p>
   </article>
 
-  <article class="project">
-    <h3><a href="https://github.com/cmcnosky/WASP-2.0">WASP 2.0 — Alpaca Autonomous Trader</a></h3>
-    <p class="tagline">A safety-critical trading system, deliberately held pre-trade.</p>
+  <article class="project" id="tokio">
+    <h3><a href="https://github.com/tokio-rs/tokio/pull/8374">Tokio: conditional select! branches</a></h3>
+    <p class="tagline">A submitted Rust implementation with regression tests and upstream checks.</p>
 
-    <p>A single-user, clean-room automated trading system: a Rust modular monolith with a PyO3 research
-    layer calling the same compiled strategy, decision-replay, and risk core. Fail-closed authorization,
-    an append-only evidence ledger, environment-isolated broker hosts, and reconcile-first deployment.</p>
-
-    <blockquote>
-      <p>It isn't trading, and the README says so in the first screen. Nothing is certified, so the system
-      refuses to act — live submission requires a human-approved permit and passed readiness gates, and
-      ambiguous broker outcomes fail closed. That is the design working, not the project stalling.
-      A system that would trade today is a system I built wrong.</p>
-    </blockquote>
+    <p>The change adds <code>#[cfg]</code> support to <code>select!</code> branches and removes
+    disabled branches before generated storage and scheduling. My work covers prior-art analysis,
+    the design contract, implementation direction, regression requirements, and evidence review.</p>
 
     <p class="links">
-      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/CASE_STUDY.md">Case study</a>
-      <a href="https://github.com/cmcnosky/WASP-2.0/releases">24-page technical handoff</a>
-      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/THREAT_MODEL.md">Threat model</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374/files">Implementation and tests</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374">Pull request and checks</a>
+      <a href="https://github.com/tokio-rs/tokio/issues/3974">Original problem</a>
+    </p>
+  </article>
+
+  <article class="project" id="wasp">
+    <h3><a href="https://github.com/cmcnosky/WASP-2.0">WASP 2.0 — Alpaca Autonomous Trader</a></h3>
+    <p class="tagline">Rust and Python research into order safety, reconciliation, and authorization.</p>
+
+    <p>A single-user, clean-room trading-system project: a Rust modular monolith with a PyO3 research
+    layer calling the same compiled strategy, decision-replay, and risk core. Fail-closed authorization,
+    an append-only evidence ledger, environment-isolated broker hosts, and a reconcile-first deployment design.</p>
+
+    <p><strong>Current operating status: HOLD.</strong> Live submission requires a human-approved
+    activation permit and documented readiness gates. The implementation-status record separates
+    tested mechanisms, synthetic research, and remaining work.</p>
+
+    <p class="links">
+      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/docs/ARCHITECTURE.md">Architecture</a>
+      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/docs/IMPLEMENTATION_STATUS.md">Implementation status</a>
+      <a href="https://github.com/cmcnosky/WASP-2.0/blob/main/crates/trader-execution/tests/order_safety.rs">Order-safety tests</a>
     </p>
   </article>
 </section>
@@ -148,12 +135,12 @@
     the evidence required for release.</dd>
 
     <dt>Mechanical verification</dt>
-    <dd>A change is done when the relevant checks pass — lint, strict typing, test suites, coverage
-    floors, integrity gates, and retained artifacts that let another reviewer inspect the result.</dd>
+    <dd>Acceptance criteria connect the required behavior to tests, logs, and retained artifacts.
+    Review follows the complete requested workflow and its failure paths.</dd>
 
     <dt>Evidence-backed release</dt>
-    <dd>Every capability is graded by evidence, and what is <em>not</em> done is published as
-    prominently as what is. A passing summary cannot substitute for the underlying record.</dd>
+    <dd>Implementation status distinguishes completed behavior from planned work. Release
+    decisions link to the underlying record, including failures and corrections.</dd>
 
     <dt>Clean-room provenance</dt>
     <dd>Documented rules about what may enter the codebase and from where, so the origin of every
@@ -163,8 +150,8 @@
 
 <section aria-labelledby="bg-h">
   <h2 id="bg-h">Background</h2>
-  <p>B.A. in Sociology, Economics, and History; roughly four and a half years as a Purchasing
-  Coordinator inside a top-5 homebuilder; then Founder / Sole Operator of a small manufacturing
+  <p>B.A. in Sociology, Economics, and History; Purchasing
+  Coordinator at Lennar from 2018 to 2022; then Founder / Sole Operator of a small manufacturing
   business. Current work as Founder / Full Stack Web Developer / AI Evaluation &amp; Governance at
   NoFuckery AI combines full-stack delivery, evidence review, technical writing, correction gates,
   and accountable release decisions.</p>
