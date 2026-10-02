@@ -1,15 +1,16 @@
 /* Chris McNosky — Why Hire
-   Warm editorial layout with explicit claims, evidence, and decision paths.
+   Warm charcoal editorial layout with explicit claims, evidence, and decision paths.
    Self-contained: system fonts only, no external requests. */
 
 :root {
-  --paper: #f7f4ec;
-  --paper-strong: #fffdf7;
-  --paper-deep: #eee8db;
-  --ink: #1a1a18;
-  --accent: #b8441d;
-  --rule: #aaa497;
-  --muted: #555149;
+  color-scheme: dark;
+  --paper: #202422;
+  --paper-strong: #282d29;
+  --paper-deep: #2c332e;
+  --ink: #ece8df;
+  --accent: #e6b891;
+  --rule: #626c63;
+  --muted: #ccc7bc;
   --serif: Baskerville, "Hoefler Text", "Big Caslon", Georgia, "Times New Roman", serif;
   --measure: 68ch;
 }
@@ -34,6 +35,11 @@ p { margin: 0; }
 p + p { margin-top: 1.62em; }
 
 a { color: inherit; }
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
 
 a:focus-visible {
   outline: 2px solid var(--accent);
@@ -419,4 +425,24 @@ footer {
   html { scroll-behavior: auto; }
 
   .button { transition: none; }
+}
+
+/* Keep a printed copy readable when browsers omit background colors. */
+@media print {
+  :root {
+    color-scheme: light;
+    --paper: #ffffff;
+    --paper-strong: #ffffff;
+    --paper-deep: #f0f0ec;
+    --ink: #1a1a18;
+    --accent: #8b361d;
+    --rule: #aaa497;
+    --muted: #44413b;
+  }
+
+  .buttonPrimary,
+  .buttonPrimary:hover {
+    background: transparent;
+    color: var(--ink);
+  }
 }
