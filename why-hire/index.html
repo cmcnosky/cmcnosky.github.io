@@ -3,18 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chris McNosky — Full Stack Web Developer, AI Evaluation, and Agent Reliability</title>
-    <meta name="description" content="Full stack web development through Read Shruti, plus adversarial AI evaluation, reproducible evidence, release readiness, and technical program management.">
-    <meta property="og:title" content="Chris McNosky — Full Stack Web Developer and AI Evaluation">
-    <meta property="og:description" content="Read Shruti full-stack web delivery, adversarial testing, reproducible evidence, and release readiness.">
+    <title>Chris McNosky — Technical Project Delivery and Software Quality</title>
+    <meta name="description" content="Turns ambiguous problems into testable requirements and delivered software through technical direction, separate review, and reproducible evidence.">
+    <meta property="og:title" content="Chris McNosky — Technical Project Delivery and Software Quality">
+    <meta property="og:description" content="Problem definition, directed implementation, separate review, and evidence-backed acceptance decisions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cmcnosky.github.io/why-hire/">
     <meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="640">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Chris McNosky — Full Stack Web Developer and AI Evaluation">
-    <meta name="twitter:description" content="Read Shruti full-stack web delivery, adversarial testing, reproducible evidence, and release readiness.">
+    <meta name="twitter:title" content="Chris McNosky — Technical Project Delivery and Software Quality">
+    <meta name="twitter:description" content="Problem definition, directed implementation, separate review, and evidence-backed acceptance decisions.">
     <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png">
     <meta name="theme-color" content="#f7f4ec">
     <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
@@ -33,9 +33,9 @@
       </nav>
 
       <header class="hero" id="top">
-        <div class="heroEyebrow"><span class="statusDot" aria-hidden="true"></span>Full stack web developer · AI evaluation · Agent reliability · Technical program management</div>
-        <h1>I build full-stack web systems and turn ambiguous AI behavior into <em>evidence you can act on.</em></h1>
-        <p class="heroCopy">I translate unclear requirements into acceptance criteria, adversarial tests, reproducible evidence, and release decisions that engineering and operating teams can defend.</p>
+        <div class="heroEyebrow"><span class="statusDot" aria-hidden="true"></span>Technical project delivery · Software quality · AI evaluation · Full-stack web development</div>
+        <h1>I turn ambiguous problems into <em>delivered software and defensible decisions.</em></h1>
+        <p class="heroCopy">I identify the expertise a problem needs, turn unclear goals into testable requirements, direct implementation and separate review, and decide what the evidence supports.</p>
         <p class="availability">Dallas–Fort Worth · Open to local or remote full-time roles</p>
         <div class="heroActions">
           <a class="button buttonPrimary" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">Discuss a role <span aria-hidden="true">↗</span></a>
@@ -45,7 +45,7 @@
       </header>
 
       <section class="proofRail" aria-label="Core capabilities">
-        <span>Full-stack web development</span><span>Requirements</span><span>Adversarial testing</span><span>Evidence review</span><span>Release readiness</span><span>Technical writing</span>
+        <span>Problem definition</span><span>Technical direction</span><span>Separate review</span><span>Evidence-backed acceptance</span><span>Full-stack web development</span><span>AI evaluation</span>
       </section>
 
       <section class="section" aria-labelledby="deliver-heading">
@@ -55,18 +55,18 @@
           <div class="deliverGrid">
             <article class="deliverCard">
               <p class="cardNumber">01</p>
-              <h3>Define success</h3>
-              <p>I translate the stated goal into written requirements, observable behavior, acceptance criteria, and the evidence required for a decision.</p>
+              <h3>Frame the real problem</h3>
+              <p>I surface hidden assumptions, omitted constraints, and failure modes, then translate the objective into observable behavior and acceptance criteria.</p>
             </article>
             <article class="deliverCard">
               <p class="cardNumber">02</p>
-              <h3>Test the weak point</h3>
-              <p>I trace assumptions, permissions, incentives, missing constraints, and the paths that can report success without earning it.</p>
+              <h3>Direct the right work</h3>
+              <p>I identify the expertise the problem needs, direct implementation against the written contract, and require separate review where a distinct challenge matters.</p>
             </article>
             <article class="deliverCard">
               <p class="cardNumber">03</p>
-              <h3>Move the work forward</h3>
-              <p>I connect each finding to evidence, severity, correction and retest gates, and a proceed, correct, hold, or stop recommendation.</p>
+              <h3>Decide from evidence</h3>
+              <p>I connect each finding to reproducible evidence, correction and retest gates, and a proceed, correct, hold, or stop decision.</p>
             </article>
           </div>
         </div>
@@ -78,14 +78,16 @@
           <h2 id="proof-heading">Proof that I can turn uncertainty into a defensible decision.</h2>
           <div class="caseGrid caseGridTwo">
             <article class="caseCard caseCardFeatured">
-              <p class="caseTag">Upstream Rust contribution</p>
-              <h3>Delivered a tested implementation of conditional Tokio select! branches.</h3>
-              <p>For Tokio issue #3974, I converted the failure modes from two earlier contributor attempts into an exact design contract and directed the Rust change. The contribution removes cfg-disabled <code>select!</code> branches before generated storage and scheduling, preserving dense branch indices and randomized fairness.</p>
+              <p class="caseTag">Upstream Rust contribution · feature code and tests unchanged since initial submission</p>
+              <h3>Delivered a working Rust implementation for Tokio's five-year-old feature request, rated E-hard.</h3>
+              <p>Identified why earlier approaches skewed randomized selection and broke existing <code>select!</code> syntax, then filtered disabled branches before generating storage and polling logic. The feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. Directed a controlled 450-invocation compiler study across Rust 1.88 and 1.98: zero unexpected results, including a 64-branch boundary case; upstream CI passed.</p>
 
-              <p><strong>My work:</strong> prior-art analysis, invariant and acceptance contract, adversarial design review, regression matrix, implementation direction, evidence review, and the submission decision.</p>
+              <p><strong>What this required:</strong> I reviewed the two earlier unsuccessful attempts and turned their separate failure modes—randomized fairness and macro parsing—into one design contract: preserve existing <code>select!</code> syntax while eliminating disabled branches during normalization, before generated storage and polling. The initial submission included regression tests for those invariants.</p>
 
-              <p><strong>Status:</strong> Delivered a working, tested Rust implementation of cfg-gated <code>select!</code> branches. The submitted Tokio PR #8374 passed upstream CI; a 450-invocation compiler study found no unexpected results, including one final <code>select!</code> body at 64 cfg-gated branches on Rust 1.88 and 1.98.</p>
+              <p><strong>Current upstream status:</strong> PR #8374 is open, unmerged, and waiting for review. Status rechecked October 1, 2026.</p>
               <a href="https://github.com/tokio-rs/tokio/pull/8374" target="_blank" rel="noreferrer">Inspect the pull request and checks <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/tokio-rs/tokio/pull/8374/commits/47d147d75a588a7f840a13d4ec9c1f80d66562db" target="_blank" rel="noreferrer">Inspect the initial feature commit <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-5720020670" target="_blank" rel="noreferrer">Inspect the compiler study <span aria-hidden="true">↗</span></a>
             </article>
 
             <article class="caseCard caseCardFeatured">
@@ -121,7 +123,7 @@
           <div class="foundationGrid">
             <article class="caseCardFeatured">
               <p class="caseTag">Founder / Full Stack Web Developer / AI Evaluation &amp; Governance · NoFuckery AI · 2026–present</p>
-              <p>I lead problem definition, architecture, acceptance criteria, adversarial evaluation, evidence review, correction decisions, and release judgment. My full-stack work includes co-creating and releasing Read Shruti with Next.js/React, TypeScript, Cloudflare Worker API routes, D1-backed aggregate measurement, search metadata, three book pages, and retailer links.</p>
+              <p>I lead problem definition, architecture, acceptance criteria, implementation direction, separate review, adversarial evaluation, evidence review, correction decisions, and release judgment. My full-stack work includes co-creating and releasing Read Shruti with Next.js/React, TypeScript, Cloudflare Worker API routes, D1-backed aggregate measurement, search metadata, three book pages, and retailer links.</p>
             </article>
             <article>
               <p class="caseTag">Purchasing Coordinator · Lennar · 2018–2022</p>
@@ -139,7 +141,7 @@
         <p class="sectionNumber">04 / How I work</p>
         <div>
           <h2 id="ownership-heading">Evidence-led. Accountable.</h2>
-          <p class="ownershipLead">I work from written acceptance criteria and inspect the evidence before release. I own problem definition, evaluation design, evidence review, correction requirements, approval gates, and the final decision.</p>
+          <p class="ownershipLead">I work from written acceptance criteria, identify the expertise required, direct implementation and separate review, and inspect the evidence before release. I own problem definition, evaluation design, correction requirements, approval gates, and the final decision.</p>
           <p class="ownershipLead">I inspect transcripts, files, diffs, tests, logs, reports, and source material directly. A tool's completion report never substitutes for the record.</p>
         </div>
       </section>
@@ -149,7 +151,7 @@
         <div>
           <h2 id="fit-heading">Evaluate the capability directly.</h2>
           <div class="fitCopy">
-            <p>Bring a real evaluation problem to the interview. I will identify the objective, surface the assumptions, explain what I would test, and state what evidence would change my conclusion—live.</p>
+            <p>Bring a short, hypothetical or already-resolved technical problem to the interview. I will identify the objective, surface the assumptions and missing expertise, define what I would test, and state what evidence would change my conclusion—live.</p>
           </div>
           <div class="fitActions">
             <a class="button buttonPrimary" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">Discuss a role <span aria-hidden="true">↗</span></a>
@@ -164,8 +166,8 @@
           <div class="workGrid">
             <article class="workCard">
               <p class="caseTag">Employment</p>
-              <h3>Full-stack web development, AI evaluation, reliability, quality operations, and technical programs</h3>
-              <p>I fit full-stack web development roles and roles that combine ambiguous requirements, adversarial testing, evidence review, correction planning, release readiness, stakeholder coordination, and technical writing.</p>
+              <h3>Technical project delivery, software quality, AI evaluation, and full-stack web development</h3>
+              <p>I fit roles that combine ambiguous requirements, technical direction, separate review, adversarial testing, evidence-backed acceptance, correction planning, release readiness, stakeholder coordination, and technical writing.</p>
               <a class="textLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">Discuss a role <span aria-hidden="true">↗</span></a>
             </article>
 

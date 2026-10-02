@@ -2,15 +2,15 @@
 
 [Live portfolio](https://cmcnosky.github.io/) · [Career profile and résumé](https://cmcnosky.github.io/why-hire/) · [GitHub profile](https://github.com/cmcnosky)
 
-A static portfolio for full stack web development, AI evaluation, and agent
-reliability work. Project entries link to live applications, source code, tests,
-and evidence records.
+A static portfolio for technical project delivery, software quality, full-stack
+web development, and AI evaluation. Project entries link to live applications,
+source code, tests, and evidence records.
 
 ## Featured work
 
 - **Read Shruti:** a released author website built with Next.js, TypeScript, Cloudflare Workers, and D1.
 - **Stinger:** a Python CLI and reusable GitHub Actions workflow for coding-agent integrity evaluation.
-- **Tokio contribution:** a submitted Rust implementation of conditional `select!` branches, with regression tests.
+- **Tokio contribution:** a working implementation for a five-year-old E-hard feature request; its feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. The pull request is open and unmerged.
 - **WASP 2.0:** Rust/Python trading-system research with documented order-safety and readiness controls.
 
 ## Local preview

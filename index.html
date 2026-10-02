@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chris McNosky — Full Stack Web Developer, AI Evaluation &amp; Governance</title>
-<meta name="description" content="Full stack web development, AI evaluation, governance, and technical program judgment through Read Shruti, Stinger, and NoFuckery AI.">
+<title>Chris McNosky — Technical Project Delivery and Software Quality</title>
+<meta name="description" content="Technical project delivery and software quality through problem definition, directed implementation, separate review, and reproducible acceptance evidence.">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cmcnosky.github.io/">
-<meta property="og:title" content="Chris McNosky — Full Stack Web Developer, AI Evaluation &amp; Governance">
-<meta property="og:description" content="Released full-stack web work and evidence-led AI evaluation with inspectable claims and accountable release decisions.">
+<meta property="og:title" content="Chris McNosky — Technical Project Delivery and Software Quality">
+<meta property="og:description" content="Turns ambiguous problems into testable requirements, delivered software, and evidence-backed decisions.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chris McNosky — Full Stack Web Developer, AI Evaluation &amp; Governance">
-<meta name="twitter:description" content="Released full-stack web work and evidence-led AI evaluation with inspectable claims and accountable release decisions.">
+<meta name="twitter:title" content="Chris McNosky — Technical Project Delivery and Software Quality">
+<meta name="twitter:description" content="Turns ambiguous problems into testable requirements, delivered software, and evidence-backed decisions.">
 <link rel="canonical" href="https://cmcnosky.github.io/">
 
 <link rel="stylesheet" href="style.css">
@@ -22,12 +22,12 @@
 
 <header class="hero">
   <h1>Chris McNosky</h1>
-  <p class="lede">I build full-stack web systems and turn ambiguous AI behavior into evidence teams can act on.</p>
+  <p class="lede">I turn ambiguous problems into testable requirements and delivered software.</p>
 
   <p>I am Founder / Full Stack Web Developer / AI Evaluation &amp; Governance at NoFuckery AI.
-  My work includes the released Read Shruti website, Stinger's coding-agent evaluation tools,
-  and a Rust contribution to Tokio. At NoFuckery AI, I own scope, architecture, evaluation design, evidence
-  review, correction decisions, and release judgment.</p>
+  I identify the expertise a problem needs, direct implementation and separate review, and make
+  acceptance and release decisions from reproducible evidence. My work includes the released Read
+  Shruti website, Stinger's coding-agent evaluation tools, and a Rust contribution to Tokio.</p>
 
   <p class="pull">Build the system. Test the claim. Keep the evidence.</p>
 
@@ -90,14 +90,23 @@
 
   <article class="project" id="tokio">
     <h3><a href="https://github.com/tokio-rs/tokio/pull/8374">Tokio: conditional select! branches</a></h3>
-    <p class="tagline">A submitted Rust implementation with regression tests and upstream checks.</p>
+    <p class="tagline">A working Rust implementation for a five-year-old E-hard feature request, with feature code and tests unchanged since the first submission.</p>
 
-    <p>The change adds <code>#[cfg]</code> support to <code>select!</code> branches and removes
-    disabled branches before generated storage and scheduling. My work covers prior-art analysis,
-    the design contract, implementation direction, regression requirements, and evidence review.</p>
+    <p><strong>Delivered a working Rust implementation for Tokio's five-year-old feature request,
+    rated E-hard.</strong> Identified why earlier approaches skewed randomized selection and broke
+    existing <code>select!</code> syntax, then filtered disabled branches before generating storage
+    and polling logic. The feature code and tests remained unchanged from the initial submission
+    through subsequent maintainer questions. Directed a controlled 450-invocation compiler study
+    across Rust 1.88 and 1.98: zero unexpected results, including a 64-branch boundary case;
+    upstream CI passed.</p>
+
+    <p><strong>Current upstream status:</strong> PR #8374 is open, unmerged, and waiting for review.
+    Status rechecked October 1, 2026.</p>
 
     <p class="links">
       <a href="https://github.com/tokio-rs/tokio/pull/8374/files">Implementation and tests</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374/commits/47d147d75a588a7f840a13d4ec9c1f80d66562db">Initial feature commit</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-5720020670">Compiler study follow-up</a>
       <a href="https://github.com/tokio-rs/tokio/pull/8374">Pull request and checks</a>
       <a href="https://github.com/tokio-rs/tokio/issues/3974">Original problem</a>
     </p>
@@ -128,21 +137,21 @@
   <p>The contribution is the operating discipline that makes delivery inspectable:</p>
 
   <dl class="method">
-    <dt>A written definition</dt>
-    <dd>Every project begins with written requirements, acceptance criteria, scope boundaries, and
-    the evidence required for release.</dd>
+    <dt>Problem definition</dt>
+    <dd>I turn the objective, hidden assumptions, constraints, and failure modes into written
+    requirements, acceptance criteria, and a clear definition of done.</dd>
+
+    <dt>Expertise and execution</dt>
+    <dd>I identify the expertise the problem needs, direct implementation against the written
+    contract, and require separate review where a distinct challenge matters.</dd>
 
     <dt>Mechanical verification</dt>
-    <dd>Acceptance criteria connect the required behavior to tests, logs, and retained artifacts.
-    Review follows the complete requested workflow and its failure paths.</dd>
+    <dd>I connect required behavior to tests, logs, and retained artifacts, then inspect both the
+    intended workflow and the paths that can produce a false pass.</dd>
 
     <dt>Evidence-backed release</dt>
-    <dd>Implementation status distinguishes completed behavior from planned work. Release
-    decisions link to the underlying record, including failures and corrections.</dd>
-
-    <dt>Clean-room provenance</dt>
-    <dd>Documented rules about what may enter the codebase and from where, so the origin of every
-    component is answerable rather than assumed.</dd>
+    <dd>I distinguish completed behavior from planned work and make proceed, correct, hold, or stop
+    decisions from the underlying record, including failures and corrections.</dd>
   </dl>
 </section>
 
@@ -158,14 +167,14 @@
 <section class="cta" aria-labelledby="contact-h">
   <h2 id="contact-h">Get in touch</h2>
   <p><a class="big" href="mailto:cmcnosky@gmail.com">cmcnosky@gmail.com</a></p>
-  <p class="quiet">Available for scoped, fixed-price engagements and full-time roles in full-stack
-  web development, AI evaluation, agent reliability, and technical program management.</p>
+  <p class="quiet">Available for scoped, fixed-price engagements and full-time roles in technical
+  project delivery, software quality, full-stack web development, AI evaluation, and agent reliability.</p>
 
   <div class="forward">
     <p class="forward-label">Forwarding this to someone? Here's the sentence:</p>
-    <p class="forward-text">Chris is a Full Stack Web Developer and AI evaluation/governance
-    founder who delivers systems with checkable evidence, including the released Read Shruti author
-    website and Stinger's inspectable agent-integrity evaluations.</p>
+    <p class="forward-text">Chris turns ambiguous technical problems into testable requirements,
+    directs the needed implementation and separate review, and makes acceptance decisions from
+    reproducible evidence.</p>
   </div>
 </section>
 
