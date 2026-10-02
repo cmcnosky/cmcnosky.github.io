@@ -91,6 +91,17 @@
             </article>
 
             <article class="caseCard caseCardFeatured">
+              <p class="caseTag">Merged upstream Go contribution · Grafana</p>
+              <h3>Delivered a Grafana ShortURL compatibility fix that was approved and merged.</h3>
+              <p>The compatibility endpoint had treated Kubernetes namespace names such as <code>default</code> and <code>org-5</code> as numeric Grafana organization IDs, producing malformed response URLs. The malformed link could send a recipient to the wrong organization and cause the short-URL lookup to fail. I directed a fix that uses the active numeric organization ID from the authenticated request for non-Cloud response URLs, omits <code>orgId</code> for Grafana Cloud, and preserves configured application subpaths.</p>
+
+              <p><strong>Result:</strong> merged into Grafana <code>main</code> as commit <code>6a03817</code>. Five handler-level regression cases cover default, named, and conflicting namespaces; Cloud with populated and absent request organization IDs; and an <code>AppURL</code> configured with an application subpath.</p>
+              <a href="https://github.com/grafana/grafana/pull/131070" target="_blank" rel="noreferrer">Inspect the merged pull request and checks <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/grafana/grafana/commit/6a038175eb0b75a8f25338748af3742c60dbc6d8" target="_blank" rel="noreferrer">Inspect the merge commit <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/grafana/grafana/issues/130873" target="_blank" rel="noreferrer">Inspect the original problem <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <article class="caseCard caseCardFeatured">
               <p class="caseTag">Full-stack web development</p>
               <h3>Co-created and released Read Shruti, a full-stack author website.</h3>
               <p>My full-stack web development work includes co-creating and releasing Read Shruti, an author website built with Next.js/React, TypeScript, Cloudflare Workers, and D1. The project includes three book pages and retailer links, search metadata, backend API routes, and aggregate page-view and retailer-click analytics.</p>

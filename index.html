@@ -27,7 +27,8 @@
   <p>I am Founder / Full Stack Web Developer / AI Evaluation &amp; Governance at NoFuckery AI.
   I identify the expertise a problem needs, direct implementation and separate review, and make
   acceptance and release decisions from reproducible evidence. My work includes the released Read
-  Shruti website, Stinger's coding-agent evaluation tools, and a Rust contribution to Tokio.</p>
+  Shruti website, Stinger's coding-agent evaluation tools, a Rust contribution to Tokio, and a
+  merged Grafana compatibility fix.</p>
 
   <p class="pull">Build the system. Test the claim. Keep the evidence.</p>
 
@@ -109,6 +110,27 @@
       <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-5720020670">Compiler study follow-up</a>
       <a href="https://github.com/tokio-rs/tokio/pull/8374">Pull request and checks</a>
       <a href="https://github.com/tokio-rs/tokio/issues/3974">Original problem</a>
+    </p>
+  </article>
+
+  <article class="project" id="grafana">
+    <h3><a href="https://github.com/grafana/grafana/pull/131070">Grafana: ShortURL compatibility fix</a></h3>
+    <p class="tagline">A merged backend fix for correctly formed, organization-aware ShortURL response links.</p>
+
+    <p>The compatibility endpoint had treated Kubernetes namespace names such as <code>default</code>
+    and <code>org-5</code> as numeric Grafana organization IDs. I directed a fix that uses the
+    active numeric organization ID from the authenticated request for non-Cloud response URLs,
+    omits <code>orgId</code> for Grafana Cloud, and preserves configured application subpaths.</p>
+
+    <p><strong>Result:</strong> merged into Grafana <code>main</code> as commit <code>6a03817</code>.
+    Five handler-level regression cases cover default, named, and conflicting namespaces; Cloud
+    with populated and absent request organization IDs; and an <code>AppURL</code> configured with
+    an application subpath.</p>
+
+    <p class="links">
+      <a href="https://github.com/grafana/grafana/pull/131070">Merged pull request and checks</a>
+      <a href="https://github.com/grafana/grafana/commit/6a038175eb0b75a8f25338748af3742c60dbc6d8">Merge commit</a>
+      <a href="https://github.com/grafana/grafana/issues/130873">Original problem</a>
     </p>
   </article>
 

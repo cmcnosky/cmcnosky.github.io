@@ -11,6 +11,7 @@ source code, tests, and evidence records.
 - **Read Shruti:** a released author website built with Next.js, TypeScript, Cloudflare Workers, and D1.
 - **Stinger:** a Python CLI and reusable GitHub Actions workflow for coding-agent integrity evaluation.
 - **Tokio contribution:** a working implementation for a five-year-old E-hard feature request; its feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. The pull request is open and unmerged.
+- **Grafana contribution:** a merged ShortURL compatibility fix that uses the authenticated organization ID for non-Cloud response links, omits `orgId` in Grafana Cloud, and preserves configured application subpaths.
 - **WASP 2.0:** Rust/Python trading-system research with documented order-safety and readiness controls.
 
 ## Local preview
