@@ -36,9 +36,12 @@ and image alternative text. Review the rendered pages as well.
 | Path | Purpose |
 |---|---|
 | `index.html`, `style.css` | Main portfolio and its styles |
-| `why-hire/` | Career profile, résumé download, social-preview image, and downloadable contribution case studies |
+| `why-hire/` | Career profile, three-page résumé with contribution evidence, and social-preview image |
 | `nofuckery/` | Technical evidence briefs, methods, corrections, and supporting assets |
 | `scripts/check_site.py` | Static page-integrity checks |
+
+The three legacy contribution-PDF paths remain byte-identical aliases of the
+current résumé so previously shared links continue to open the same document.
 
 GitHub Pages publishes the root of `main`. After a change, verify the Pages build
 and the rendered live page.
