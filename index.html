@@ -28,7 +28,7 @@
   I identify the expertise a problem needs, direct implementation and separate review, and make
   acceptance and release decisions from reproducible evidence. My work includes the released Read
   Shruti website, Stinger's coding-agent evaluation tools, a merged Grafana compatibility fix, and
-  a difficult Rust contribution to Tokio whose reviewer now says the approach probably works.</p>
+  a difficult Rust contribution to Tokio whose maintainer now says the approach probably works.</p>
 
   <p class="pull">Build the system. Test the claim. Keep the evidence.</p>
 
@@ -95,14 +95,14 @@
     <p class="tagline">A working Rust implementation for a five-year-old E-hard feature request, with feature code and tests unchanged since the first submission.</p>
 
     <p><strong>Delivered a working Rust implementation for Tokio's five-year-old feature request,
-    rated E-hard.</strong> Identified why earlier approaches skewed randomized selection and broke
-    existing <code>select!</code> syntax, then filtered disabled branches before generating storage
+    labeled E-hard.</strong> Analyzed the documented fairness and parsing failures in earlier attempts,
+    then filtered cfg-disabled branches during normalization before generating storage
     and polling logic. The feature code and tests remained unchanged from the initial submission
     through subsequent maintainer questions. Directed a controlled 450-invocation compiler study
     across Rust 1.88 and 1.98: zero unexpected results, including a 64-branch boundary case;
     upstream CI passed.</p>
 
-    <p><strong>Current upstream status:</strong> on October 13, reviewer Darksonn wrote,
+    <p><strong>Current upstream status:</strong> on October 13, maintainer Darksonn wrote,
     “I've determined your approach probably works. I'll review this once v1.54.0 is out.”
     PR #8374 remains open, unmerged, and waiting for review.</p>
 
@@ -110,7 +110,7 @@
       <a href="https://github.com/tokio-rs/tokio/pull/8374/files">Implementation and tests</a>
       <a href="https://github.com/tokio-rs/tokio/pull/8374/commits/47d147d75a588a7f840a13d4ec9c1f80d66562db">Initial feature commit</a>
       <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-5720020670">Compiler study follow-up</a>
-      <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">October 13 reviewer response</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">October 13 maintainer response</a>
       <a href="https://github.com/tokio-rs/tokio/pull/8374">Pull request and checks</a>
       <a href="https://github.com/tokio-rs/tokio/issues/3974">Original problem</a>
     </p>

@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_HOST = "cmcnosky.github.io"
 PRIMARY_RESUME_NAME = "Chris McNosky Resume.pdf"
 PRIMARY_RESUME = ROOT / "why-hire" / PRIMARY_RESUME_NAME
 RESUME_ALIASES = (
@@ -61,12 +62,21 @@ class Document(HTMLParser):
 
 def local_target(page: Path, href: str) -> Path | None:
     parsed = urlparse(href)
-    if parsed.scheme or parsed.netloc or href.startswith(("mailto:", "data:", "#")):
+    if parsed.scheme and parsed.scheme not in {"http", "https"}:
+        return None
+    if parsed.netloc and parsed.hostname != SITE_HOST:
+        return None
+    if href.startswith("#"):
         return None
     raw = unquote(parsed.path)
     if not raw:
-        return None
-    target = (page.parent / raw).resolve()
+        if not parsed.netloc:
+            return None
+        raw = "/"
+    if parsed.netloc or raw.startswith("/"):
+        target = (ROOT / raw.lstrip("/")).resolve()
+    else:
+        target = (page.parent / raw).resolve()
     if raw.endswith("/"):
         target /= "index.html"
     return target
@@ -121,6 +131,9 @@ def main() -> int:
                 if target_page == page and parsed.fragment not in seen_ids:
                     errors.append(f"{rel}: missing local anchor #{parsed.fragment}")
             target = local_target(page, href)
+            if target is not None and not target.is_relative_to(ROOT):
+                errors.append(f"{rel}: local link escapes site root: {href}")
+                continue
             if target is not None and not target.exists():
                 errors.append(f"{rel}: broken local link {href} -> {target.relative_to(ROOT)}")
         for href, has_download, download_name in parser.anchors:

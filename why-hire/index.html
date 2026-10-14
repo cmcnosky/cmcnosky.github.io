@@ -6,7 +6,7 @@
   <title>Chris McNosky | Technical Project Delivery &amp; Software Quality</title>
   <meta name="description" content="Technical project delivery and software quality through inspectable requirements, implementation, testing, and review. Explore Chris McNosky's merged Grafana repair and Tokio contribution.">
   <meta property="og:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
-  <meta property="og:description" content="A merged Grafana repair and a difficult Tokio implementation whose approach the reviewer says probably works.">
+  <meta property="og:description" content="A merged Grafana repair and a difficult Tokio implementation whose approach the maintainer says probably works.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmcnosky.github.io/why-hire/">
   <meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png">
@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="Chris McNosky: technical project delivery and software quality, with inspectable Grafana and Tokio contributions.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
-  <meta name="twitter:description" content="A merged Grafana repair and a difficult Tokio implementation with a positive preliminary reviewer assessment.">
+  <meta name="twitter:description" content="A merged Grafana repair and a difficult Tokio implementation with a positive preliminary maintainer assessment.">
   <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png">
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
@@ -41,7 +41,7 @@
       <h1 id="hero-heading">Find the problem.<br><em>Verify the repair.</em></h1>
       <div class="heroBottom">
         <div>
-          <p class="heroCopy">I turn ambiguous problems into testable requirements, delivered software, and evidence-backed decisions. My open-source work includes a Grafana repair approved and merged upstream and a Tokio implementation whose reviewer now says the approach probably works.</p>
+          <p class="heroCopy">I turn ambiguous problems into testable requirements, delivered software, and evidence-backed decisions. My open-source work includes a Grafana repair approved and merged upstream and a Tokio implementation whose maintainer now says the approach probably works.</p>
           <p class="location">Dallas–Fort Worth, Texas · Open to local or remote full-time roles</p>
         </div>
         <div class="heroActions">
@@ -76,7 +76,7 @@
           </div>
           <div>
             <h4>The regression coverage</h4>
-            <p>Five handler-level cases cover default, named, and conflicting namespaces; Cloud with and without an organization ID; and a configured subpath.</p>
+            <p>Five handler cases cover default, matching, and conflicting namespaces, plus Cloud with and without an organization ID. The matching-namespace case also checks a configured subpath.</p>
           </div>
         </div>
         <div class="evidenceLinks">
@@ -95,7 +95,7 @@
         <p class="featureLead">Tokio issue #3974 had been open since 2021 and was marked E-hard. The submitted implementation removes disabled branches before generating storage and polling logic, preserving dense branch indices and randomized scheduling behavior. Its feature code and tests have remained unchanged since the first submission; upstream CI passed.</p>
         <blockquote cite="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">
           <p>“I've determined your approach probably works. I'll review this once v1.54.0 is out.”</p>
-          <cite>— Darksonn · October 13, 2026</cite>
+          <cite>— Darksonn · Tokio maintainer · October 13, 2026</cite>
         </blockquote>
         <div class="repairGrid">
           <div>
@@ -108,12 +108,12 @@
           </div>
           <div>
             <h4>The current status</h4>
-            <p>The pull request remains open and unmerged. The reviewer has given a positive preliminary assessment and plans to review it after Tokio v1.54.0.</p>
+            <p>The pull request remains open and unmerged. The maintainer has given a positive preliminary assessment and plans to review it after Tokio v1.54.0.</p>
           </div>
         </div>
         <div class="evidenceLinks">
           <a href="https://github.com/tokio-rs/tokio/pull/8374">Inspect the pull request and checks <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">Read the reviewer response <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">Read the maintainer response <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/tokio-rs/tokio/issues/3974">Original E-hard issue <span aria-hidden="true">↗</span></a>
         </div>
       </article>
@@ -176,7 +176,7 @@
           <p class="status review">Open · Positive preliminary assessment</p>
           <h3>Tokio: conditional <code>select!</code> branches</h3>
           <p>Submitted Rust changes that remove conditionally disabled branches before state and polling generation. Integration and compile tests cover fairness, grammar compatibility, macro hygiene, and the 64-branch boundary.</p>
-          <p class="small muted">On October 13, the reviewer said the approach probably works and plans to review it after Tokio v1.54.0. PR #8374 remains open and unmerged.</p>
+          <p class="small muted">On October 13, the maintainer said the approach probably works and plans to review it after Tokio v1.54.0. PR #8374 remains open and unmerged.</p>
           <a class="textLink" href="https://github.com/tokio-rs/tokio/pull/8374">Review the proposal and tests <span aria-hidden="true">↗</span></a>
         </article>
         <article class="project">
