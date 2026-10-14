@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chris McNosky | Software Quality &amp; Business Systems Support</title>
-  <meta name="description" content="Software testing, defect analysis, and business systems support. Explore Chris McNosky's merged Grafana repair, regression-testing work, and five-division Lennar experience.">
-  <meta property="og:title" content="Chris McNosky | Software Quality &amp; Business Systems Support">
-  <meta property="og:description" content="A merged Grafana repair. Five Go regression cases. Hands-on business systems troubleshooting across five Lennar divisions.">
+  <title>Chris McNosky | Technical Project Delivery &amp; Software Quality</title>
+  <meta name="description" content="Technical project delivery and software quality through inspectable requirements, implementation, testing, and review. Explore Chris McNosky's merged Grafana repair and Tokio contribution.">
+  <meta property="og:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
+  <meta property="og:description" content="A merged Grafana repair and a difficult Tokio implementation whose approach the reviewer says probably works.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmcnosky.github.io/why-hire/">
   <meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
-  <meta property="og:image:alt" content="Chris McNosky: Software quality, defect analysis, and business systems support. Grafana contribution merged September 25, 2026.">
+  <meta property="og:image:alt" content="Chris McNosky: technical project delivery and software quality, with inspectable Grafana and Tokio contributions.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chris McNosky | Software Quality &amp; Business Systems Support">
-  <meta name="twitter:description" content="A merged Grafana repair, regression-testing evidence, and practical business systems experience.">
+  <meta name="twitter:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
+  <meta name="twitter:description" content="A merged Grafana repair and a difficult Tokio implementation with a positive preliminary reviewer assessment.">
   <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png">
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
@@ -28,6 +28,7 @@
     <a class="wordmark" href="#top">Chris McNosky<span aria-hidden="true"> /</span></a>
     <nav aria-label="Primary navigation">
       <a href="#proof">Evidence</a>
+      <a href="#case-studies">Case studies</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Résumé</a>
@@ -37,15 +38,15 @@
 
   <main id="main" class="wrap" tabindex="-1">
     <section class="hero" aria-labelledby="hero-heading">
-      <p class="eyebrow">Software quality · Defect analysis · Business systems support</p>
+      <p class="eyebrow">Technical project delivery · Software quality · Business systems support</p>
       <h1 id="hero-heading">Find the problem.<br><em>Verify the repair.</em></h1>
       <div class="heroBottom">
         <div>
-          <p class="heroCopy">I investigate defects, turn requirements into checks, and follow the evidence through correction. My work connects an accepted Grafana contribution with practical experience troubleshooting business systems across five Lennar divisions.</p>
+          <p class="heroCopy">I turn ambiguous problems into testable requirements, delivered software, and evidence-backed decisions. My open-source work includes a Grafana repair approved and merged upstream and a Tokio implementation whose reviewer now says the approach probably works.</p>
           <p class="location">Dallas–Fort Worth, Texas · Open to local or remote full-time roles</p>
         </div>
         <div class="heroActions">
-          <a class="button buttonPrimary" href="#proof">See the merged Grafana fix <span aria-hidden="true">↓</span></a>
+          <a class="button buttonPrimary" href="#proof">See the upstream evidence <span aria-hidden="true">↓</span></a>
           <a class="button" href="./chris-mcnosky-resume.pdf" download>Download résumé <span class="buttonMeta">PDF · 1 page</span></a>
           <a class="textLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">Discuss a role <span aria-hidden="true">↗</span></a>
         </div>
@@ -54,16 +55,17 @@
 
     <section class="section" id="proof" aria-labelledby="proof-heading">
       <div class="sectionHead">
-        <p class="eyebrow">01 / Accepted upstream</p>
-        <h2 id="proof-heading">A repair reviewed and merged by Grafana.</h2>
+        <p class="eyebrow">01 / Upstream evidence</p>
+        <h2 id="proof-heading">One merged repair. One difficult implementation moving toward review.</h2>
       </div>
+      <div class="featureStack">
       <article class="feature">
         <div class="featureHeader">
           <span class="status merged">Merged · September 25, 2026</span>
           <span class="technicalMeta">Go / ShortURL API / PR #131070</span>
         </div>
         <h3>Restore valid organization links in the short-URL API.</h3>
-        <p class="featureLead">The compatibility endpoint used a resource namespace where it needed a numeric organization ID, producing malformed response links. I contributed an AI-assisted repair with five Go regression cases. Grafana approved and merged the pull request.</p>
+        <p class="featureLead">The compatibility endpoint used a resource namespace where it needed a numeric organization ID, producing malformed response links. I contributed the repair and five Go regression cases. Grafana approved and merged the pull request.</p>
         <div class="repairGrid">
           <div>
             <h4>The defect</h4>
@@ -82,36 +84,96 @@
           <a href="https://github.com/grafana/grafana/pull/131070">Inspect the merged pull request <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/grafana/grafana/issues/130873">Original issue <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/grafana/grafana/commit/6a038175eb0b75a8f25338748af3742c60dbc6d8">Merge commit <span aria-hidden="true">↗</span></a>
+          <a href="./assets/Chris-McNosky-Grafana-Contribution.pdf">One-page Grafana case study <span aria-hidden="true">↓</span></a>
         </div>
       </article>
+
+      <article class="feature featureReview">
+        <div class="featureHeader">
+          <span class="status review">Open · Review pending</span>
+          <span class="technicalMeta">Rust / Tokio macro / PR #8374</span>
+        </div>
+        <h3>Support cfg-gated <code>select!</code> branches without breaking fairness or existing syntax.</h3>
+        <p class="featureLead">Tokio issue #3974 had been open since 2021 and was marked E-hard. The submitted implementation removes disabled branches before generating storage and polling logic, preserving dense branch indices and randomized scheduling behavior. Its feature code and tests have remained unchanged since the first submission; upstream CI passed.</p>
+        <blockquote cite="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">
+          <p>“I've determined your approach probably works. I'll review this once v1.54.0 is out.”</p>
+          <cite>— Darksonn · October 13, 2026</cite>
+        </blockquote>
+        <div class="repairGrid">
+          <div>
+            <h4>The hard part</h4>
+            <p>Earlier approaches either distorted randomized selection by counting disabled branches or broke supported <code>select!</code> grammar and macro behavior.</p>
+          </div>
+          <div>
+            <h4>The verification</h4>
+            <p>Regression coverage and a controlled 450-invocation compiler study found no unexpected results across Rust 1.88 and 1.98, including the 64-branch boundary.</p>
+          </div>
+          <div>
+            <h4>The current status</h4>
+            <p>The pull request remains open and unmerged. The reviewer has given a positive preliminary assessment and plans to review it after Tokio v1.54.0.</p>
+          </div>
+        </div>
+        <div class="evidenceLinks">
+          <a href="https://github.com/tokio-rs/tokio/pull/8374">Inspect the pull request and checks <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">Read the reviewer response <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/issues/3974">Original E-hard issue <span aria-hidden="true">↗</span></a>
+          <a href="./assets/Chris-McNosky-Tokio-Contribution.pdf">One-page Tokio case study <span aria-hidden="true">↓</span></a>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="case-studies" aria-labelledby="case-studies-heading">
+      <div class="sectionHead">
+        <p class="eyebrow">02 / Downloadable case studies</p>
+        <h2 id="case-studies-heading">Evidence briefs for a hiring conversation.</h2>
+      </div>
+      <div class="downloadGrid">
+        <article class="downloadCard downloadCardFeatured">
+          <p class="status">Optional résumé supplement · PDF · 2 pages</p>
+          <h3>Selected upstream contributions</h3>
+          <p>Grafana first, then Tokio: the merged repair, the difficult implementation, the tests, and the current review status in one compact document.</p>
+          <a class="button buttonPrimary" href="./assets/Chris-McNosky-Selected-Contributions.pdf" download>Download the combined supplement <span aria-hidden="true">↓</span></a>
+        </article>
+        <article class="downloadCard">
+          <p class="status merged">Merged upstream · PDF · 1 page</p>
+          <h3>Grafana contribution</h3>
+          <p>The defect, correction, five regression cases, approval, and merge evidence.</p>
+          <a class="textLink" href="./assets/Chris-McNosky-Grafana-Contribution.pdf">View or download <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="downloadCard">
+          <p class="status review">Open · Review pending · PDF · 1 page</p>
+          <h3>Tokio contribution</h3>
+          <p>The E-hard feature request, unchanged first-submission implementation, verification, and the October 13 reviewer assessment.</p>
+          <a class="textLink" href="./assets/Chris-McNosky-Tokio-Contribution.pdf">View or download <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="experience" aria-labelledby="experience-heading">
       <div class="sectionHead">
-        <p class="eyebrow">02 / Paid experience</p>
+        <p class="eyebrow">03 / Paid experience</p>
         <h2 id="experience-heading">Systems support with an operational foundation.</h2>
       </div>
       <div class="experienceGrid">
         <article class="job primaryJob">
-          <div class="jobTitle"><h3>Lennar</h3><p class="date">May 2018 – November 2022</p></div>
-          <p class="role">Purchasing Assistant</p>
-          <p class="small muted">Initially hired as a Design Assistant; later handled purchasing coordination duties.</p>
-          <p>I served as a regional point of contact for five divisions, coordinating purchasing questions and record corrections with divisional, regional purchasing, and BuildPro teams.</p>
+          <div class="jobTitle"><h3>Lennar</h3><p class="date">May 2018 – October 2022</p></div>
+          <p class="role">Purchasing Coordinator</p>
+          <p>I coordinated purchasing work in production homebuilding, reconciling cost and documentation discrepancies across bids, contracts, budgets, and vendor records before field execution.</p>
           <ul>
-            <li>Resolved home-start errors and guided staff in JD Edwards, Citrix, and BuildPro.</li>
-            <li>Maintained vendor assignments, pricing, cost and trade codes, and take-offs.</li>
-            <li>Reviewed community budgets and cost variables, created price contracts, and supported purchase-order revisions.</li>
+            <li>Coordinated vendors, trades, and internal stakeholders against construction deadlines.</li>
+            <li>Balanced cost, quality, documentation, and compliance requirements across concurrent work.</li>
           </ul>
         </article>
         <div class="experienceAside">
           <article class="job">
-            <div class="jobTitle"><h3>High Pie</h3><p class="date">2022–2026</p></div>
-            <p class="role">Sole Operator</p>
+            <div class="jobTitle"><h3>High Pie</h3><p class="date">October 2022 – present</p></div>
+            <p class="role">Founder / Sole Operator</p>
             <p>Investigated supplier and fulfillment discrepancies using order records. Managed purchasing, inventory, pricing, documentation, and customer issues.</p>
           </article>
           <div class="education">
             <p class="eyebrow">Education</p>
-            <p><strong>University of North Texas</strong><br>B.A. in Sociology · Economics minor</p>
+            <p><strong>University of North Texas</strong><br>B.A., Sociology, Economics, and History</p>
           </div>
         </div>
       </div>
@@ -119,21 +181,22 @@
 
     <section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="sectionHead">
-        <p class="eyebrow">03 / Selected technical work</p>
+        <p class="eyebrow">04 / Selected technical work</p>
         <h2 id="projects-heading">More work you can inspect.</h2>
       </div>
       <div class="projectGrid">
         <article class="project">
-          <p class="status">Open · Unmerged contribution</p>
+          <p class="status review">Open · Positive preliminary assessment</p>
           <h3>Tokio: conditional <code>select!</code> branches</h3>
           <p>Submitted Rust changes that remove conditionally disabled branches before state and polling generation. Integration and compile tests cover fairness, grammar compatibility, macro hygiene, and the 64-branch boundary.</p>
-          <p class="small muted">PR #8374 remains open and unmerged. Status checked October 13, 2026.</p>
+          <p class="small muted">On October 13, the reviewer said the approach probably works and plans to review it after Tokio v1.54.0. PR #8374 remains open and unmerged.</p>
           <a class="textLink" href="https://github.com/tokio-rs/tokio/pull/8374">Review the proposal and tests <span aria-hidden="true">↗</span></a>
+          <a class="textLink" href="./assets/Chris-McNosky-Tokio-Contribution.pdf">Read the case study <span aria-hidden="true">↗</span></a>
         </article>
         <article class="project">
           <p class="status">Personal project · Regression testing</p>
           <h3>Stinger: test the evaluator, too</h3>
-          <p>Directed AI-assisted development of a coding-agent evaluation framework with predefined criteria, reproducible reports, and integrity checks. A refusal-classification repair preserves captured messages and tests them against completion-claim negative controls.</p>
+          <p>Directed development of a coding-agent evaluation framework with predefined criteria, reproducible reports, and integrity checks. A refusal-classification repair preserves captured messages and tests them against completion-claim negative controls.</p>
           <p class="small muted">PR #2 is a correction in my own project, with the evidence retained for review.</p>
           <a class="textLink" href="https://github.com/cmcnosky/stinger/pull/2">Inspect the repair and regressions <span aria-hidden="true">↗</span></a>
           <a class="textLink" href="../nofuckery/evidence/stinger-c04/">Read the case record <span aria-hidden="true">↗</span></a>
@@ -156,7 +219,7 @@
 
     <section class="section" id="work" aria-labelledby="work-heading">
       <div class="sectionHead">
-        <p class="eyebrow">04 / What I bring to a team</p>
+        <p class="eyebrow">05 / What I bring to a team</p>
         <h2 id="work-heading">Clear requirements. Careful checks. Useful follow-through.</h2>
       </div>
       <div class="capabilityGrid">
@@ -165,27 +228,28 @@
         <article><span class="index" aria-hidden="true">03</span><h3>Evidence review</h3><p>Check completion claims against diffs, tests, logs, and source records. Turn a finding into a clear correction and a way to verify it.</p></article>
       </div>
       <div class="method" id="fit">
-        <div><p class="eyebrow">How I work with AI</p><p>I use AI coding agents for implementation. My role is to define the problem and acceptance criteria, direct the work, review evidence, and decide what needs correction. The linked contributions show the resulting code, tests, and review history.</p></div>
+        <div><p class="eyebrow">How I direct technical work</p><p>I define the problem and acceptance criteria, identify the expertise needed, direct implementation and separate review, inspect the evidence, and decide what needs correction. The linked contributions show the resulting code, tests, and review history.</p></div>
         <div><p class="eyebrow">A useful interview conversation</p><p>Bring a short, hypothetical or already-resolved defect. I can walk through the expected behavior, the evidence I would seek, and the regression checks I would use to assess a repair.</p></div>
       </div>
     </section>
 
     <section class="resume section" id="resume" aria-labelledby="resume-heading">
       <div>
-        <p class="eyebrow">05 / Résumé</p>
-        <h2 id="resume-heading">Software Testing<br>and Defect Analysis</h2>
-        <p class="muted">Current software-quality résumé · October 2026<br>PDF · 1 page · 76 KB</p>
+        <p class="eyebrow">06 / Résumé</p>
+        <h2 id="resume-heading">Technical Project Delivery<br>and Software Quality</h2>
+        <p class="muted">Current general résumé · October 2026<br>PDF · 1 page</p>
       </div>
       <div class="resumeActions">
         <a class="button buttonPrimary" href="./chris-mcnosky-resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
         <a class="textLink" href="./chris-mcnosky-resume.pdf">View the PDF in your browser <span aria-hidden="true">↗</span></a>
+        <a class="textLink" href="./assets/Chris-McNosky-Selected-Contributions.pdf">Download the optional two-page evidence supplement <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-heading">
       <p class="eyebrow">Let's talk</p>
       <h2 id="contact-heading">Have a role where this work fits?</h2>
-      <p>I'm interested in software quality, defect analysis, and technical or business systems support. Send the role and the problems your team needs help solving.</p>
+      <p>I'm interested in technical project delivery, software quality, defect analysis, and technical or business systems support. Send the role and the problems your team needs help solving.</p>
       <a class="emailLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">cmcnosky@gmail.com <span aria-hidden="true">↗</span></a>
       <nav class="socialLinks" aria-label="Profiles and contact">
         <a href="https://www.linkedin.com/in/chris-mcnosky/">LinkedIn</a>

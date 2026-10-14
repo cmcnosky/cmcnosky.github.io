@@ -53,18 +53,32 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .section { padding: 4.25rem 0; border-top: 1px solid var(--rule); }
 .sectionHead { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2.5rem; }
 .sectionHead > .eyebrow { padding-top: .5rem; }
+.featureStack { display: grid; gap: 1.6rem; }
 .feature { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--green); padding: 2.3rem; }
+.featureReview { border-top-color: var(--accent); }
 .featureHeader { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem 2rem; align-items: center; margin-bottom: 1.5rem; }
 .status { color: var(--muted); font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; line-height: 1.6; }
 .merged { color: var(--green); }
 .merged::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--green); border-radius: 50%; margin-right: .6rem; }
+.review { color: var(--accent); }
+.review::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--accent); border-radius: 50%; margin-right: .6rem; }
 .technicalMeta { color: var(--muted); font: .73rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
 .feature h3 { font-size: clamp(1.7rem, 3vw, 2.35rem); max-width: 29ch; }
 .featureLead { margin-top: 1.1rem; max-width: 85ch; color: var(--muted); }
+.feature blockquote { margin: 1.8rem 0 0; padding: 1.25rem 1.4rem; border-left: 3px solid var(--accent); background: var(--paper); }
+.feature blockquote p { color: var(--ink); font: 1.25rem/1.45 var(--serif); }
+.feature blockquote cite { display: block; margin-top: .65rem; color: var(--muted); font: normal .78rem/1.5 var(--sans); }
 .repairGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; border-top: 1px solid var(--rule); padding-top: 1.8rem; margin-top: 2rem; }
 .repairGrid p { color: var(--muted); font-size: .9rem; }
 .evidenceLinks { display: flex; gap: .5rem 2rem; flex-wrap: wrap; margin-top: 1.75rem; }
 .evidenceLinks a { font-size: .85rem; display: inline-flex; align-items: center; min-height: 44px; gap: .5rem; }
+.downloadGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+.downloadCard { padding: 1.6rem; border: 1px solid var(--rule); background: var(--panel); }
+.downloadCardFeatured { grid-column: 1 / -1; border-top: 3px solid var(--accent); }
+.downloadCard h3 { margin: .75rem 0 .8rem; }
+.downloadCard > p:not(.status) { max-width: 70ch; color: var(--muted); }
+.downloadCard .button { margin-top: 1.35rem; }
+.downloadCard .textLink { margin-top: .75rem; }
 .experienceGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; }
 .jobTitle { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .35rem 1rem; align-items: baseline; }
 .jobTitle h3 { font-size: 1.85rem; }
@@ -119,7 +133,8 @@ footer a { padding-bottom: .5rem; }
   .siteHeader nav a { font-size: .8rem; }
   .hero { padding: 2.75rem 0 3rem; }
   .hero > .eyebrow { font-size: .68rem; max-width: 38ch; }
-  .heroBottom, .repairGrid, .experienceGrid, .projectGrid, .capabilityGrid, .method { grid-template-columns: 1fr; }
+  .heroBottom, .repairGrid, .downloadGrid, .experienceGrid, .projectGrid, .capabilityGrid, .method { grid-template-columns: 1fr; }
+  .downloadCardFeatured { grid-column: auto; }
   .heroBottom { margin-top: 1.5rem; gap: 1.5rem; }
   .heroCopy { font-size: 1rem; }
   .section { padding-block: 3rem; }
@@ -153,5 +168,5 @@ footer a { padding-bottom: .5rem; }
   h2 { font-size: 22pt; }
   .heroBottom, .sectionHead { display: block; }
   .sectionHead > .eyebrow { margin-bottom: .5rem; }
-  .feature, .project, .job, .education, .method > div { break-inside: avoid; }
+  .feature, .downloadCard, .project, .job, .education, .method > div { break-inside: avoid; }
 }

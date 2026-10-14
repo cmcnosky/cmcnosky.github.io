@@ -10,7 +10,7 @@ source code, tests, and evidence records.
 
 - **Read Shruti:** a released author website built with Next.js, TypeScript, Cloudflare Workers, and D1.
 - **Stinger:** a Python CLI and reusable GitHub Actions workflow for coding-agent integrity evaluation.
-- **Tokio contribution:** a working implementation for a five-year-old E-hard feature request; its feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. The pull request is open and unmerged.
+- **Tokio contribution:** a working implementation for a five-year-old E-hard feature request; its feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. On October 13, 2026, the reviewer said the approach probably works and plans to review it after Tokio v1.54.0. The pull request remains open and unmerged.
 - **Grafana contribution:** a merged ShortURL compatibility fix that uses the authenticated organization ID for non-Cloud response links, omits `orgId` in Grafana Cloud, and preserves configured application subpaths.
 - **WASP 2.0:** Rust/Python trading-system research with documented order-safety and readiness controls.
 
@@ -36,7 +36,7 @@ and image alternative text. Review the rendered pages as well.
 | Path | Purpose |
 |---|---|
 | `index.html`, `style.css` | Main portfolio and its styles |
-| `why-hire/` | Career profile, résumé download, and social-preview image |
+| `why-hire/` | Career profile, résumé download, social-preview image, and downloadable contribution case studies |
 | `nofuckery/` | Technical evidence briefs, methods, corrections, and supporting assets |
 | `scripts/check_site.py` | Static page-integrity checks |
 
