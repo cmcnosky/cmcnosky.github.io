@@ -29,7 +29,8 @@ python3 scripts/check_site.py
 ```
 
 The check inspects HTML titles, language attributes, duplicate IDs, local links,
-and image alternative text. Review the rendered pages as well.
+image alternative text, résumé-link naming, and byte-identical résumé aliases.
+Review the rendered pages as well.
 
 ## Repository map
 
@@ -40,8 +41,9 @@ and image alternative text. Review the rendered pages as well.
 | `nofuckery/` | Technical evidence briefs, methods, corrections, and supporting assets |
 | `scripts/check_site.py` | Static page-integrity checks |
 
-The three legacy contribution-PDF paths remain byte-identical aliases of the
-current résumé so previously shared links continue to open the same document.
+The former lowercase résumé path and three legacy contribution-PDF paths remain
+byte-identical aliases of `why-hire/Chris McNosky Resume.pdf` so previously
+shared links continue to open the same current document.
 
 GitHub Pages publishes the root of `main`. After a change, verify the Pages build
 and the rendered live page.

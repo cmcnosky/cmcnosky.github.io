@@ -3,18 +3,28 @@
 
 from __future__ import annotations
 
+import hashlib
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+PRIMARY_RESUME_NAME = "Chris McNosky Resume.pdf"
+PRIMARY_RESUME = ROOT / "why-hire" / PRIMARY_RESUME_NAME
+RESUME_ALIASES = (
+    ROOT / "why-hire" / "chris-mcnosky-resume.pdf",
+    ROOT / "why-hire" / "assets" / "Chris-McNosky-Grafana-Contribution.pdf",
+    ROOT / "why-hire" / "assets" / "Chris-McNosky-Selected-Contributions.pdf",
+    ROOT / "why-hire" / "assets" / "Chris-McNosky-Tokio-Contribution.pdf",
+)
 
 
 class Document(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.links: list[str] = []
+        self.anchors: list[tuple[str, bool, str | None]] = []
         self.images: list[tuple[str, str | None]] = []
         self.ids: list[str] = []
         self.lang: str | None = None
@@ -31,7 +41,9 @@ class Document(HTMLParser):
         if tag == "title":
             self._in_title = True
         if tag == "a" and values.get("href"):
-            self.links.append(values["href"])
+            href = values["href"]
+            self.links.append(href)
+            self.anchors.append((href, "download" in values, values.get("download")))
         if tag == "link" and values.get("href"):
             self.links.append(values["href"])
         if tag == "img":
@@ -62,6 +74,22 @@ def local_target(page: Path, href: str) -> Path | None:
 
 def main() -> int:
     errors: list[str] = []
+    resume_files = (PRIMARY_RESUME, *RESUME_ALIASES)
+    resume_hashes: dict[Path, str] = {}
+    for resume_file in resume_files:
+        if not resume_file.is_file():
+            errors.append(f"missing résumé file: {resume_file.relative_to(ROOT)}")
+            continue
+        resume_hashes[resume_file] = hashlib.sha256(resume_file.read_bytes()).hexdigest()
+    if PRIMARY_RESUME in resume_hashes:
+        primary_hash = resume_hashes[PRIMARY_RESUME]
+        for alias in RESUME_ALIASES:
+            if alias in resume_hashes and resume_hashes[alias] != primary_hash:
+                errors.append(
+                    f"résumé alias differs from primary: {alias.relative_to(ROOT)}"
+                )
+
+    primary_resume_links = 0
     pages = sorted(ROOT.rglob("*.html"))
     for page in pages:
         parser = Document()
@@ -95,6 +123,21 @@ def main() -> int:
             target = local_target(page, href)
             if target is not None and not target.exists():
                 errors.append(f"{rel}: broken local link {href} -> {target.relative_to(ROOT)}")
+        for href, has_download, download_name in parser.anchors:
+            target = local_target(page, href)
+            if target in RESUME_ALIASES:
+                errors.append(
+                    f"{rel}: active résumé link must use {PRIMARY_RESUME_NAME}: {href}"
+                )
+            if target == PRIMARY_RESUME:
+                primary_resume_links += 1
+                if has_download and download_name != PRIMARY_RESUME_NAME:
+                    errors.append(
+                        f"{rel}: résumé download filename must be {PRIMARY_RESUME_NAME}"
+                    )
+
+    if primary_resume_links == 0:
+        errors.append(f"no active link to primary résumé: why-hire/{PRIMARY_RESUME_NAME}")
 
     logo = ROOT / "nofuckery/assets/nofuckery-ai-logo.png"
     if not logo.is_file():
