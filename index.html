@@ -28,7 +28,7 @@
   I identify the expertise a problem needs, direct implementation and separate review, and make
   acceptance and release decisions from reproducible evidence. My work includes the released Read
   Shruti website, Stinger's coding-agent evaluation tools, a merged Grafana compatibility fix, and
-  a difficult Rust contribution to Tokio whose maintainer now says the approach probably works.</p>
+  a Rust feature approved and merged into Tokio, the asynchronous runtime.</p>
 
   <p class="pull">Build the system. Test the claim. Keep the evidence.</p>
 
@@ -92,27 +92,31 @@
 
   <article class="project" id="tokio">
     <h3><a href="https://github.com/tokio-rs/tokio/pull/8374">Tokio: conditional select! branches</a></h3>
-    <p class="tagline">A working Rust implementation for a five-year-old E-hard feature request, with feature code and tests unchanged since the first submission.</p>
+    <p class="tagline">Approved and merged into Tokio on October 21, 2026, resolving an E-hard feature request opened in 2021.</p>
 
-    <p><strong>Delivered a working Rust implementation for Tokio's five-year-old feature request,
-    labeled E-hard.</strong> Analyzed the documented fairness and parsing failures in earlier attempts,
-    then filtered cfg-disabled branches during normalization before generating storage
-    and polling logic. The feature code and tests remained unchanged from the initial submission
-    through subsequent maintainer questions. Directed a controlled 450-invocation compiler study
-    across Rust 1.88 and 1.98: zero unexpected results, including a 64-branch boundary case;
-    upstream CI passed.</p>
+    <p><strong>I led AI-assisted delivery of conditional <code>select!</code> branches for Tokio,
+    an open-source Rust asynchronous runtime.</strong> I defined acceptance criteria, directed
+    implementation and testing, and investigated prior fairness and parsing failures.
+    The change removes cfg-disabled branches before generating storage, branch indices, and
+    polling logic, preserving randomized selection and existing syntax.</p>
 
-    <p><strong>Current upstream status:</strong> on October 13, maintainer Darksonn wrote,
-    “I've determined your approach probably works. I'll review this once v1.54.0 is out.”
-    PR #8374 remains open, unmerged, and waiting for review.</p>
+    <p>Regression coverage checks caller features, macro hygiene, preconditions, <code>biased;</code>,
+    <code>else</code>, all-disabled behavior, and the 64-branch boundary. I answered a review concern
+    about exponential expansion with measured probes on Rust 1.88 and 1.98. The 10- and 64-branch
+    cases each produced one final select body; these bounded measurements do not establish zero
+    compile-time overhead. Upstream CI passed.</p>
+
+    <p><strong>Upstream result:</strong> maintainer Darksonn approved PR #8374, which merged as
+    <code>de7a96a</code> on October 21, 2026. The linked record shows the implementation,
+    tests, reviewer questions, and evidence leading to acceptance.</p>
 
     <p class="links">
       <a href="https://github.com/tokio-rs/tokio/pull/8374/files">Implementation and tests</a>
-      <a href="https://github.com/tokio-rs/tokio/pull/8374/commits/47d147d75a588a7f840a13d4ec9c1f80d66562db">Initial feature commit</a>
-      <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-5720020670">Compiler study follow-up</a>
-      <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">October 13 maintainer response</a>
-      <a href="https://github.com/tokio-rs/tokio/pull/8374">Pull request and checks</a>
-      <a href="https://github.com/tokio-rs/tokio/issues/3974">Original problem</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374#discussion_r3984177192">Expansion measurements</a>
+      <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">Maintainer approval</a>
+      <a href="https://github.com/tokio-rs/tokio/commit/de7a96abd86bd85159ce1161823e7589edb8367c">Merge commit</a>
+      <a href="https://github.com/tokio-rs/tokio/actions/runs/35606728369">Passing CI</a>
+      <a href="https://github.com/tokio-rs/tokio/issues/3974">Original E-hard request</a>
     </p>
   </article>
 

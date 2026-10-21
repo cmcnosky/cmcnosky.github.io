@@ -10,7 +10,7 @@ source code, tests, and evidence records.
 
 - **Read Shruti:** a released author website built with Next.js, TypeScript, Cloudflare Workers, and D1.
 - **Stinger:** a Python CLI and reusable GitHub Actions workflow for coding-agent integrity evaluation.
-- **Tokio contribution:** a working implementation for a five-year-old E-hard feature request; its feature code and tests remained unchanged from the initial submission through subsequent maintainer questions. On October 13, 2026, the maintainer said the approach probably works and plans to review it after Tokio v1.54.0. The pull request remains open and unmerged.
+- **Tokio contribution:** an AI-assisted Rust feature approved and merged upstream on October 21, 2026, resolving a five-year-old E-hard request. Conditional `select!` branches are filtered before storage and polling generation, with regression coverage and measured responses to maintainer review. [PR #8374](https://github.com/tokio-rs/tokio/pull/8374) records the implementation, tests, approval, and merge.
 - **Grafana contribution:** a merged ShortURL compatibility fix that uses the authenticated organization ID for non-Cloud response links, omits `orgId` in Grafana Cloud, and preserves configured application subpaths.
 - **WASP 2.0:** Rust/Python trading-system research with documented order-safety and readiness controls.
 

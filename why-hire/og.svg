@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
   <title id="title">Chris McNosky — Technical project delivery and software quality</title>
-  <desc id="desc">Find the problem. Verify the repair. Grafana contribution merged and Tokio approach assessed positively by the reviewer.</desc>
+  <desc id="desc">Find the problem. Verify the repair. Tokio and Grafana contributions approved and merged upstream.</desc>
   <rect width="1280" height="640" fill="#202422"/>
   <text x="80" y="93" fill="#f1eee6" font-family="Georgia, serif" font-size="30">Chris McNosky</text>
   <line x1="80" y1="128" x2="1200" y2="128" stroke="#606a60"/>
@@ -11,6 +11,6 @@
   <circle cx="87" cy="487" r="6" fill="#bed7b6"/>
   <text x="110" y="495" fill="#bed7b6" font-family="Arial, sans-serif" font-size="22">Grafana contribution approved and merged · September 25, 2026</text>
   <circle cx="87" cy="531" r="6" fill="#e6b891"/>
-  <text x="110" y="539" fill="#e6b891" font-family="Arial, sans-serif" font-size="22">Tokio reviewer: “approach probably works” · October 13, 2026</text>
+  <text x="110" y="539" fill="#e6b891" font-family="Arial, sans-serif" font-size="22">Tokio contribution approved and merged · October 21, 2026</text>
   <text x="80" y="597" fill="#c4c8bf" font-family="Arial, sans-serif" font-size="20">cmcnosky.github.io/why-hire</text>
 </svg>

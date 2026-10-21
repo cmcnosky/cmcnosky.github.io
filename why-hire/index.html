@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chris McNosky | Technical Project Delivery &amp; Software Quality</title>
-  <meta name="description" content="Technical project delivery and software quality through inspectable requirements, implementation, testing, and review. Explore Chris McNosky's merged Grafana repair and Tokio contribution.">
+  <meta name="description" content="Technical project delivery and software quality through inspectable requirements, implementation, testing, and review. Explore Chris McNosky's merged contributions to Tokio in Rust and Grafana in Go.">
   <meta property="og:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
-  <meta property="og:description" content="A merged Grafana repair and a difficult Tokio implementation whose approach the maintainer says probably works.">
+  <meta property="og:description" content="Merged upstream contributions to Tokio in Rust and Grafana in Go, with implementation, tests, and maintainer review.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmcnosky.github.io/why-hire/">
-  <meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png">
+  <meta property="og:image" content="https://cmcnosky.github.io/why-hire/og.png?v=20261021">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
   <meta property="og:image:alt" content="Chris McNosky: technical project delivery and software quality, with inspectable Grafana and Tokio contributions.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chris McNosky | Technical Project Delivery &amp; Software Quality">
-  <meta name="twitter:description" content="A merged Grafana repair and a difficult Tokio implementation with a positive preliminary maintainer assessment.">
-  <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png">
+  <meta name="twitter:description" content="Merged upstream contributions to Tokio in Rust and Grafana in Go, with implementation, tests, and maintainer review.">
+  <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png?v=20261021">
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23e6b891%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
@@ -41,7 +41,7 @@
       <h1 id="hero-heading">Find the problem.<br><em>Verify the repair.</em></h1>
       <div class="heroBottom">
         <div>
-          <p class="heroCopy">I turn ambiguous problems into testable requirements, delivered software, and evidence-backed decisions. My open-source work includes a Grafana repair approved and merged upstream and a Tokio implementation whose maintainer now says the approach probably works.</p>
+          <p class="heroCopy">I turn ambiguous problems into testable requirements, delivered software, and evidence-backed decisions. My open-source contributions to Tokio in Rust and Grafana in Go have both been approved and merged upstream.</p>
           <p class="location">Dallas–Fort Worth, Texas · Open to local or remote full-time roles</p>
         </div>
         <div class="heroActions">
@@ -55,9 +55,43 @@
     <section class="section" id="proof" aria-labelledby="proof-heading">
       <div class="sectionHead">
         <p class="eyebrow">01 / Upstream evidence</p>
-        <h2 id="proof-heading">One merged repair. One difficult implementation moving toward review.</h2>
+        <h2 id="proof-heading">Two contributions, approved and merged upstream.</h2>
       </div>
       <div class="featureStack">
+      <article class="feature" id="tokio-contribution">
+        <div class="featureHeader">
+          <span class="status merged">Merged · October 21, 2026</span>
+          <span class="technicalMeta">Rust / Tokio async runtime / PR #8374</span>
+        </div>
+        <h3>Support cfg-gated <code>select!</code> branches without breaking fairness or existing syntax.</h3>
+        <p class="featureLead">I led AI-assisted delivery of a Rust feature that Tokio approved and merged upstream, resolving an E-hard request open since July 2021. The change lets developers conditionally compile individual <code>select!</code> branches for different features and platforms.</p>
+        <p class="featureLead"><a href="https://tokio.rs/">Tokio is an asynchronous runtime</a> for Rust, used to build network applications. <a href="https://rust-lang.org/">Rust combines performance with memory-safety guarantees</a>. This contribution required careful recursive macro parsing, conditional compilation, and preservation of async branch-selection behavior.</p>
+        <p class="featureLead">I framed the problem and acceptance criteria, directed implementation and testing with AI coding agents, investigated earlier attempts and reviewer objections, and presented reproducible evidence for maintainer review.</p>
+        <div class="repairGrid">
+          <div>
+            <h4>The correction</h4>
+            <p>Remove cfg-disabled branches during normalization, before storage, numbering, masks, polling, and dispatch. Enabled branch indices stay dense, preserving randomized selection. Disabled code need not resolve or type-check, while still requiring valid syntax.</p>
+          </div>
+          <div>
+            <h4>The regression coverage</h4>
+            <p>Integration and downstream compile tests cover fairness, grammar compatibility, caller features, macro hygiene, preconditions, <code>biased;</code>, <code>else</code>, all-disabled behavior, and the 64-branch boundary. Upstream CI passed.</p>
+          </div>
+          <div>
+            <h4>The review</h4>
+            <p>Answered a concern about exponential macro expansion with measured 10- and 64-branch probes on two Rust versions and an exponential control. Each cfg probe produced one final select body. The measurements do not establish zero compile-time overhead.</p>
+          </div>
+        </div>
+        <p class="featureLead">Maintainer Darksonn approved the PR on October 21, 2026, and it merged as <code>de7a96a</code>. The result is upstream acceptance of the implementation, tests, and documentation.</p>
+        <div class="evidenceLinks">
+          <a href="https://github.com/tokio-rs/tokio/pull/8374">Merged pull request <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">Maintainer approval <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/commit/de7a96abd86bd85159ce1161823e7589edb8367c">Merge commit <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/pull/8374#discussion_r3984177192">Expansion measurements <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/actions/runs/35606728369">Passing CI <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/tokio-rs/tokio/issues/3974">Original E-hard issue <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
       <article class="feature">
         <div class="featureHeader">
           <span class="status merged">Merged · September 25, 2026</span>
@@ -86,37 +120,7 @@
         </div>
       </article>
 
-      <article class="feature featureReview">
-        <div class="featureHeader">
-          <span class="status review">Open · Review pending</span>
-          <span class="technicalMeta">Rust / Tokio macro / PR #8374</span>
-        </div>
-        <h3>Support cfg-gated <code>select!</code> branches without breaking fairness or existing syntax.</h3>
-        <p class="featureLead">Tokio issue #3974 had been open since 2021 and was marked E-hard. The submitted implementation removes disabled branches before generating storage and polling logic, preserving dense branch indices and randomized scheduling behavior. Its feature code and tests have remained unchanged since the first submission; upstream CI passed.</p>
-        <blockquote cite="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">
-          <p>“I've determined your approach probably works. I'll review this once v1.54.0 is out.”</p>
-          <cite>— Darksonn · Tokio maintainer · October 13, 2026</cite>
-        </blockquote>
-        <div class="repairGrid">
-          <div>
-            <h4>The hard part</h4>
-            <p>Earlier approaches either distorted randomized selection by counting disabled branches or broke supported <code>select!</code> grammar and macro behavior.</p>
-          </div>
-          <div>
-            <h4>The verification</h4>
-            <p>Regression coverage and a controlled 450-invocation compiler study found no unexpected results across Rust 1.88 and 1.98, including the 64-branch boundary.</p>
-          </div>
-          <div>
-            <h4>The current status</h4>
-            <p>The pull request remains open and unmerged. The maintainer has given a positive preliminary assessment and plans to review it after Tokio v1.54.0.</p>
-          </div>
-        </div>
-        <div class="evidenceLinks">
-          <a href="https://github.com/tokio-rs/tokio/pull/8374">Inspect the pull request and checks <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/tokio-rs/tokio/pull/8374#issuecomment-6140481706">Read the maintainer response <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/tokio-rs/tokio/issues/3974">Original E-hard issue <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+
       </div>
     </section>
 
@@ -128,9 +132,9 @@
       </div>
       <div class="downloadGrid">
         <article class="downloadCard downloadCardFeatured">
-          <p class="status">Current general résumé · October 2026 · PDF · 3 pages</p>
+          <p class="status">Current general résumé · October 21, 2026 · PDF · 3 pages</p>
           <h3>Résumé and selected upstream contributions</h3>
-          <p>Page one presents the résumé. Pages two and three document the merged Grafana repair and the open Tokio contribution, including the tests and current review status.</p>
+          <p>Page one presents the résumé. Pages two and three document the merged Grafana and Tokio contributions, including implementation, tests, and maintainer review.</p>
           <a class="button buttonPrimary" href="./Chris%20McNosky%20Resume.pdf" download="Chris McNosky Resume.pdf">Download the complete résumé <span aria-hidden="true">↓</span></a>
           <a class="textLink" href="./Chris%20McNosky%20Resume.pdf">View the PDF in your browser <span aria-hidden="true">↗</span></a>
         </article>
@@ -173,11 +177,11 @@
       </div>
       <div class="projectGrid">
         <article class="project">
-          <p class="status review">Open · Positive preliminary assessment</p>
+          <p class="status merged">Merged upstream · October 21, 2026</p>
           <h3>Tokio: conditional <code>select!</code> branches</h3>
-          <p>Submitted Rust changes that remove conditionally disabled branches before state and polling generation. Integration and compile tests cover fairness, grammar compatibility, macro hygiene, and the 64-branch boundary.</p>
-          <p class="small muted">On October 13, the maintainer said the approach probably works and plans to review it after Tokio v1.54.0. PR #8374 remains open and unmerged.</p>
-          <a class="textLink" href="https://github.com/tokio-rs/tokio/pull/8374">Review the proposal and tests <span aria-hidden="true">↗</span></a>
+          <p>Led AI-assisted delivery of Rust changes that remove conditionally disabled branches before state and polling generation. Integration and compile tests cover fairness, grammar compatibility, macro hygiene, and the 64-branch boundary.</p>
+          <p class="small muted">PR #8374 received maintainer approval and merged into Tokio on October 21, closing the feature request opened in July 2021.</p>
+          <a class="textLink" href="https://github.com/tokio-rs/tokio/pull/8374">Inspect the merged feature and tests <span aria-hidden="true">↗</span></a>
         </article>
         <article class="project">
           <p class="status">Personal project · Regression testing</p>
