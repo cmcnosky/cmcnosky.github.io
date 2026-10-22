@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-labelledby="title desc">
+  <title id="title">Chris McNosky Resume</title>
+  <desc id="desc">Technical project delivery and software quality. Three-page resume with experience, skills, and contribution case studies.</desc>
+  <rect width="1200" height="627" fill="#202422"/>
+  <path d="M88 72V548" stroke="#87bc8b" stroke-width="4" stroke-linecap="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-style="normal">
+    <text x="132" y="103" fill="#87bc8b" font-size="24" font-weight="700" letter-spacing="2.7">CAREER PROFILE</text>
+    <text x="1112" y="103" fill="#c4c8bf" font-size="24" font-weight="700" text-anchor="end">CHRIS MCNOSKY</text>
+    <text x="132" y="242" fill="#f1eee6" font-size="106" font-weight="750" letter-spacing="-3">Resume</text>
+    <text x="136" y="318" fill="#f1eee6" font-size="42" font-weight="500">Technical project delivery &amp; software quality</text>
+    <path d="M136 350H1088" stroke="#606a60" stroke-width="3"/>
+    <rect x="136" y="386" width="390" height="64" rx="8" fill="#87bc8b"/>
+    <text x="331" y="429" fill="#202422" font-size="31" font-weight="700" text-anchor="middle">THREE-PAGE RESUME</text>
+    <text x="136" y="514" fill="#c4c8bf" font-size="28" font-weight="500">Experience, skills &amp; contribution case studies</text>
+    <text x="136" y="562" fill="#f1eee6" font-size="30" font-weight="500">Chris McNosky Resume</text>
+  </g>
+</svg>

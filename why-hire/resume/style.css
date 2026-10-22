@@ -1,0 +1,140 @@
+/* Resume landing page additions. The shared Why Hire Me stylesheet supplies the base system. */
+
+.resumeLanding { padding-bottom: 4rem; }
+
+.resumeLandingHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 3rem;
+  align-items: end;
+  padding: 4.5rem 0 4rem;
+}
+
+.resumeLandingKicker {
+  color: var(--green);
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.resumeLanding h1 {
+  max-width: 12ch;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+}
+
+.resumeLandingSummary {
+  max-width: 46ch;
+  color: var(--muted);
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  margin-top: 1.5rem;
+}
+
+.resumeLandingActions {
+  display: grid;
+  gap: .8rem;
+}
+
+.documentSection {
+  border-top: 2px solid var(--rule);
+  padding-top: 2rem;
+}
+
+.documentToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding: 0 0 1rem;
+}
+
+.documentToolbar h2 {
+  max-width: none;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.documentToolbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: .9375rem;
+}
+
+.documentObject {
+  display: block;
+  width: 100%;
+  height: clamp(760px, 82vh, 1120px);
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+
+.documentFallback,
+.mobileDocumentFallback {
+  padding: 2rem;
+  background: var(--panel);
+  color: var(--muted);
+}
+
+.documentFallback .button,
+.documentFallback .textLink,
+.mobileDocumentFallback .button {
+  margin-top: 1rem;
+}
+
+.mobileDocumentFallback { display: none; }
+
+.resumeLandingFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--rule);
+  padding-block: 1.5rem 2rem;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+@media (max-width: 760px) {
+  .resumeLanding { padding-bottom: 2.5rem; }
+
+  .resumeLandingHero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .resumeLanding h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
+
+  .resumeLandingActions { width: 100%; }
+
+  .documentToolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .25rem;
+  }
+
+  .documentObject { display: none; }
+  .mobileDocumentFallback { display: block; }
+
+  .resumeLandingFooter {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+
+@media print {
+  .siteHeader,
+  .resumeLandingHero,
+  .documentToolbar,
+  .mobileDocumentFallback,
+  .resumeLandingFooter { display: none; }
+
+  .resumeLanding { padding: 0; }
+  .documentSection { border: 0; padding: 0; }
+  .documentObject { width: 100%; height: 100vh; border: 0; }
+}
