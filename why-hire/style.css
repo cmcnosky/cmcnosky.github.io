@@ -7,6 +7,7 @@
   --muted: #c4c8bf;
   --accent: #e6b891;
   --green: #bed7b6;
+  --proof-green: #87bc8b;
   --rule: #606a60;
   --serif: Baskerville, "Hoefler Text", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -17,8 +18,8 @@ body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.
 .wrap { width: calc(100% - 6rem); max-width: 1120px; margin-inline: auto; }
 h1, h2, h3, h4, p { margin: 0; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; }
-h1 { font-size: clamp(3.25rem, 7vw, 6rem); letter-spacing: -.035em; line-height: 1.05; }
-h1 em { color: var(--accent); font-weight: 400; }
+h1 { font-family: var(--sans); font-size: clamp(3.25rem, 7vw, 6rem); font-weight: 750; letter-spacing: -.035em; line-height: 1.05; }
+h1 em { color: var(--proof-green); font-style: normal; font-weight: inherit; }
 h2 { font-size: clamp(2rem, 3.8vw, 3.1rem); line-height: 1.15; letter-spacing: -.02em; max-width: 26ch; }
 h3 { font-size: 1.6rem; line-height: 1.25; }
 h4 { font-size: 1.0625rem; font-weight: 650; margin-bottom: .65rem; }
@@ -48,6 +49,9 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .button:hover { border-color: var(--accent); }
 .buttonPrimary { background: var(--accent); border-color: var(--accent); color: var(--paper); }
 .buttonPrimary:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.buttonEvidence { background: var(--proof-green); border-color: var(--proof-green); }
+.buttonEvidence:hover { background: var(--green); border-color: var(--green); }
+.buttonEvidence:focus-visible { outline-color: var(--proof-green); }
 .buttonMeta { font-size: .875rem; font-weight: 400; white-space: nowrap; }
 .textLink { display: inline-block; padding-block: .6rem; font-size: 1rem; }
 .heroActions > .textLink { align-self: flex-start; }
