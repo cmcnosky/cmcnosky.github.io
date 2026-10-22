@@ -70,7 +70,7 @@
           </div>
           <span class="technicalMeta">Rust / Tokio async runtime / PR #8374</span>
         </div>
-        <h3>Tokio: include operations based on app features or platform.</h3>
+        <h3>Tokio: resolved a five-year-old Rust feature request.</h3>
         <p class="featureLead">I led delivery of a Rust feature that Tokio approved and merged upstream, resolving an E-hard request open since July 2021. The change lets developers conditionally compile individual <code>select!</code> branches for different features and platforms.</p>
         <p class="featureLead"><a href="https://tokio.rs/">Tokio is an asynchronous runtime</a> for Rust, used to build network applications. <a href="https://rust-lang.org/">Rust combines performance with memory-safety guarantees</a>. This contribution required careful recursive macro parsing, conditional compilation, and preservation of async branch-selection behavior.</p>
         <p class="featureLead">I framed the problem and acceptance criteria, directed implementation and testing, investigated earlier attempts and reviewer objections, and presented reproducible evidence for maintainer review.</p>
@@ -111,7 +111,7 @@
           </div>
           <span class="technicalMeta">Go / ShortURL API / PR #131070</span>
         </div>
-        <h3>Grafana: make short links open in the correct organization.</h3>
+        <h3>Grafana: fixed broken short links and added regression tests.</h3>
         <p class="featureLead">The compatibility endpoint used a resource namespace where it needed a numeric organization ID, producing malformed response links. I contributed the repair and five Go regression cases. Grafana approved and merged the pull request.</p>
         <div class="repairGrid">
           <div>
@@ -192,7 +192,7 @@
       <div class="projectGrid">
         <article class="project">
           <p class="status merged">Merged upstream · October 21, 2026</p>
-          <h3>Tokio: include operations based on app features or platform</h3>
+          <h3>Tokio: resolved a five-year-old Rust feature request</h3>
           <p>Led delivery of Rust changes that remove conditionally disabled branches before state and polling generation. Integration and compile tests cover fairness, grammar compatibility, macro hygiene, and the 64-branch boundary.</p>
           <p class="small muted">PR #8374 received maintainer approval and merged into Tokio on October 21, closing the feature request opened in July 2021.</p>
           <a class="textLink" href="https://github.com/tokio-rs/tokio/pull/8374">Inspect the merged feature and tests <span aria-hidden="true">↗</span></a>
