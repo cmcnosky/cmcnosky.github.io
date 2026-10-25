@@ -19,8 +19,8 @@
   <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/og.png?v=20261022">
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23e6b891%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css?v=20261025-employer">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23f1eee6%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css?v=20261025-colors">
 </head>
 <body>
   <a class="skipLink" href="#main">Skip to content</a>
@@ -47,7 +47,7 @@
           <p class="location">Authorized to work in the U.S.; no sponsorship required.</p>
         </div>
         <div class="heroActions">
-          <a class="button buttonPrimary buttonEvidence" href="#proof">See the accepted contributions <span aria-hidden="true">↓</span></a>
+          <a class="button buttonPrimary" href="#proof">See the accepted contributions <span aria-hidden="true">↓</span></a>
           <a class="button" href="./Chris%20McNosky%20Resume.pdf" download="Chris McNosky Resume.pdf">Download résumé <span class="buttonMeta">PDF · 3 pages</span></a>
           <a class="textLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">Discuss a role <span aria-hidden="true">↗</span></a>
         </div>
@@ -64,6 +64,7 @@
         <article class="feature" id="tokio-contribution">
           <div class="featureHeader">
             <div class="contributionStatus">
+            <span class="statusLabel">Contribution status</span>
             <div class="mergeProgress" role="img" aria-label="Contribution status: submitted, then accepted into the project’s main codebase.">
               <span class="mergeProgressSubmitted" aria-hidden="true">Submitted</span>
               <span class="mergeProgressTrack" aria-hidden="true"><span class="mergeProgressThumb"><svg viewBox="0 0 16 16" fill="none"><path d="m4 8 2.5 2.5L12 5"/></svg></span></span>
@@ -95,7 +96,7 @@
             <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">See the maintainer’s approval <span aria-hidden="true">↗</span></a>
           </div>
           <details class="technicalDetails">
-            <summary>Technical details and test results</summary>
+            <summary><span>Explore technical details and test results</span></summary>
             <div class="detailsBody">
               <p>The <code>select!</code> macro accepts one branch-level <code>#[cfg(...)]</code> attribute. Excluded branches are removed during normalization, before storage, branch counts, masks, polling, and dispatch are generated. Enabled branch indices remain dense, preserving randomized selection. Excluded code need not resolve or type-check, but must still have valid syntax.</p>
               <p>Integration and downstream compile tests cover selection fairness, existing syntax, caller features, macro hygiene, preconditions, <code>biased;</code>, <code>else</code>, all-disabled behavior, and the 64-branch limit. These are regression tests: checks intended to catch a return of the problem or a break in existing behavior. The project’s automated checks passed.</p>
@@ -113,6 +114,7 @@
         <article class="feature" id="grafana-contribution">
           <div class="featureHeader">
             <div class="contributionStatus">
+            <span class="statusLabel">Contribution status</span>
             <div class="mergeProgress" role="img" aria-label="Contribution status: submitted, then accepted into the project’s main codebase.">
               <span class="mergeProgressSubmitted" aria-hidden="true">Submitted</span>
               <span class="mergeProgressTrack" aria-hidden="true"><span class="mergeProgressThumb"><svg viewBox="0 0 16 16" fill="none"><path d="m4 8 2.5 2.5L12 5"/></svg></span></span>
@@ -144,7 +146,7 @@
             <a href="https://github.com/grafana/grafana/issues/130873">Read the original problem <span aria-hidden="true">↗</span></a>
           </div>
           <details class="technicalDetails">
-            <summary>Technical details and test results</summary>
+            <summary><span>Explore technical details and test results</span></summary>
             <div class="detailsBody">
               <p>The compatibility API’s <code>POST /api/short-urls</code> response used a Kubernetes resource namespace, such as <code>default</code> or <code>org-5</code>, where the redirect logic required a numeric organization ID. The fix uses the authenticated request’s numeric ID outside Grafana Cloud, omits <code>orgId</code> in Cloud, and preserves configured application subpaths.</p>
               <p>Five Go handler test cases cover the default namespace, matching and conflicting organization namespaces, and Cloud with and without an organization ID. The matching-namespace case also checks a configured subpath.</p>
