@@ -58,6 +58,7 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .section { padding: 4.25rem 0; border-top: 2px solid var(--rule); }
 .sectionHead { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2.5rem; }
 .sectionHead > .eyebrow { padding-top: .5rem; }
+.sectionIntro { max-width: 76ch; margin: -1rem 0 2rem; color: var(--muted); }
 .featureStack { display: grid; gap: 1.6rem; }
 .feature { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--green); padding: 2.3rem; }
 .featureReview { border-top-color: var(--accent); }
@@ -83,6 +84,14 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .feature blockquote { max-width: 68ch; margin: 1.8rem 0 0; padding: 1.4rem 1.5rem; border-left: 3px solid var(--accent); background: var(--paper); }
 .feature blockquote p { color: var(--ink); font: 1.25rem/1.45 var(--serif); }
 .feature blockquote cite { display: block; margin-top: .85rem; color: var(--muted); font: normal .875rem/1.5 var(--sans); }
+.evaluationNote { margin-top: 1.5rem; max-width: 76ch; font-size: 1rem; color: var(--muted); }
+.evaluationNote strong { color: var(--ink); }
+.technicalDetails { border-top: 1px solid var(--rule); margin-top: 1.4rem; padding-top: .5rem; }
+.technicalDetails summary { cursor: pointer; padding-block: .8rem; font-size: 1rem; font-weight: 600; color: var(--green); }
+.technicalDetails summary:hover { color: var(--ink); }
+.technicalDetails summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.detailsBody { padding: .5rem 0 .25rem; max-width: 80ch; color: var(--muted); font-size: 1rem; }
+.detailsBody p + p { margin-top: 1rem; }
 .repairGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; border-top: 1px solid var(--rule); padding-top: 1.8rem; margin-top: 2rem; }
 .repairGrid > div { min-width: 0; }
 .repairGrid p { max-width: 65ch; color: var(--muted); font-size: 1.0625rem; }
@@ -95,7 +104,8 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .downloadCard > p:not(.status) { max-width: 65ch; color: var(--muted); }
 .downloadCard .button { margin-top: 1.35rem; }
 .downloadCard .textLink { margin-top: .75rem; }
-.experienceGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; }
+.experienceGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 3rem; }
+.experienceGrid .job { border-top: 1px solid var(--rule); padding-top: 1.25rem; }
 .jobTitle { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .35rem 1rem; align-items: baseline; }
 .jobTitle h3 { font-size: 1.85rem; }
 .date { font-size: .875rem; color: var(--muted); margin: 0; }
