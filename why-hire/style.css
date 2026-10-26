@@ -5,8 +5,8 @@
   --panel: #292f2b;
   --ink: #f1eee6;
   --muted: #c4c8bf;
-  /* Neutrals carry content; blue means action; green means accepted;
-     orange marks an earlier submission or a pending review. */
+  /* Neutrals carry content; blue means action; green means verified or accepted;
+     orange marks problem-finding, submission, or pending review. */
   --link: #8fceff;
   --link-hover: #c5e5ff;
   --link-surface: #263c48;
@@ -24,6 +24,8 @@ h1, h2, h3, h4, p { margin: 0; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; text-wrap: balance; }
 h1 { font-family: var(--sans); font-size: clamp(3.25rem, 7vw, 6rem); font-weight: 750; letter-spacing: -.035em; line-height: 1.05; }
 h1 em { color: var(--ink); font-style: normal; font-weight: inherit; }
+.hero h1 { color: var(--pending); }
+.hero h1 em { color: var(--success); }
 h2 { font-size: clamp(2rem, 3.8vw, 3.1rem); line-height: 1.15; letter-spacing: -.02em; max-width: 26ch; }
 h3 { font-size: 1.6rem; line-height: 1.25; }
 h4 { font-size: 1.0625rem; font-weight: 650; margin-bottom: .65rem; }
