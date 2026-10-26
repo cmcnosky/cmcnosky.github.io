@@ -13,6 +13,7 @@
   --success: #9ed5a3;
   --pending: #f3ab68;
   --heading-accent: var(--pending);
+  --education-maroon: #cf7289;
   --rule: #707a70;
   --serif: Baskerville, "Hoefler Text", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -126,6 +127,8 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .education .eyebrow { margin-bottom: .6rem; }
 .education p { font-size: 1.0625rem; }
 .education p.eyebrow { font-size: .875rem; }
+.educationUnt { color: var(--success); }
+.educationBrooklyn { color: var(--education-maroon); }
 .projectGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; }
 .project { border-top: 1px solid var(--rule); padding-top: 1.25rem; }
 .project h3 { margin: .7rem 0 1rem; }
@@ -195,7 +198,7 @@ footer a { padding-bottom: .5rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
-  :root { color-scheme: light; --paper: #fff; --panel: #fff; --ink: #111; --muted: #333; --link: #145784; --link-hover: #143f5c; --link-surface: #edf5fa; --success: #285520; --pending: #7b4313; --rule: #888; }
+  :root { color-scheme: light; --paper: #fff; --panel: #fff; --ink: #111; --muted: #333; --link: #145784; --link-hover: #143f5c; --link-surface: #edf5fa; --success: #285520; --pending: #7b4313; --education-maroon: #800020; --rule: #888; }
   .wrap { width: 100%; }
   body { font-size: 10pt; }
   .siteHeader nav, .heroActions, .resumeActions, .skipLink, footer > a { display: none; }
