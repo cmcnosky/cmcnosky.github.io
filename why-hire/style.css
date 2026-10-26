@@ -6,12 +6,13 @@
   --ink: #f1eee6;
   --muted: #c4c8bf;
   /* Neutrals carry content; blue means action; green means verified or accepted;
-     orange highlights project titles, problem-finding, and pending work. */
+     orange highlights headings, problem-finding, and pending work. */
   --link: #8fceff;
   --link-hover: #c5e5ff;
   --link-surface: #263c48;
   --success: #9ed5a3;
   --pending: #f3ab68;
+  --heading-accent: var(--pending);
   --rule: #707a70;
   --serif: Baskerville, "Hoefler Text", Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -28,6 +29,7 @@ h1 em { color: var(--ink); font-style: normal; font-weight: inherit; }
 .hero h1 em { color: var(--success); }
 h2 { font-size: clamp(2rem, 3.8vw, 3.1rem); line-height: 1.15; letter-spacing: -.02em; max-width: 26ch; }
 h3 { font-size: 1.6rem; line-height: 1.25; }
+h2, h3 { color: var(--heading-accent); }
 h4 { font-size: 1.0625rem; font-weight: 650; margin-bottom: .65rem; }
 p { text-wrap: pretty; }
 p + p { margin-top: 1.15rem; }
@@ -83,7 +85,6 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .review { color: var(--pending); }
 .review::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--pending); border-radius: 50%; margin-right: .6rem; }
 .technicalMeta { color: var(--muted); font: .875rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace; }
-#proof-heading, .feature h3, .project h3 { color: var(--pending); }
 .feature h3 { font-size: clamp(1.7rem, 3vw, 2.35rem); max-width: 29ch; }
 .featureLead { margin-top: 1.25rem; max-width: 68ch; color: var(--muted); }
 .feature blockquote { max-width: 68ch; margin: 1.8rem 0 0; padding: 1.4rem 1.5rem; border-left: 3px solid var(--rule); background: var(--paper); }
