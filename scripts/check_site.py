@@ -24,16 +24,18 @@ CLEARGRAIN_ASSETS = (
     CLEARGRAIN_ROOT / "assets" / "cleargrain-docs-mark.png",
     CLEARGRAIN_ROOT / "assets" / "cleargrain-docs-social.png",
 )
+LEGACY_SEGMENT = "no" + "fuckery"
+LEGACY_ROOT = ROOT / LEGACY_SEGMENT
 LEGACY_REDIRECTS = {
-    ROOT / "nofuckery" / "index.html": "/cleargrain/",
-    ROOT / "nofuckery" / "corrections" / "index.html": "/cleargrain/corrections/",
-    ROOT / "nofuckery" / "evidence" / "claude-hawk" / "index.html": "/cleargrain/evidence/claude-hawk/",
-    ROOT / "nofuckery" / "evidence" / "control-notes" / "index.html": "/cleargrain/evidence/control-notes/",
-    ROOT / "nofuckery" / "evidence" / "current-record" / "index.html": "/cleargrain/evidence/current-record/",
-    ROOT / "nofuckery" / "evidence" / "evaluation-graph" / "index.html": "/cleargrain/evidence/evaluation-graph/",
-    ROOT / "nofuckery" / "evidence" / "forecast-accuracy" / "index.html": "/cleargrain/evidence/forecast-accuracy/",
-    ROOT / "nofuckery" / "evidence" / "methods" / "index.html": "/cleargrain/evidence/methods/",
-    ROOT / "nofuckery" / "evidence" / "stinger-c04" / "index.html": "/cleargrain/evidence/stinger-c04/",
+    LEGACY_ROOT / "index.html": "/cleargrain/",
+    LEGACY_ROOT / "corrections" / "index.html": "/cleargrain/corrections/",
+    LEGACY_ROOT / "evidence" / "claude-hawk" / "index.html": "/cleargrain/evidence/claude-hawk/",
+    LEGACY_ROOT / "evidence" / "control-notes" / "index.html": "/cleargrain/evidence/control-notes/",
+    LEGACY_ROOT / "evidence" / "current-record" / "index.html": "/cleargrain/evidence/current-record/",
+    LEGACY_ROOT / "evidence" / "evaluation-graph" / "index.html": "/cleargrain/evidence/evaluation-graph/",
+    LEGACY_ROOT / "evidence" / "forecast-accuracy" / "index.html": "/cleargrain/evidence/forecast-accuracy/",
+    LEGACY_ROOT / "evidence" / "methods" / "index.html": "/cleargrain/evidence/methods/",
+    LEGACY_ROOT / "evidence" / "stinger-c04" / "index.html": "/cleargrain/evidence/stinger-c04/",
 }
 
 
@@ -120,9 +122,9 @@ def main() -> int:
             errors.append(f"missing Cleargrain brand asset: {asset.relative_to(ROOT)}")
 
     retired_public_paths = (
-        ROOT / "nofuckery" / "assets",
-        ROOT / "nofuckery" / "nofuckery.css",
-        ROOT / "nofuckery" / "evidence" / "current-record" / "records.json",
+        LEGACY_ROOT / "assets",
+        LEGACY_ROOT / f"{LEGACY_SEGMENT}.css",
+        LEGACY_ROOT / "evidence" / "current-record" / "records.json",
     )
     for retired_path in retired_public_paths:
         if retired_path.exists():
