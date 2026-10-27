@@ -206,6 +206,15 @@ dl.method dd {
   color: var(--muted);
 }
 
+.method-value {
+  margin-top: 1.8rem;
+  padding: 1.15rem 1.3rem 0.1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--mark);
+}
+.method-value p { max-width: 39rem; }
+
 /* ---------- call to action ---------- */
 
 .cta { margin-bottom: 4rem; }
@@ -255,5 +264,6 @@ footer p { margin: 0; }
   .hero { padding-top: 3rem; }
   .project { padding: 1.2rem 1.2rem 0.9rem; }
   .ask { padding: 1.2rem 1.2rem 0.8rem; }
+  .method-value { padding-inline: 1rem; }
   section { margin: 2.75rem 0; }
 }
