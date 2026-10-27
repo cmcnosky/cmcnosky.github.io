@@ -1,17 +1,13 @@
 [
   {
-    "id": "NF-009",
+    "id": "Evidence 009",
     "slug": "containment-answer-data",
     "label": "Case analysis",
     "title": "The execution reached answer data after the containment boundary failed",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/execution-reached-answer-data-after-containment-boundary-2kt6c/",
     "summary": "Once an evaluation path violates containment and reaches answer data, a pass cannot demonstrate clean completion under the intended conditions.",
-    "alt_text": "NoFuckery AI article cover, NF-009. Headline: The execution reached answer data after the containment boundary failed. Summary: Once an evaluation path violates containment and reaches answer data, a pass cannot demonstrate clean completion under the intended conditions.",
     "body": [
       "A benchmark result is only evidence if the execution stayed inside the conditions the benchmark claims to measure.",
       "FACT.",
@@ -32,21 +28,19 @@
     "sources": [
       "https://huggingface.co/blog/security-incident-july-2026",
       "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-010",
+    "id": "Evidence 010",
     "slug": "persistence-is-not-permission",
     "label": "Control note",
     "title": "Persistence is not permission",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/persistence-permission-nofuckery-ai-hnopc/",
     "summary": "Elapsed time, retries, and a weak boundary cannot expand the authority originally granted to an execution.",
-    "alt_text": "NoFuckery AI article cover, NF-010. Headline: Persistence is not permission. Summary: Elapsed time, retries, and a weak boundary cannot expand the authority originally granted to an execution.",
     "body": [
       "A system can continue attempting a task for hours. The grant of authority does not grow with elapsed time, retry count, or successful use of a weak boundary.",
       "FACT.",
@@ -66,21 +60,19 @@
     ],
     "sources": [
       "https://openai.com/index/safety-alignment-long-horizon-models/"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-011",
+    "id": "Evidence 011",
     "slug": "validate-the-evaluator",
     "label": "Evidence brief",
     "title": "Before you rank the agent, validate the evaluator",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/before-you-rank-agent-validate-evaluator-nofuckery-ai-jwpjc/",
     "summary": "A ranking cannot carry more evidentiary weight than the evaluator that produced it.",
-    "alt_text": "NoFuckery AI article cover, NF-011. Headline: Before you rank the agent, validate the evaluator. Summary: A ranking cannot carry more evidentiary weight than the evaluator that produced it.",
     "body": [
       "On July 8, OpenAI reported an audit of SWE-Bench Pro, a benchmark used to compare agentic coding performance.",
       "FACT.",
@@ -100,21 +92,19 @@
     ],
     "sources": [
       "https://openai.com/index/separating-signal-from-noise-coding-evaluations/"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-012",
+    "id": "Evidence 012",
     "slug": "approval-is-not-a-boolean",
     "label": "Control note",
     "title": "Human approval is not a boolean",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/human-approval-boolean-nofuckery-ai-fgwkc/",
     "summary": "Approval must bind the actor, tool, target, normalized parameters, timestamp, and expiry of the exact action.",
-    "alt_text": "NoFuckery AI article cover, NF-012. Headline: Human approval is not a boolean. Summary: Approval must bind the actor, tool, target, normalized parameters, timestamp, and expiry of the exact action.",
     "body": [
       "“Approved” is not enough information to authorize a consequential action.",
       "FACT.",
@@ -135,21 +125,19 @@
     "sources": [
       "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
       "https://github.com/OWASP/CheatSheetSeries/blob/9feea5a6b5afdeb3277ad5f49262a62f86e018fb/cheatsheets/AI_Agent_Security_Cheat_Sheet.md"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-013",
+    "id": "Evidence 013",
     "slug": "localhost-trust-boundary",
     "label": "Security control note",
     "title": "Localhost is not a trust boundary anymore",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/localhost-trust-boundary-anymore-nofuckery-ai-w9nmc/",
     "summary": "A browsing process can turn a loopback-only service into a route from untrusted content to privileged capability.",
-    "alt_text": "NoFuckery AI article cover, NF-013. Headline: Localhost is not a trust boundary anymore. Summary: A browsing process can turn a loopback-only service into a route from untrusted content to privileged capability.",
     "body": [
       "Microsoft’s AutoJack research shows why “it only listens on localhost” is not a complete security argument.",
       "FACT.",
@@ -168,21 +156,19 @@
     ],
     "sources": [
       "https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-014",
+    "id": "Evidence 014",
     "slug": "paper-compliant-capital-safe",
     "label": "Financial evidence note",
     "title": "Paper-compliant is not capital-safe",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/paper-compliant-capital-safe-nofuckery-ai-tui2c/",
     "summary": "Procedural compliance and polished portfolio language do not establish live profitability, execution realism, or capital safety.",
-    "alt_text": "NoFuckery AI article cover, NF-014. Headline: Paper-compliant is not capital-safe. Summary: Procedural compliance and polished portfolio language do not establish live profitability, execution realism, or capital safety.",
     "body": [
       "Rule compliance does not preserve capital under stress.",
       "FACT.",
@@ -203,21 +189,19 @@
     "sources": [
       "https://arxiv.org/html/2605.27887v2",
       "https://arxiv.org/abs/2606.08285"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   },
   {
-    "id": "NF-015",
+    "id": "Evidence 015",
     "slug": "score-needs-harness",
     "label": "Correction analysis",
     "title": "A benchmark score without its harness is not a result",
-    "editorial_state": "published",
+    "editorial_state": "archived",
     "approved_by": "Chris McNosky",
     "approved_on": "2026-07-26",
-    "linkedin_state": "published",
-    "linkedin_published_on": "2026-07-26",
-    "linkedin_url": "https://www.linkedin.com/pulse/benchmark-score-without-its-harness-result-nofuckery-ai-dhckc/",
     "summary": "A benchmark result belongs to its model, budget, scaffold, tools, grader, protocol, and correction record.",
-    "alt_text": "NoFuckery AI article cover, NF-015. Headline: A benchmark score without its harness is not a result. Summary: A benchmark result belongs to its model, budget, scaffold, tools, grader, protocol, and correction record.",
     "body": [
       "Anthropic’s Claude Sonnet 5 launch supplied a useful correction because it exposed how much of an agent score lives outside the model.",
       "FACT.",
@@ -239,6 +223,8 @@
     ],
     "sources": [
       "https://www.anthropic.com/news/claude-sonnet-5"
-    ]
+    ],
+    "original_publication_on": "2026-07-26",
+    "republished_on": "2026-10-27"
   }
 ]

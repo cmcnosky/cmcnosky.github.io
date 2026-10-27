@@ -38,7 +38,7 @@ Review the rendered pages as well.
 |---|---|
 | `index.html`, `style.css` | Main portfolio and its styles |
 | `why-hire/` | Career profile, three-page résumé with contribution evidence, and social-preview image |
-| `nofuckery/` | Technical evidence briefs, methods, corrections, and supporting assets |
+| `cleargrain/` | Cleargrain Docs technical evidence briefs, methods, corrections, and supporting assets |
 | `scripts/check_site.py` | Static page-integrity checks |
 
 The former lowercase résumé path and three legacy contribution-PDF paths remain
@@ -47,3 +47,6 @@ shared links continue to open the same current document.
 
 GitHub Pages publishes the root of `main`. After a change, verify the Pages build
 and the rendered live page.
+
+Previously shared evidence-page URLs remain as compatibility redirects to their
+equivalent Cleargrain Docs archive routes.
