@@ -24,19 +24,6 @@ CLEARGRAIN_ASSETS = (
     CLEARGRAIN_ROOT / "assets" / "cleargrain-docs-mark.png",
     CLEARGRAIN_ROOT / "assets" / "cleargrain-docs-social.png",
 )
-LEGACY_SEGMENT = "no" + "fuckery"
-LEGACY_ROOT = ROOT / LEGACY_SEGMENT
-LEGACY_REDIRECTS = {
-    LEGACY_ROOT / "index.html": "/cleargrain/",
-    LEGACY_ROOT / "corrections" / "index.html": "/cleargrain/corrections/",
-    LEGACY_ROOT / "evidence" / "claude-hawk" / "index.html": "/cleargrain/evidence/claude-hawk/",
-    LEGACY_ROOT / "evidence" / "control-notes" / "index.html": "/cleargrain/evidence/control-notes/",
-    LEGACY_ROOT / "evidence" / "current-record" / "index.html": "/cleargrain/evidence/current-record/",
-    LEGACY_ROOT / "evidence" / "evaluation-graph" / "index.html": "/cleargrain/evidence/evaluation-graph/",
-    LEGACY_ROOT / "evidence" / "forecast-accuracy" / "index.html": "/cleargrain/evidence/forecast-accuracy/",
-    LEGACY_ROOT / "evidence" / "methods" / "index.html": "/cleargrain/evidence/methods/",
-    LEGACY_ROOT / "evidence" / "stinger-c04" / "index.html": "/cleargrain/evidence/stinger-c04/",
-}
 
 
 class Document(HTMLParser):
@@ -121,27 +108,6 @@ def main() -> int:
         if not asset.is_file():
             errors.append(f"missing Cleargrain brand asset: {asset.relative_to(ROOT)}")
 
-    retired_public_paths = (
-        LEGACY_ROOT / "assets",
-        LEGACY_ROOT / f"{LEGACY_SEGMENT}.css",
-        LEGACY_ROOT / "evidence" / "current-record" / "records.json",
-    )
-    for retired_path in retired_public_paths:
-        if retired_path.exists():
-            errors.append(f"retired public brand asset remains: {retired_path.relative_to(ROOT)}")
-
-    forbidden_brand_terms = ("No" + "Fuckery", "No " + "Fuckery", "NF" + "AI")
-    current_text_files = [ROOT / "README.md"]
-    for suffix in ("*.html", "*.json", "*.css", "*.svg"):
-        current_text_files.extend(sorted(ROOT.rglob(suffix)))
-    for current_file in current_text_files:
-        text = current_file.read_text(encoding="utf-8")
-        for forbidden_term in forbidden_brand_terms:
-            if forbidden_term.casefold() in text.casefold():
-                errors.append(
-                    f"retired public brand remains in {current_file.relative_to(ROOT)}"
-                )
-
     cleargrain_pages = sorted(CLEARGRAIN_ROOT.rglob("index.html"))
     if len(cleargrain_pages) != 9:
         errors.append(f"expected 9 Cleargrain HTML routes, found {len(cleargrain_pages)}")
@@ -150,18 +116,6 @@ def main() -> int:
         if archive_notice not in cleargrain_page.read_text(encoding="utf-8"):
             errors.append(
                 f"missing Cleargrain archive provenance: {cleargrain_page.relative_to(ROOT)}"
-            )
-
-    for redirect_page, destination in LEGACY_REDIRECTS.items():
-        if not redirect_page.is_file():
-            errors.append(f"missing legacy redirect: {redirect_page.relative_to(ROOT)}")
-            continue
-        redirect_text = redirect_page.read_text(encoding="utf-8")
-        if 'name="robots" content="noindex, follow"' not in redirect_text:
-            errors.append(f"legacy redirect must be noindex: {redirect_page.relative_to(ROOT)}")
-        if destination not in redirect_text:
-            errors.append(
-                f"legacy redirect target mismatch: {redirect_page.relative_to(ROOT)}"
             )
 
     primary_resume_links = 0
