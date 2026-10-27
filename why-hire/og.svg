@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
   <title id="title">Chris McNosky — Why Hire Me</title>
-  <desc id="desc">Technical project delivery and software quality. Find the problem. Verify the repair. Grafana and Tokio contributions approved and merged.</desc>
+  <desc id="desc">Technical project delivery, software quality, and AI evaluation. Find the problem. Verify the repair. I make difficult, unfamiliar problems solvable—and carry the work through to a result that holds up. Work accepted by Tokio and Grafana.</desc>
   <rect width="1280" height="640" fill="#202422"/>
   <g font-family="Arial, Helvetica, sans-serif" font-style="normal">
-    <text x="80" y="92" fill="#8fceff" font-family="Georgia, serif" font-size="32" font-weight="400">Chris McNosky</text>
-    <path d="M80 128H1200" stroke="#707a70" stroke-width="2"/>
-    <text x="80" y="193" fill="#c4c8bf" font-size="26" font-weight="600">Technical project delivery · Software quality</text>
-    <text x="78" y="300" fill="#f3ab68" font-size="82" font-weight="750" letter-spacing="-2.5">Find the problem.</text>
-    <text x="78" y="392" fill="#9ed5a3" font-size="82" font-weight="750" letter-spacing="-2.5">Verify the repair.</text>
-    <path d="M80 445H1200" stroke="#707a70" stroke-width="2"/>
-    <circle cx="88" cy="488" r="7" fill="#9ed5a3"/>
-    <text x="112" y="497" fill="#c4c8bf" font-size="23" font-weight="500">Grafana contribution approved and merged · September 25, 2026</text>
-    <circle cx="88" cy="536" r="7" fill="#9ed5a3"/>
-    <text x="112" y="545" fill="#c4c8bf" font-size="23" font-weight="500">Tokio contribution approved and merged · October 21, 2026</text>
-    <text x="80" y="600" fill="#c4c8bf" font-size="20" font-weight="500">cmcnosky.github.io/why-hire</text>
+    <text x="80" y="72" fill="#8fceff" font-family="Georgia, serif" font-size="32" font-weight="400">Chris McNosky</text>
+    <path d="M80 100H1200" stroke="#707a70" stroke-width="2"/>
+    <text x="80" y="149" fill="#c4c8bf" font-size="26" font-weight="600">Technical project delivery · Software quality · AI evaluation</text>
+    <text x="78" y="247" fill="#f3ab68" font-size="82" font-weight="750" letter-spacing="-2.5">Find the problem.</text>
+    <text x="78" y="337" fill="#9ed5a3" font-size="82" font-weight="750" letter-spacing="-2.5">Verify the repair.</text>
+    <text x="80" y="407" fill="#9ed5a3" font-family="Georgia, serif" font-size="30" font-weight="400">I make difficult, unfamiliar problems solvable—and carry</text>
+    <text x="80" y="450" fill="#9ed5a3" font-family="Georgia, serif" font-size="30" font-weight="400">the work through to a result that holds up.</text>
+    <path d="M80 488H1200" stroke="#707a70" stroke-width="2"/>
+    <circle cx="88" cy="528" r="7" fill="#9ed5a3"/>
+    <text x="112" y="537" fill="#f1eee6" font-size="27" font-weight="600">Work accepted by Tokio and Grafana.</text>
+    <text x="80" y="598" fill="#c4c8bf" font-size="22" font-weight="500">cmcnosky.github.io/why-hire</text>
   </g>
 </svg>
