@@ -52,7 +52,8 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .heroRole { max-width: 58ch; margin-bottom: 1.65rem; color: var(--muted); font-size: clamp(1.125rem, 1.5vw, 1.25rem); font-weight: 600; line-height: 1.5; }
 .heroBottom { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; margin-top: 2.5rem; align-items: start; }
 .heroCopy { max-width: 60ch; font-size: 1.125rem; color: var(--ink); }
-.heroStatement { max-width: 52ch; font: 1.35rem/1.45 var(--serif); color: var(--success); }
+.heroStatement { max-width: 52ch; font: 600 1.35rem/1.45 var(--serif); color: #71b7fb; }
+.heroResult { color: var(--success); text-decoration-line: underline; text-decoration-color: var(--pending); text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-skip-ink: none; }
 .location { color: var(--muted); font-size: .9375rem; margin-top: 1.2rem; }
 .heroActions { display: flex; flex-direction: column; align-items: stretch; gap: .7rem; padding-top: .2rem; }
 .button { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 50px; padding: .9rem 1.15rem; border: 2px solid var(--link); border-radius: 3px; font-size: 1rem; font-weight: 600; text-decoration: none; }
