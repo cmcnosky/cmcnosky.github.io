@@ -8,8 +8,9 @@
     <text x="80" y="149" fill="#c4c8bf" font-size="26" font-weight="600">Technical project delivery · Software quality · AI evaluation</text>
     <text x="78" y="247" fill="#f3ab68" font-size="82" font-weight="750" letter-spacing="-2.5">Find the problem.</text>
     <text x="78" y="337" fill="#9ed5a3" font-size="82" font-weight="750" letter-spacing="-2.5">Verify the repair.</text>
-    <text x="80" y="407" fill="#9ed5a3" font-family="Georgia, serif" font-size="30" font-weight="400">I make difficult, unfamiliar problems solvable—and carry</text>
-    <text x="80" y="450" fill="#9ed5a3" font-family="Georgia, serif" font-size="30" font-weight="400">the work through to a result that holds up.</text>
+    <text x="80" y="407" fill="#71b7fb" font-family="Baskerville, 'Hoefler Text', Georgia, serif" font-size="30" font-weight="600">I make difficult, unfamiliar problems solvable—and carry</text>
+    <path d="M386 460H658" stroke="#f3ab68" stroke-width="2.5"/>
+    <text x="80" y="450" fill="#71b7fb" font-family="Baskerville, 'Hoefler Text', Georgia, serif" font-size="30" font-weight="600">the work through to a <tspan fill="#9ed5a3">result that holds up</tspan>.</text>
     <path d="M80 488H1200" stroke="#707a70" stroke-width="2"/>
     <circle cx="88" cy="528" r="7" fill="#9ed5a3"/>
     <text x="112" y="537" fill="#f1eee6" font-size="27" font-weight="600">Work accepted by Tokio and Grafana.</text>
