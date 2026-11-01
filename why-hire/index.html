@@ -21,7 +21,7 @@
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23f1eee6%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css?v=20261028-tagline">
+  <link rel="stylesheet" href="./style.css?v=20261101-organization">
 </head>
 <body>
   <a class="skipLink" href="#main">Skip to content</a>
@@ -56,7 +56,25 @@
       </div>
     </section>
 
-    <section class="section" id="proof" aria-labelledby="proof-heading">
+<section class="valueBridge" id="work" aria-labelledby="employer-value-heading">
+      <aside class="valueStatement" aria-labelledby="employer-value-heading">
+        <h2 id="employer-value-heading">Clearer requirements. Earlier discovery of mistakes.</h2>
+        <p>Clearer requirements, earlier discovery of mistakes, explicit acceptance criteria, and documented handoffs reduce uncertainty. When that prevents avoidable rework or frees specialist time, it can lower delivery cost and create capacity for other work.</p>
+      </aside>
+      <details class="technicalDetails methodDetails" id="fit"><summary>How I work: delivery, scrutiny, and AI evaluation</summary><div class="detailsBody"><div class="capabilityGrid">
+        <article><span class="index" aria-hidden="true">01</span><h3>Problem framing and delivery</h3><p>Break an unfamiliar request into explicit requirements, failure cases, acceptance criteria, and a delivery plan. Identify the expertise and evidence needed to finish the work.</p></article>
+        <article><span class="index" aria-hidden="true">02</span><h3>Scrutiny and correction</h3><p>Coordinate implementation and separate review, investigate false passes and hidden assumptions, and pursue corrections until the evidence supports acceptance.</p></article>
+        <article><span class="index" aria-hidden="true">03</span><h3>AI evaluation and evidence review</h3><p>Test whether AI systems follow stated requirements and whether their claims match recorded results. Preserve failure cases, evaluate corrections, and make the findings understandable.</p></article>
+      </div>
+      <div class="method">
+        <div><p class="eyebrow">Research and operations support</p><p>Compare sources, reconcile records, flag discrepancies, and produce useful spreadsheets and procedures. Cleargrain’s work samples and my purchasing experience show this side of my work.</p></div>
+        <div><p class="eyebrow">Bring a difficult problem</p><p>Choose one of the linked projects, or bring a short hypothetical or already-resolved problem. I can explain how I would identify the needed expertise, define success, decide what evidence to seek, and judge whether a proposed solution actually addresses it.</p></div>
+      </div>
+    </div></details></section>
+
+    
+
+<section class="section" id="proof" aria-labelledby="proof-heading">
       <div class="sectionHead">
         <p class="eyebrow">01 / Accepted contributions</p>
         <h2 id="proof-heading">Work accepted by Tokio and Grafana.</h2>
@@ -66,20 +84,21 @@
         <article class="feature" id="tokio-contribution">
           <div class="featureHeader">
             <div class="contributionStatus">
-            <span class="statusLabel">Contribution status</span>
-            <div class="mergeProgress" role="img" aria-label="Contribution status: submitted, then accepted into the project’s main codebase.">
-              <span class="mergeProgressSubmitted" aria-hidden="true">Submitted</span>
-              <span class="mergeProgressTrack" aria-hidden="true"><span class="mergeProgressThumb"><svg viewBox="0 0 16 16" fill="none"><path d="m4 8 2.5 2.5L12 5"/></svg></span></span>
-              <span class="mergeProgressMerged" aria-hidden="true">Merged</span>
-            </div>
-            <time class="mergeDate" datetime="2026-10-21">Merged October 21, 2026</time>
+            <time class="mergeDate merged" datetime="2026-10-21">Merged October 21, 2026</time>
           </div>
             <span class="technicalMeta">Software infrastructure · Rust · Pull request #8374</span>
           </div>
           <h3>Tokio: resolved a five-year-old feature request.</h3>
-          <p class="featureLead"><a href="https://tokio.rs/">Tokio</a> helps programs written in the <a href="https://rust-lang.org/">Rust programming language</a> manage many operations at once, such as waiting for network messages or timers. I led delivery of a feature requested in July 2021 and rated hard by the project’s maintainers.</p>
-          <div class="repairGrid">
-            <div>
+          <p class="featureOutcome">The change removes excluded operations while preserving existing selection behavior. Tokio approved and merged the feature and tests. The feature code and tests from the first public submission were retained through merge.</p>
+            <p class="contributionRole"><strong>My role: </strong>I defined the required behavior, directed implementation and testing, and required separate scrutiny before submission.</p><div class="evidenceLinks">
+            <a href="https://github.com/tokio-rs/tokio/pull/8374">Read the accepted contribution and discussion <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">See the maintainer’s approval <span aria-hidden="true">↗</span></a>
+          </div>
+          <details class="technicalDetails">
+            <summary><span>Read the problem, delivery decisions, and test evidence</span></summary>
+            <div class="detailsBody">
+              <p class="contributionContext"><a href="https://tokio.rs/">Tokio</a> helps programs written in the <a href="https://rust-lang.org/">Rust programming language</a> manage many operations at once, such as waiting for network messages or timers. I led delivery of a feature requested in July 2021 and rated hard by the project’s maintainers.</p>
+          <div>
               <h4>The problem</h4>
               <p>Developers needed to include or exclude individual operations for different platforms or optional features. Earlier attempts had changed how the remaining operations were selected or broken syntax the library already supported.</p>
             </div>
@@ -87,20 +106,7 @@
               <h4>My role</h4>
               <p>I defined the required behavior, directed implementation and testing, and required separate scrutiny before submission. When that review exposed a failing configuration and missing coverage, I reopened the readiness decision and required correction. I then followed maintainer concerns through to reproducible evidence.</p>
             </div>
-            <div>
-              <h4>The result</h4>
-              <p>The change removes excluded operations while preserving existing selection behavior. Tokio approved and merged the feature and tests. The feature code and tests from the first public submission were retained through merge.</p>
-            </div>
-          </div>
-          <p class="evaluationNote"><strong>What this demonstrates:</strong> getting oriented in an unfamiliar problem, turning it into testable requirements, challenging a favorable answer when the evidence does not hold, and following technical objections through to an accepted result.</p>
-          <div class="evidenceLinks">
-            <a href="https://github.com/tokio-rs/tokio/pull/8374">Read the accepted contribution and discussion <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">See the maintainer’s approval <span aria-hidden="true">↗</span></a>
-          </div>
-          <details class="technicalDetails">
-            <summary><span>Explore technical details and test results</span></summary>
-            <div class="detailsBody">
-              <p>The <code>select!</code> macro accepts one branch-level <code>#[cfg(...)]</code> attribute. Excluded branches are removed during normalization, before storage, branch counts, masks, polling, and dispatch are generated. Enabled branch indices remain dense, preserving randomized selection. Excluded code need not resolve or type-check, but must still have valid syntax.</p>
+            <p>The <code>select!</code> macro accepts one branch-level <code>#[cfg(...)]</code> attribute. Excluded branches are removed during normalization, before storage, branch counts, masks, polling, and dispatch are generated. Enabled branch indices remain dense, preserving randomized selection. Excluded code need not resolve or type-check, but must still have valid syntax.</p>
               <p>Integration and downstream compile tests cover selection fairness, existing syntax, caller features, macro hygiene, preconditions, <code>biased;</code>, <code>else</code>, all-disabled behavior, and the 64-branch limit. These are regression tests: checks intended to catch a return of the problem or a break in existing behavior. The project’s automated checks passed.</p>
               <p>A reviewer raised a concern about exponential code expansion. Measurements on two Rust versions found one final selection body for both 10- and 64-branch cases. A deliberately exponential comparison confirmed that the measurement could detect that behavior. These bounded tests do not establish zero compilation overhead.</p>
               <div class="evidenceLinks">
@@ -109,27 +115,29 @@
                 <a href="https://github.com/tokio-rs/tokio/actions/runs/35606728369">Automated test results <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/tokio-rs/tokio/commit/de7a96abd86bd85159ce1161823e7589edb8367c">Merged code and tests <span aria-hidden="true">↗</span></a>
               </div>
-            </div>
+            <p class="evaluationNote"><strong>What this demonstrates:</strong> getting oriented in an unfamiliar problem, turning it into testable requirements, challenging a favorable answer when the evidence does not hold, and following technical objections through to an accepted result.</p>
+          </div>
           </details>
         </article>
 
         <article class="feature" id="grafana-contribution">
           <div class="featureHeader">
             <div class="contributionStatus">
-            <span class="statusLabel">Contribution status</span>
-            <div class="mergeProgress" role="img" aria-label="Contribution status: submitted, then accepted into the project’s main codebase.">
-              <span class="mergeProgressSubmitted" aria-hidden="true">Submitted</span>
-              <span class="mergeProgressTrack" aria-hidden="true"><span class="mergeProgressThumb"><svg viewBox="0 0 16 16" fill="none"><path d="m4 8 2.5 2.5L12 5"/></svg></span></span>
-              <span class="mergeProgressMerged" aria-hidden="true">Merged</span>
-            </div>
-            <time class="mergeDate" datetime="2026-09-25">Merged September 25, 2026</time>
+            <time class="mergeDate merged" datetime="2026-09-25">Merged September 25, 2026</time>
           </div>
             <span class="technicalMeta">Monitoring and dashboards · Go · Pull request #131070</span>
           </div>
           <h3>Grafana: fixed broken shared links.</h3>
-          <p class="featureLead">Grafana helps teams monitor systems through dashboards. Its short-link service could put the wrong organization identifier in a URL, sending a recipient to the wrong organization or causing the link to fail.</p>
-          <div class="repairGrid">
-            <div>
+          <p class="featureOutcome">Grafana approved and merged the fix, closing the tracked issue. Five test cases check the affected configurations and help catch the same failure if it returns.</p>
+            <p class="contributionRole"><strong>My role: </strong>I directed the correction and tests through project review.</p><div class="evidenceLinks">
+            <a href="https://github.com/grafana/grafana/pull/131070">Read the accepted fix and review <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/grafana/grafana/issues/130873">Read the original problem <span aria-hidden="true">↗</span></a>
+          </div>
+          <details class="technicalDetails">
+            <summary><span>Read the problem, delivery decisions, and test evidence</span></summary>
+            <div class="detailsBody">
+              <p class="contributionContext">Grafana helps teams monitor systems through dashboards. Its short-link service could put the wrong organization identifier in a URL, sending a recipient to the wrong organization or causing the link to fail.</p>
+          <div>
               <h4>The problem</h4>
               <p>The service confused an internal resource label with the numeric organization ID needed to open the link. Different behavior was also required for Grafana Cloud and other installations.</p>
             </div>
@@ -137,87 +145,25 @@
               <h4>My role</h4>
               <p>I directed the correction and tests through project review. The work covered conflicting identifiers, Cloud-specific behavior, and installations hosted under a custom URL path.</p>
             </div>
-            <div>
-              <h4>The result</h4>
-              <p>Grafana approved and merged the fix, closing the tracked issue. Five test cases check the affected configurations and help catch the same failure if it returns.</p>
-            </div>
-          </div>
-          <p class="evaluationNote"><strong>What this demonstrates:</strong> turning a user-visible failure into a clearly defined correction, checking different configurations, and following the repair through testing and external review.</p>
-          <div class="evidenceLinks">
-            <a href="https://github.com/grafana/grafana/pull/131070">Read the accepted fix and review <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/grafana/grafana/issues/130873">Read the original problem <span aria-hidden="true">↗</span></a>
-          </div>
-          <details class="technicalDetails">
-            <summary><span>Explore technical details and test results</span></summary>
-            <div class="detailsBody">
-              <p>The compatibility API’s <code>POST /api/short-urls</code> response used a Kubernetes resource namespace, such as <code>default</code> or <code>org-5</code>, where the redirect logic required a numeric organization ID. The fix uses the authenticated request’s numeric ID outside Grafana Cloud, omits <code>orgId</code> in Cloud, and preserves configured application subpaths.</p>
+            <p>The compatibility API’s <code>POST /api/short-urls</code> response used a Kubernetes resource namespace, such as <code>default</code> or <code>org-5</code>, where the redirect logic required a numeric organization ID. The fix uses the authenticated request’s numeric ID outside Grafana Cloud, omits <code>orgId</code> in Cloud, and preserves configured application subpaths.</p>
               <p>Five Go handler test cases cover the default namespace, matching and conflicting organization namespaces, and Cloud with and without an organization ID. The matching-namespace case also checks a configured subpath.</p>
               <div class="evidenceLinks">
                 <a href="https://github.com/grafana/grafana/pull/131070/files">Implementation and regression tests <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/grafana/grafana/pull/131070/checks">Automated checks <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/grafana/grafana/commit/6a038175eb0b75a8f25338748af3742c60dbc6d8">Merged code <span aria-hidden="true">↗</span></a>
               </div>
-            </div>
+            <p class="evaluationNote"><strong>What this demonstrates:</strong> turning a user-visible failure into a clearly defined correction, checking different configurations, and following the repair through testing and external review.</p>
+          </div>
           </details>
         </article>
       </div>
     </section>
 
-    <section class="section" id="resume" aria-labelledby="resume-heading">
-      <span id="case-studies" aria-hidden="true"></span>
-      <div class="sectionHead">
-        <p class="eyebrow">02 / Résumé</p>
-        <h2 id="resume-heading">Résumé, experience, and two contribution case studies.</h2>
-      </div>
-      <div class="downloadGrid">
-        <article class="downloadCard downloadCardFeatured">
-          <p class="status">Current résumé · Updated October 28, 2026 · PDF · 3 pages</p>
-          <h3>Chris McNosky Resume</h3>
-          <p>Page one covers experience, skills, and education. Pages two and three explain the Grafana and Tokio contributions, with links to the changes, tests, and external review.</p>
-          <a class="button buttonPrimary" href="./Chris%20McNosky%20Resume.pdf" download="Chris McNosky Resume.pdf">Download the complete résumé <span aria-hidden="true">↓</span></a>
-          <a class="textLink" href="./Chris%20McNosky%20Resume.pdf">View the PDF in your browser <span aria-hidden="true">↗</span></a>
-        </article>
-      </div>
-    </section>
+    
 
-    <section class="section" id="experience" aria-labelledby="experience-heading">
+<section class="section" id="projects" aria-labelledby="projects-heading">
       <div class="sectionHead">
-        <p class="eyebrow">03 / Experience and current work</p>
-        <h2 id="experience-heading">Experience across technology and operations.</h2>
-      </div>
-      <div class="experienceGrid">
-        <article class="job">
-          <div class="jobTitle"><h3>Founder - Cleargrain Docs</h3><p class="date">2026 – present</p></div>
-          <p>Define scope, deliverables, quality checks, and handover requirements for document, research, spreadsheet, and website work. Turn unfamiliar requests into expected behavior, failure cases, and acceptance criteria; direct implementation and separate review; and require correction when the recorded result does not support acceptance.</p>
-          <p class="small muted">Eight public-source examples and the released Read Shruti website show the work, its checks, and its limits.</p>
-          <a class="textLink" href="https://cleargraindocs.com/work">View the business work samples <span aria-hidden="true">↗</span></a>
-          <a class="textLink" href="../cleargrain/">View the AI evaluation evidence <span aria-hidden="true">↗</span></a>
-        </article>
-        <article class="job">
-          <div class="jobTitle"><h3>High Pie</h3><p class="date">October 2022 – present</p></div>
-          <p class="role">Founder / Sole Operator</p>
-          <p>Run sourcing, purchasing, inventory, pricing, fulfillment, and customer issue resolution for a hemp-product business. Investigate supplier and delivery discrepancies using order records and maintain compliance documentation.</p>
-        </article>
-        <article class="job primaryJob">
-          <div class="jobTitle"><h3>Lennar</h3><p class="date">May 2018 – October 2022</p></div>
-          <p class="role">Purchasing Coordinator</p>
-          <p>I coordinated purchasing for home construction, resolving differences between bids, contracts, budgets, and vendor records before work began on site.</p>
-          <ul>
-            <li>Coordinated vendors, trades, and internal teams against construction deadlines.</li>
-            <li>Balanced cost, quality, documentation, and compliance requirements across concurrent work.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="education">
-        <p class="eyebrow">Education</p>
-        <p><strong class="educationUnt">University of North Texas</strong><br>B.A. in Sociology; minors in Economics and History.</p>
-        <p><strong class="educationBrooklyn">Brooklyn Law School</strong><br>Coursework toward J.D., 2014–2017; degree not conferred.</p>
-      </div>
-    </section>
-
-    <section class="section" id="projects" aria-labelledby="projects-heading">
-      <div class="sectionHead">
-        <p class="eyebrow">04 / Additional work samples</p>
+        <p class="eyebrow">02 / Selected projects</p>
         <h2 id="projects-heading">See how the work is checked and delivered.</h2>
       </div>
       <div class="projectGrid">
@@ -254,29 +200,58 @@
       <p class="moreWork">More to explore: <a href="https://github.com/cmcnosky/side-effects-lab">Side Effects Lab project</a> · <a href="../cleargrain/">Cleargrain Docs evaluation records</a> · <a href="../">Full project portfolio</a></p>
     </section>
 
-    <section class="section" id="work" aria-labelledby="work-heading">
+    
+
+<section class="section" id="experience" aria-labelledby="experience-heading">
       <div class="sectionHead">
-        <p class="eyebrow">05 / Where I can contribute</p>
-        <h2 id="work-heading">A disciplined path from unfamiliar problem to accepted result.</h2>
+        <p class="eyebrow">03 / Experience and education</p>
+        <h2 id="experience-heading">Experience across technology and operations.</h2>
       </div>
-      <div class="capabilityGrid">
-        <article><span class="index" aria-hidden="true">01</span><h3>Problem framing and delivery</h3><p>Break an unfamiliar request into explicit requirements, failure cases, acceptance criteria, and a delivery plan. Identify the expertise and evidence needed to finish the work.</p></article>
-        <article><span class="index" aria-hidden="true">02</span><h3>Scrutiny and correction</h3><p>Coordinate implementation and separate review, investigate false passes and hidden assumptions, and pursue corrections until the evidence supports acceptance.</p></article>
-        <article><span class="index" aria-hidden="true">03</span><h3>AI evaluation and evidence review</h3><p>Test whether AI systems follow stated requirements and whether their claims match recorded results. Preserve failure cases, evaluate corrections, and make the findings understandable.</p></article>
+      <div class="experienceGrid">
+        <article class="job">
+          <div class="jobTitle"><h3>Founder - Cleargrain Docs</h3><p class="date">2026 – present</p></div>
+          <p>Define scope, deliverables, quality checks, and handover requirements for document, research, spreadsheet, and website work. Turn unfamiliar requests into expected behavior, failure cases, and acceptance criteria; direct implementation and separate review; and require correction when the recorded result does not support acceptance.</p>
+          <p class="small muted">Eight public-source examples and the released Read Shruti website show the work, its checks, and its limits.</p>
+          <a class="textLink" href="https://cleargraindocs.com/work">View the business work samples <span aria-hidden="true">↗</span></a>
+          <a class="textLink" href="../cleargrain/">View the AI evaluation evidence <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="job">
+          <div class="jobTitle"><h3>High Pie</h3><p class="date">October 2022 – present</p></div>
+          <p class="role">Founder / Sole Operator</p>
+          <p>Run sourcing, purchasing, inventory, pricing, fulfillment, and customer issue resolution for a hemp-product business. Investigate supplier and delivery discrepancies using order records and maintain compliance documentation.</p>
+        </article>
+        <article class="job primaryJob">
+          <div class="jobTitle"><h3>Lennar</h3><p class="date">May 2018 – October 2022</p></div>
+          <p class="role">Purchasing Coordinator</p>
+          <p>I coordinated purchasing for home construction, resolving differences between bids, contracts, budgets, and vendor records before work began on site.</p>
+          <ul>
+            <li>Coordinated vendors, trades, and internal teams against construction deadlines.</li>
+            <li>Balanced cost, quality, documentation, and compliance requirements across concurrent work.</li>
+          </ul>
+        </article>
       </div>
-      <aside class="employerValue" aria-labelledby="employer-value-heading">
-        <p class="eyebrow">Employer value</p>
-        <h3 id="employer-value-heading">Why this method matters at work</h3>
-        <p>Clearer requirements, earlier discovery of mistakes, explicit acceptance criteria, and documented handoffs reduce uncertainty. When that prevents avoidable rework or frees specialist time, it can lower delivery cost and create capacity for other work.</p>
+      <div class="education">
+        <p class="eyebrow">Education</p>
+        <p><strong class="educationUnt">University of North Texas</strong><br>B.A. in Sociology; minors in Economics and History.</p>
+        <p><strong class="educationBrooklyn">Brooklyn Law School</strong><br>Coursework toward J.D., 2014–2017; degree not conferred.</p>
+      </div>
+    <aside class="resumeCompact" id="resume" aria-labelledby="resume-heading">
+      <span id="case-studies" aria-hidden="true"></span>
+      <article class="resumeCopy">
+          <p class="status">Updated October 28, 2026 · PDF · 3 pages</p>
+          <h3 id="resume-heading">Résumé and contribution case studies</h3>
+          <p>Page one covers experience, skills, and education. Pages two and three explain the Grafana and Tokio contributions, with links to the changes, tests, and external review.</p>
+          <div class="resumeCompactActions"><a class="button buttonPrimary" href="./Chris%20McNosky%20Resume.pdf" download="Chris McNosky Resume.pdf">Download résumé ↓</a>
+          <a class="textLink" href="./Chris%20McNosky%20Resume.pdf">View the PDF in your browser <span aria-hidden="true">↗</span></a>
+        </div></article>
       </aside>
-      <div class="method" id="fit">
-        <div><p class="eyebrow">Research and operations support</p><p>Compare sources, reconcile records, flag discrepancies, and produce useful spreadsheets and procedures. Cleargrain’s work samples and my purchasing experience show this side of my work.</p></div>
-        <div><p class="eyebrow">Bring a difficult problem</p><p>Choose one of the linked projects, or bring a short hypothetical or already-resolved problem. I can explain how I would identify the needed expertise, define success, decide what evidence to seek, and judge whether a proposed solution actually addresses it.</p></div>
-      </div>
+
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
-      <p class="eyebrow">Let's talk</p>
+    
+
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+      <p class="eyebrow">04 / Let's talk</p>
       <h2 id="contact-heading">Have a role where this work fits?</h2>
       <p>I’m interested in roles involving technical project coordination, software quality, AI evaluation, or business-systems support. Send a job description and the problems your team needs help solving, and we can discuss where this experience fits.</p>
       <a class="emailLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">cmcnosky@gmail.com <span aria-hidden="true">↗</span></a>
@@ -286,6 +261,7 @@
         <a href="tel:+18173600687">817-360-0687</a>
       </nav>
     </section>
+  
   </main>
   <footer class="wrap"><span>Chris McNosky · Dallas–Fort Worth</span><a href="#top">Back to top ↑</a></footer>
 </body>

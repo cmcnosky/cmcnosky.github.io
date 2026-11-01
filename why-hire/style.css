@@ -216,3 +216,61 @@ footer a { padding-bottom: .5rem; }
   .sectionHead > .eyebrow { margin-bottom: .5rem; }
   .feature, .downloadCard, .project, .job, .education, .employerValue, .method > div { break-inside: avoid; }
 }
+/* Reading hierarchy: unchanged hero, compact value bridge, evidence, breadth, background. */
+.valueBridge { border-top: 1px solid var(--rule); padding: 2rem 0 2.5rem; }
+.valueStatement { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; align-items: start; }
+.valueStatement h2 { color: var(--success); font-size: 1.6rem; line-height: 1.3; }
+.valueStatement p { color: var(--muted); font-size: 1rem; max-width: 72ch; }
+.methodDetails { margin-top: 1.25rem; border-top: 0; padding-top: 0; }
+.methodDetails > summary { display: list-item; width: fit-content; padding: .65rem .8rem; background: transparent; border-color: var(--rule); font-weight: 400; }
+.methodDetails > .detailsBody { max-width: none; padding-top: 1.5rem; }
+.methodDetails .capabilityGrid h3 { font-size: 1.4rem; }
+.methodDetails .method { margin-top: 1.5rem; padding-top: 1.5rem; }
+.section { padding-block: 4rem; }
+.sectionHead { margin-bottom: 2rem; }
+.featureStack { gap: 2rem; }
+.featureHeader { margin-bottom: 1rem; gap: .5rem 1.5rem; }
+.contributionStatus { display: block; }
+.mergeDate { font-size: .875rem; font-weight: 600; }
+.featureOutcome { margin-top: 1.1rem; max-width: 76ch; font-size: 1.125rem; }
+.contributionRole { max-width: 80ch; color: var(--muted); font-size: 1rem; margin-top: .85rem; }
+.contributionRole strong { color: var(--ink); }
+.feature > .evidenceLinks { margin-top: 1rem; }
+.feature > .technicalDetails { margin-top: 1rem; padding-top: 1rem; }
+.detailsBody > div:not(.evidenceLinks) { margin-top: 1.25rem; }
+.detailsBody h4 { margin-bottom: .4rem; color: var(--ink); }
+.projectGrid { gap: 2.5rem; }
+.experienceGrid { grid-template-columns: 1fr; gap: 1.75rem; }
+.job { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); column-gap: 2rem; }
+.jobTitle { grid-column: 1; grid-row: 1 / span 5; display: block; }
+.jobTitle .date { margin-top: .5rem; }
+.job > :not(.jobTitle) { grid-column: 2; }
+.job > p:not(.role) { margin-top: 0; }
+.job > p + p:not(.role) { margin-top: .65rem; }
+.job .role { margin-top: 0; margin-bottom: .5rem; }
+.job .textLink { justify-self: start; }
+.education { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+.education p + p { margin-top: 0; }
+.resumeCompact { margin-top: 2rem; padding: 1.5rem; background: var(--panel); border: 1px solid var(--rule); }
+.resumeCopy { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: .5rem 2rem; }
+.resumeCopy > .status, .resumeCopy > h3, .resumeCopy > p { grid-column: 1; }
+.resumeCopy > p { font-size: .9375rem; color: var(--muted); margin: 0; }
+.resumeCopy > h3 { font-size: 1.5rem; }
+.resumeCopy > .status { font-size: .75rem; }
+.resumeCompactActions { grid-column: 2; grid-row: 1 / span 3; align-self: center; }
+.resumeCompactActions .textLink { font-size: .9375rem; }
+.contact { border-top-width: 2px; }
+@media (max-width: 680px) {
+  .valueBridge { padding-block: 1.5rem 2rem; }
+  .valueStatement, .job, .education, .resumeCopy { display: block; }
+  .valueStatement p { margin-top: .8rem; }
+  .section { padding-block: 3rem; }
+  .featureStack { gap: 1.5rem; }
+  .featureOutcome { font-size: 1.0625rem; }
+  .jobTitle { margin-bottom: .85rem; }
+  .education p + p { margin-top: 1rem; }
+  .resumeCopy h3 { margin-top: .5rem; }
+  .resumeCopy > p:not(.status) { margin-top: .75rem; }
+  .resumeCompactActions { margin-top: 1rem; }
+  .resumeCompact { padding: 1.25rem; }
+}
