@@ -34,7 +34,7 @@ h2, h3 { color: var(--heading-accent); }
 h4 { font-size: 1.0625rem; font-weight: 650; margin-bottom: .65rem; }
 p { text-wrap: pretty; }
 p + p { margin-top: 1.15rem; }
-a { color: var(--link); text-decoration-line: underline; text-underline-offset: .22em; text-decoration-thickness: 1px; text-decoration-skip-ink: auto; }
+a { color: var(--link); text-decoration-line: underline; text-underline-offset: .22em; text-decoration-thickness: 1.5px; text-decoration-skip-ink: auto; }
 a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 a:focus-visible, summary:focus-visible { outline: 3px solid var(--link); outline-offset: 5px; border-radius: 2px; }
 ::selection { background: var(--link); color: var(--paper); }
@@ -61,7 +61,7 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .buttonPrimary { background: var(--link); border-color: var(--link); color: var(--paper); }
 .buttonPrimary:hover { background: var(--link-hover); border-color: var(--link-hover); color: var(--paper); }
 .buttonMeta { font-size: .875rem; font-weight: 400; white-space: nowrap; }
-.textLink { display: inline-block; padding-block: .6rem; font-size: 1rem; }
+.textLink { display: inline-block; padding-block: .6rem; font-size: 1rem; font-weight: 500; }
 .heroActions > .textLink { align-self: flex-start; }
 .section { padding: 4.25rem 0; border-top: 2px solid var(--rule); }
 .sectionHead { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-bottom: 2.5rem; }
@@ -106,7 +106,7 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .repairGrid > div { min-width: 0; }
 .repairGrid p { max-width: 65ch; color: var(--muted); font-size: 1.0625rem; }
 .evidenceLinks { display: flex; gap: .5rem 2rem; flex-wrap: wrap; margin-top: 1.75rem; }
-.evidenceLinks a { font-size: .9375rem; display: inline-flex; align-items: center; min-height: 44px; gap: .5rem; }
+.evidenceLinks a { font-size: .9375rem; font-weight: 500; display: inline-flex; align-items: center; min-height: 44px; gap: .5rem; }
 .downloadGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
 .downloadCard { padding: 1.6rem; border: 1px solid var(--rule); background: var(--panel); }
 .downloadCardFeatured { grid-column: 1 / -1; }
@@ -222,7 +222,7 @@ footer a { padding-bottom: .5rem; }
 .valueStatement h2 { color: var(--success); font-size: 1.6rem; line-height: 1.3; }
 .valueStatement p { color: var(--muted); font-size: 1rem; max-width: 72ch; }
 .methodDetails { margin-top: 1.25rem; border-top: 0; padding-top: 0; }
-.methodDetails > summary { display: list-item; width: fit-content; padding: .65rem .8rem; background: transparent; border-color: var(--rule); font-weight: 400; }
+.methodDetails > summary { display: list-item; width: fit-content; padding: .65rem .8rem; background: var(--paper); border-color: var(--link); font-weight: 600; }
 .methodDetails > .detailsBody { max-width: none; padding-top: 1.5rem; }
 .methodDetails .capabilityGrid h3 { font-size: 1.4rem; }
 .methodDetails .method { margin-top: 1.5rem; padding-top: 1.5rem; }
