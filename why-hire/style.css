@@ -28,6 +28,7 @@ h1 { font-family: var(--sans); font-size: clamp(3.25rem, 7vw, 6rem); font-weight
 h1 em { color: var(--ink); font-style: normal; font-weight: inherit; }
 .hero h1 { color: var(--pending); }
 .hero h1 em { color: var(--success); }
+.heroProblem { font-size: 1.05em; }
 h2 { font-size: clamp(2rem, 3.8vw, 3.1rem); line-height: 1.15; letter-spacing: -.02em; max-width: 26ch; }
 h3 { font-size: 1.6rem; line-height: 1.25; }
 h2, h3 { color: var(--heading-accent); }
