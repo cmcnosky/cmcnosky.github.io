@@ -53,7 +53,7 @@ code { font: .87em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-w
 .hero h1 { font-size: clamp(3rem, 6.2vw, 5rem); line-height: 1.08; }
 .heroBottom { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 4rem; margin-top: 2.5rem; align-items: start; }
 .heroCopy { max-width: 60ch; font-size: 1.125rem; color: var(--ink); }
-.heroStatement { max-width: 40ch; font: 600 clamp(1.4rem, 2.1vw, 1.7rem)/1.4 var(--serif); color: var(--ink); }
+.heroStatement { max-width: 40ch; font: 600 clamp(1.4rem, 2.1vw, 1.7rem)/1.4 var(--serif); color: #71b7fb; }
 .heroResult { color: var(--success); text-decoration-line: underline; text-decoration-color: var(--pending); text-decoration-thickness: 1.5px; text-underline-offset: 4px; text-decoration-skip-ink: none; }
 .location { color: var(--muted); font-size: .9375rem; margin-top: 1.2rem; }
 .heroActions { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: .7rem; margin-top: 1.5rem; }
