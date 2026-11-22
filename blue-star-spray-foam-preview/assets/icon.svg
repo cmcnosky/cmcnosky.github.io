@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(0 32 33)" fill="#169abb"/>
+  <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(72 32 33)" fill="#c97848"/>
+  <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(144 32 33)" fill="#147eb9"/>
+  <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(216 32 33)" fill="#147eb9"/>
+  <path d="M32 3 39 20.876 35.2 26.5 28.8 26.5 25 20.876Z" transform="rotate(288 32 33)" fill="#147eb9"/>
+</svg>
