@@ -23,6 +23,10 @@
   else desktopNav.addListener(resetMenuAtBreakpoint);
   menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);if(open)nav.querySelector('a')?.focus()});
   nav?.addEventListener('click',event=>{if(event.target instanceof Element && event.target.closest('a'))closeMenu()});
+  nav?.addEventListener('focusout', event => {
+    const next = event.relatedTarget;
+    if (next instanceof Node && !nav.contains(next) && next !== menu) closeMenu();
+  });
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
   document.addEventListener('click',event=>{if(menu&&nav&&!nav.contains(event.target)&&!menu.contains(event.target))closeMenu()});
   const localPreview = ['127.0.0.1', 'localhost', '[::1]'].includes(location.hostname) || location.protocol === 'file:';
@@ -71,7 +75,7 @@
   });
   window.setTimeout(() => {
     if (receivedState || !loading) return;
-    loading.textContent = 'The form is taking longer to load. You can open it separately or contact Josh below.';
+    loading.textContent = 'The form is taking longer to load. Open the form in a new tab or call Blue Star.';
     loading.classList.add('load-delay');
   }, 8000);
   window.addEventListener('beforeunload',event=>{if(dirty){event.preventDefault();event.returnValue=''}});
