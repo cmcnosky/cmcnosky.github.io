@@ -6,7 +6,23 @@
   updateThemeLabel();
   theme?.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';try{localStorage.setItem('bs-main-theme',root.dataset.theme)}catch{}updateThemeLabel()});
   const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#main-nav'),brand=document.querySelector('.site-header .brand');
-  function closeMenu(){if(!menu||!nav)return;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open')}
+  function closeMenu(){if(!menu||!nav)return;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open');if(explore)explore.open=false}
+  const explore = nav?.querySelector('.nav-explore');
+  if (explore) {
+    document.addEventListener('click', event => {
+      if (!explore.contains(event.target)) explore.open = false;
+    });
+    explore.addEventListener('focusout', event => {
+      if (!explore.contains(event.relatedTarget)) explore.open = false;
+    });
+    explore.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && explore.open) {
+        event.stopPropagation();
+        explore.open = false;
+        explore.querySelector('summary').focus();
+      }
+    });
+  }
   const desktopNav=window.matchMedia('(min-width: 961px)');
   function resetMenuAtBreakpoint(event){
     if(!menu||!nav)return;
