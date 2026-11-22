@@ -452,3 +452,56 @@ p{text-wrap:pretty}
   .field-note-grid img { flex: auto; min-height: 160px; }
 }
 @media(max-width:520px) { .field-note-grid article { display: block; } .field-note-grid img { height: 205px; } }
+
+/* The original three homepage guide cards: clay, blue and green. */
+.audience-section { padding-block: clamp(44px,6.3vw,88px); background: var(--bg); border-block: 1px solid var(--line); }
+.audience-heading { display: grid; grid-template-columns: minmax(0,1.5fr) minmax(0,.88fr); gap: 28px; align-items: end; margin-bottom: clamp(23px,3vw,38px); }
+.audience-heading h2, .audience-card h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; letter-spacing: -.035em; }
+.audience-heading h2 { margin: 8px 0 0; font-size: clamp(35px,4.3vw,62px); line-height: 1.06; }
+.audience-heading > p { margin: 0; max-width: 42ch; color: var(--muted); line-height: 1.6; }
+.audience-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(12px,1.8vw,24px); }
+.audience-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(20px,2.35vw,34px);
+  border: 1px solid var(--guide-edge);
+  border-top: 5px solid var(--guide-accent);
+  border-radius: 5px;
+  background: var(--guide-bg);
+  color: var(--guide-text);
+}
+.audience-home { --guide-bg: #593a32; --guide-accent: #ffb292; --guide-edge: #94695d; }
+.audience-builder { --guide-bg: #254568; --guide-accent: #9ad4fc; --guide-edge: #6087a9; }
+.audience-options { --guide-bg: #285346; --guide-accent: #a2e4b5; --guide-edge: #679580; }
+.audience-card { --guide-text: #fffaf2; --guide-copy: #ecebe5; --guide-icon: #16313b; }
+html[data-theme=light] .audience-home { --guide-bg: #f3e0d7; --guide-accent: #85452f; --guide-edge: #b08c7e; }
+html[data-theme=light] .audience-builder { --guide-bg: #deeaf4; --guide-accent: #265b80; --guide-edge: #8aa9bc; }
+html[data-theme=light] .audience-options { --guide-bg: #dfede1; --guide-accent: #2d6548; --guide-edge: #88aa95; }
+html[data-theme=light] .audience-card { --guide-text: #182e34; --guide-copy: #32454b; --guide-icon: #fffdf6; }
+.audience-icon { display: grid; place-items: center; width: 45px; height: 45px; border-radius: 50%; background: var(--guide-accent); color: var(--guide-icon); }
+.audience-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.audience-label { margin: clamp(18px,2.35vw,34px) 0 10px; color: var(--guide-accent); font-size: 13px; font-weight: 750; line-height: 1.45; letter-spacing: .075em; text-transform: uppercase; }
+.audience-card h3 { margin: 0; font-size: clamp(26px,2.65vw,39px); line-height: 1.08; color: var(--guide-text); text-wrap: pretty; }
+.audience-description { margin: 15px 0 24px; max-width: 42ch; color: var(--guide-copy); font-size: 16px; line-height: 1.58; }
+.audience-link { margin-top: auto; padding-top: 14px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px solid var(--guide-edge); color: var(--guide-text); font-size: 16px; font-weight: 700; line-height: 1.5; }
+.audience-link span { color: var(--guide-accent); font-size: 21px; line-height: 1; }
+.audience-link::after { content: ''; position: absolute; inset: 0; border-radius: 5px; }
+.audience-link:focus-visible { outline: none; }
+.audience-card:focus-within { outline: 3px solid var(--text); outline-offset: 3px; }
+.audience-card:focus-within .audience-link, .audience-card:hover .audience-link { text-decoration: underline; text-underline-offset: .23em; }
+@media(max-width:799px) {
+  .audience-heading { grid-template-columns: 1fr; gap: 14px; }
+  .audience-grid { grid-template-columns: 1fr; gap: 14px; }
+  .audience-card { display: grid; grid-template-columns: 40px minmax(0,1fr); column-gap: 15px; padding: 20px; }
+  .audience-icon { width: 40px; height: 40px; grid-row: 1 / span 2; }
+  .audience-label { grid-column: 2; margin: 0 0 5px; }
+  .audience-card h3 { grid-column: 2; font-size: clamp(24px,5.8vw,34px); }
+  .audience-description, .audience-link { grid-column: 1 / -1; }
+  .audience-description { max-width: 65ch; margin: 13px 0 16px; }
+}
+@media(forced-colors:active) {
+  .audience-card { border-color: CanvasText; }
+  .audience-card:focus-within { outline-color: Highlight; }
+}
