@@ -22,7 +22,7 @@
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23f1eee6%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css?v=20261122-navigation">
-  <link rel="stylesheet" href="/why-hire/guide-layout.css?v=20261122">
+  <link rel="stylesheet" href="/why-hire/guide-layout.css?v=20261122-buttons">
 </head>
 <body class="careerGuide">
   <a class="skipLink" href="#main">Skip to content</a>
@@ -70,9 +70,9 @@
           <p class="featureOutcome"><strong>Problem:</strong> Developers needed one selection flow that could include or leave out operations for different platforms or optional features, without copying that flow for every configuration.</p>
           <p class="featureOutcome"><strong>Result:</strong> Tokio approved and merged the feature and regression tests. The merged change lets developers leave out unavailable operations at compile time without changing how the remaining operations are selected.</p>
           <p class="contributionRole"><strong>My role:</strong> I turned the request into required behavior, coordinated implementation and regression coverage, used compiler probes to answer the expansion concern, and followed maintainer questions through resolution.</p>
-          <div class="evidenceLinks">
-            <a href="https://github.com/tokio-rs/tokio/pull/8374">Accepted contribution and discussion</a>
-            <a href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">Maintainer approval</a>
+          <div class="evidenceLinks caseActions">
+            <a class="button buttonPrimary" href="https://github.com/tokio-rs/tokio/pull/8374">View Tokio pull request <span aria-hidden="true">↗</span></a>
+            <a class="button" href="https://github.com/tokio-rs/tokio/pull/8374#pullrequestreview-5598690059">Maintainer approval <span aria-hidden="true">↗</span></a>
           </div>
           <details class="technicalDetails">
             <summary><span>Technical evidence</span></summary>
@@ -111,9 +111,9 @@
           <p class="featureOutcome"><strong>Problem:</strong> A shared link could use the wrong organization identifier, leaving a recipient in the wrong organization or preventing the link from opening.</p>
           <p class="featureOutcome"><strong>Result:</strong> Grafana approved and merged the repair into <code>main</code>, closing the tracked issue. The fix uses the correct organization ID for each supported deployment type, and five Go handler test cases cover the affected configurations.</p>
           <p class="contributionRole"><strong>My role:</strong> I translated the reported mismatch into required behavior across self-hosted Grafana, Grafana Cloud and configured subpaths. I directed implementation and regression coverage, reviewed the results, and followed the change through upstream review and merge.</p>
-          <div class="evidenceLinks">
-            <a href="https://github.com/grafana/grafana/pull/131070">Accepted fix and review</a>
-            <a href="https://github.com/grafana/grafana/issues/130873">Original problem</a>
+          <div class="evidenceLinks caseActions">
+            <a class="button buttonPrimary" href="https://github.com/grafana/grafana/pull/131070">View Grafana pull request <span aria-hidden="true">↗</span></a>
+            <a class="button" href="https://github.com/grafana/grafana/issues/130873">Original issue <span aria-hidden="true">↗</span></a>
           </div>
           <details class="technicalDetails">
             <summary><span>Technical evidence</span></summary>

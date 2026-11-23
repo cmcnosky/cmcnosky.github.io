@@ -11,7 +11,30 @@
 .proofPair .feature { display: flex; flex-direction: column; padding: clamp(1.2rem, 2.3vw, 1.8rem); }
 .proofPair .feature h3 { margin-block: .6rem; max-width: 26ch; }
 .proofPair .feature > p { color: var(--muted); font-size: 1.0625rem; }
-.proofPair .evidenceLinks { gap: 0 1.3rem; margin-top: auto; padding-top: .7rem; }
+.feature > .caseActions {
+  container-type: inline-size;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+}
+.proofPair .caseActions { margin-top: auto; padding-top: 1.25rem; }
+.caseActions .button {
+  gap: .75rem;
+  min-height: 46px;
+  padding: .68rem .95rem;
+  border-width: 1.5px;
+  border-radius: 4px;
+  font-size: .975rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.caseActions .button span { font-size: 1.05em; line-height: 1; }
+@container (max-width: 25.25rem) {
+  .proofPair .caseActions > .button { width: 100%; }
+}
+@container (max-width: 28rem) {
+  .featureStack .caseActions > .button { width: 100%; }
+}
 .sampleList article, .roleList > div { display: grid; align-items: baseline; border-top: 1px solid var(--rule); gap: .4rem 1.8rem; padding-block: 1.15rem; }
 .sampleList article { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(9rem, .82fr); }
 .sampleList h3 { font-size: 1.4rem; }
