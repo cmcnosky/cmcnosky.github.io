@@ -1,0 +1,10 @@
+{
+  "fixture": true,
+  "updatedAt": null,
+  "items": [
+    {"id":"demo-river","title":"Riverbank linen shirt","description":"A blue long-sleeve layer with a curved hem and a well-loved feel.","category":"Clothing","brand":"Example Mill","size":"M","condition":"Good pre-owned","price":27,"currency":"USD","listedAt":"2026-11-22T19:00:00Z","links":{}},
+    {"id":"demo-moon","title":"Moon seed ceramic bowl","description":"A small stoneware mixing bowl with a soft celadon glaze.","category":"Home & kitchen","brand":"Demo Pottery","condition":"Excellent pre-owned","price":19,"currency":"USD","listedAt":"2026-11-22T00:00:00Z","links":{}},
+    {"id":"demo-cedar","title":"Cedar trail crossbody","description":"A textured canvas bag with a sturdy adjustable strap.","category":"Accessories","brand":"Sample Goods","condition":"Good pre-owned","price":36,"currency":"USD","listedAt":"2026-11-21T19:00:00Z","links":{}},
+    {"id":"demo-duck","title":"Little wooden duck","description":"A hand-carved shelf companion with a warm waxed finish.","category":"Vintage & collectibles","condition":"Light wear","price":16,"currency":"USD","listedAt":"2026-11-20T09:00:00Z","links":{}}
+  ]
+}

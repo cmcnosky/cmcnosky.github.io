@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Feral & Free catalog preview. Browse secondhand clothing, home finds and vintage goods.">
+  <title>Feral &amp; Free | Browse the finds</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.mjs" type="module"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top"><div class="shell nav">
+    <a class="wordmark" href="#main">Feral <i>&amp;</i> Free<span>SECONDHAND GOODS</span></a>
+    <nav aria-label="Main navigation"><a href="#catalog">Browse</a><a href="#shops">Live shops</a></nav>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">VINTAGE &amp; PRE-OWNED <span aria-hidden="true">•</span> NORTH TEXAS</p>
+        <h1 id="hero-title">Good things are worth <em>finding again.</em></h1>
+        <p>Curious clothes, useful home finds, and objects with a little history. Find the things you’d want to keep looking at.</p>
+        <a class="button primary" href="#catalog">Browse the finds <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="art"><img src="treasures.svg" alt="" width="660" height="600"><span>THE GOOD STUFF IS ALREADY OUT THERE.</span></div>
+    </section>
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title"><div class="shell band">
+      <p class="eyebrow">THE THRILL OF THE FIND</p>
+      <h2 id="catalog-title">Browse the finds.</h2>
+      <p id="fixture-flag" class="fixture" hidden>DEMO ONLY · All items and prices on this page are fictional. Demo items do not link to real marketplace listings.</p>
+      <p id="catalog-meta" class="intro" hidden></p>
+      <div id="controls" class="controls" role="search" aria-label="Filter the catalog" hidden>
+        <label for="search" class="search-label">Find an item<input id="search" type="search" placeholder="Try a material, style or maker" maxlength="160" autocomplete="off"></label>
+        <label for="category">Category<select id="category"><option value="">All categories</option></select></label>
+        <label for="sort">Sort by<select id="sort"><option value="newest">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="title">Name: A to Z</option></select></label>
+        <button type="button" id="reset" class="button secondary">Clear filters</button>
+      </div>
+      <p id="result-status" class="result-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      <div id="cards" class="cards" hidden></div>
+      <button id="more" type="button" class="button secondary more" hidden>Show more finds</button>
+      <section id="fallback" class="fallback" aria-labelledby="fallback-title">
+        <h3 id="fallback-title">The live shops are open.</h3>
+        <p id="fallback-copy">Browse the shops directly for current items, prices and availability.</p>
+        <a class="button primary" href="https://www.ebay.com/str/feralandfree">Browse on eBay <span aria-hidden="true">↗</span></a>
+      </section>
+    </div></section>
+    <section id="shops" class="shell band" aria-labelledby="shop-title">
+      <p class="eyebrow">THREE MARKETPLACES, ONE SHOP</p>
+      <h2 id="shop-title">Shop where you like.</h2>
+      <p class="intro">Your orders, questions and checkout stay on the marketplace you choose.</p>
+      <div class="shop-list">
+        <a href="https://www.ebay.com/str/feralandfree"><strong>eBay</strong><span>Browse the main shop</span><span aria-hidden="true">↗</span></a>
+        <a href="https://poshmark.com/closet/feralandfree"><strong>Poshmark</strong><span>Visit the closet</span><span aria-hidden="true">↗</span></a>
+        <a href="https://www.mercari.com/u/feralandfreeco/"><strong>Mercari</strong><span>Visit the marketplace shop</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <dialog id="item-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <button type="button" id="close-dialog" class="button secondary close-dialog" autofocus>Close <span aria-hidden="true">×</span></button>
+      <div id="dialog-media" class="dialog-media" hidden></div>
+      <div class="dialog-copy">
+        <p class="eyebrow" id="dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-meta" class="item-meta" hidden></p>
+        <p id="dialog-price" class="price" hidden></p>
+        <p id="dialog-description" class="description" hidden></p>
+        <div id="dialog-links" class="market-links" aria-label="Marketplace listing options"></div>
+        <p id="dialog-note" class="intro"></p>
+      </div>
+    </div>
+  </dialog>
+  <footer><div class="shell foot"><span class="wordmark">Feral <i>&amp;</i> Free</span><p>Independent catalog concept. Not an official Feral &amp; Free storefront.</p><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
