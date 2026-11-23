@@ -11,29 +11,37 @@
 .proofPair .feature { display: flex; flex-direction: column; padding: clamp(1.2rem, 2.3vw, 1.8rem); }
 .proofPair .feature h3 { margin-block: .6rem; max-width: 26ch; }
 .proofPair .feature > p { color: var(--muted); font-size: 1.0625rem; }
-.feature > .caseActions {
+.feature > .evidenceLinks {
   container-type: inline-size;
   display: flex;
   flex-wrap: wrap;
   gap: .65rem;
 }
-.proofPair .caseActions { margin-top: auto; padding-top: 1.25rem; }
-.caseActions .button {
+.proofPair .feature > .evidenceLinks { margin-top: auto; padding-top: 1.25rem; }
+.feature > .evidenceLinks > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
   gap: .75rem;
   min-height: 46px;
   padding: .68rem .95rem;
-  border-width: 1.5px;
+  border: 1.5px solid var(--link);
   border-radius: 4px;
+  color: var(--link);
+  text-decoration: none;
   font-size: .975rem;
   font-weight: 600;
   line-height: 1.35;
 }
-.caseActions .button span { font-size: 1.05em; line-height: 1; }
+.feature > .evidenceLinks > a:first-child { background: var(--link); color: var(--paper); }
+.feature > .evidenceLinks > a:hover { background: var(--link-surface); border-color: var(--link-hover); color: var(--link-hover); }
+.feature > .evidenceLinks > a:first-child:hover { background: var(--link-hover); color: var(--paper); }
+.feature > .evidenceLinks > a span { font-size: 1.05em; line-height: 1; }
 @container (max-width: 25.25rem) {
-  .proofPair .caseActions > .button { width: 100%; }
+  .proofPair .feature > .evidenceLinks > a { width: 100%; }
 }
 @container (max-width: 28rem) {
-  .featureStack .caseActions > .button { width: 100%; }
+  .featureStack .feature > .evidenceLinks > a { width: 100%; }
 }
 .sampleList article, .roleList > div { display: grid; align-items: baseline; border-top: 1px solid var(--rule); gap: .4rem 1.8rem; padding-block: 1.15rem; }
 .sampleList article { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(9rem, .82fr); }
