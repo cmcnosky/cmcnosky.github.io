@@ -1,0 +1,78 @@
+{
+  "sample": true,
+  "updatedAt": "2026-11-23T02:12:00Z",
+  "items": [
+    {
+      "id": "ws-napkins",
+      "title": "Williams Sonoma cotton napkin set",
+      "category": "Home & kitchen",
+      "description": "Set of 12 cotton napkins, patterned with green and yellow paisley.",
+      "links": {
+        "ebay": "https://www.ebay.com/itm/840079926295"
+      }
+    },
+    {
+      "id": "copper-canisters",
+      "title": "Copper-tone kitchen canisters",
+      "category": "Home & kitchen",
+      "description": "Four canisters labeled for flour, sugar, coffee and tea.",
+      "links": {
+        "ebay": "https://www.ebay.com/itm/840135594510"
+      }
+    },
+    {
+      "id": "coogi-sweater",
+      "title": "COOGI multicolor cotton sweater",
+      "category": "Clothing",
+      "description": "A textured multicolor cotton knit in men's size L.",
+      "links": {
+        "ebay": "https://www.ebay.com/itm/840150226195"
+      }
+    },
+    {
+      "id": "orr-blanket",
+      "title": "Orr Health wool tulip blanket",
+      "category": "Bedding & linens",
+      "description": "Wool blanket with an orange and cream tulip motif.",
+      "links": {
+        "ebay": "https://www.ebay.com/itm/188929604637"
+      }
+    },
+    {
+      "id": "patch-stock",
+      "title": "Velvet patchwork stocking",
+      "category": "Vintage & collectibles",
+      "description": "Christmas stocking made with multicolor velvet patches and lace.",
+      "links": {
+        "ebay": "https://www.ebay.com/itm/188956880984"
+      }
+    },
+    {
+      "id": "turtle-charm",
+      "title": "Sterling silver turtle charm",
+      "category": "Jewelry",
+      "description": "Small turtle-shaped charm, approximately half an inch long.",
+      "links": {
+        "poshmark": "https://poshmark.com/listing/Sterling-Silver-Turtle-Charm-Pendant-For-Bracelet-925-6b008a2dcbbea5a6ca3e566a"
+      }
+    },
+    {
+      "id": "gloria-dress",
+      "title": "Gloria Vanderbilt belted dress",
+      "category": "Clothing",
+      "description": "Vintage long-sleeve dress with a belt, marked size 8.",
+      "links": {
+        "poshmark": "https://poshmark.com/listing/Vintage-Gloria-Vanderbilt-Long-Sleeve-Belted-Dress-Boho-Cottagecore-8-6ad64ecac6e38ae35058ac1e"
+      }
+    },
+    {
+      "id": "halogen-clutch",
+      "title": "Halogen black leather clutch",
+      "category": "Accessories",
+      "description": "Black leather bag that can also be worn over the shoulder.",
+      "links": {
+        "mercari": "https://www.mercari.com/us/item/m40144898326/"
+      }
+    }
+  ]
+}

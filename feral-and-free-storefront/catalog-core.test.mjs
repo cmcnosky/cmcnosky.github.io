@@ -32,3 +32,17 @@ test('token search spans fields and sale price sorting keeps missing prices last
   assert.deepEqual(filterAndSort(p.items,'','Clothing','high').map(x=>x.id),['c','a']);
   assert.deepEqual(filterAndSort(p.items,'','','low').map(x=>x.id),['b','c','a']);
 });
+
+test('historical sample is opt-in and cannot imply live pricing', () => {
+  const data = { sample:true, updatedAt:'2026-11-01T01:00:00Z', items:[{
+    id:'a', title:'Ceramic bowl', category:'Home', price:10, currency:'USD', image:'assets/catalog/bowl.jpg',
+    links:{ebay:'https://www.ebay.com/itm/840079926295'}
+  }] };
+  const now = Date.parse('2026-11-23T02:12:01Z');
+  assert.equal(parseCatalog(data,{now}).state, 'unavailable');
+  const shown = parseCatalog(data,{sample:true, now});
+  assert.equal(shown.state,'fresh');
+  assert.equal(shown.items[0].price,null);
+  assert.deepEqual(shown.items[0].images,[]);
+  assert.equal(shown.items[0].links.ebay,'https://www.ebay.com/itm/840079926295');
+});

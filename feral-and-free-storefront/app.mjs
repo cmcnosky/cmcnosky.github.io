@@ -3,6 +3,7 @@ import { CHANNEL_NAMES, filterAndSort, parseCatalog, snapshotState } from './cat
 const byId = id => document.getElementById(id);
 const ui = Object.fromEntries(['fixture-flag','catalog-meta','controls','search','category','sort','reset','result-status','cards','more','fallback','fallback-copy','item-dialog','close-dialog','dialog-media','dialog-category','dialog-title','dialog-meta','dialog-price','dialog-description','dialog-links','dialog-note'].map(id => [id, byId(id)]));
 const fixture = new URLSearchParams(location.search).get('demo') === '1';
+const sample = !fixture && new URLSearchParams(location.search).get('sample') === '1';
 const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 const dateFmt = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' });
 const PAGE = 24;
@@ -39,7 +40,7 @@ function homeState() {
   limit = PAGE;
   ui.search.value = '';
   ui.category.value = '';
-  ui.sort.value = 'newest';
+  ui.sort.value = sample ? 'title' : 'newest';
 }
 function focusBack() {
   if (openTrigger?.isConnected && !ui.cards.hidden) openTrigger.focus();
@@ -52,7 +53,7 @@ ui['item-dialog'].addEventListener('click', e => {
   if (e.target === ui['item-dialog']) ui['item-dialog'].close();
 });
 function expiryCheck() {
-  if (!fixture && catalog?.state === 'fresh' && snapshotState(catalog.updatedAt) !== 'fresh') {
+  if (!fixture && !sample && catalog?.state === 'fresh' && snapshotState(catalog.updatedAt) !== 'fresh') {
     showState('stale');
     return false;
   }
@@ -104,7 +105,7 @@ function details(item, trigger) {
     a.addEventListener('click', e => { if (!expiryCheck()) e.preventDefault(); });
     ui['dialog-links'].append(a);
   }
-  assign(ui['dialog-note'], fixture ? 'Fictional demo item. Not for sale.' : 'Confirm current availability, total price, shipping and returns on the listing.');
+  assign(ui['dialog-note'], fixture ? 'Fictional demo item. Not for sale.' : sample ? 'This is an example from the noted date. The marketplace listing may have sold or ended.' : 'Confirm current availability, total price, shipping and returns on the listing.');
   ui['item-dialog'].showModal();
 }
 function card(item) {
@@ -167,12 +168,12 @@ setInterval(expiryCheck, 15000);
 async function init() {
   ui['fixture-flag'].hidden = !fixture;
   try {
-    const response = await fetch(fixture ? './catalog.fixture.json' : './catalog.json', {
+    const response = await fetch(fixture ? './catalog.fixture.json' : sample ? './catalog.sample.json' : './catalog.json', {
       cache: 'no-store',
       credentials: 'same-origin'
     });
     if (!response.ok) throw new Error('Catalog unavailable');
-    catalog = parseCatalog(await response.json(), {fixture});
+    catalog = parseCatalog(await response.json(), {fixture, sample});
   } catch {
     showState('unavailable');
     return;
@@ -185,7 +186,11 @@ async function init() {
   for (const cat of categories) {
     const option = element('option','',cat); option.value = cat; ui.category.append(option);
   }
-  if (!fixture) assign(ui['catalog-meta'], 'Catalog snapshot from ' + dateFmt.format(new Date(catalog.updatedAt)) + '. Availability and final prices are on the marketplaces.');
+  if (sample) {
+    for (const opt of Array.from(ui.sort.options)) if (opt.value !== 'title') opt.remove();
+    ui.sort.value = 'title';
+    assign(ui['catalog-meta'], 'Selected examples from public listings, compiled November 22, 2026 (Central). Not a live stock list. Check the marketplaces for current inventory.');
+  } else if (!fixture) assign(ui['catalog-meta'], 'Catalog snapshot from ' + dateFmt.format(new Date(catalog.updatedAt)) + '. Availability and final prices are on the marketplaces.');
   ui.controls.hidden = false;
   ui['result-status'].hidden = false;
   ui.fallback.hidden = true;

@@ -15,3 +15,7 @@ From this directory, run `python -m http.server 8712` and open `http://localhost
 5. Test a complete seller-approved snapshot and a sold-item removal before launch. Track freshness and reconcile unexpected stock declines or unmatched links; use marketplaces alone if there is no maintainable inventory feed. Use GitHub for source, not production e-commerce hosting. Never put card entry or secret keys in this frontend.
 
 Reference: [Nifty exports](https://docs.nifty.ai/analytics/insights-and-reports), [Nifty inventory manager](https://docs.nifty.ai/inventory-management/inventory-manager), [eBay Seller Hub Reports](https://export.ebay.com/en/services-tools/seller-hub/seller-hub-reports/), [eBay API public display rules](https://developer.ebay.com/support/api-license-agreement), [GitHub Pages limits](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits).
+
+## Public listing examples
+
+Open `/?sample=1` for original fact summaries from eight exact public Feral & Free listing pages on eBay, Poshmark, and Mercari. This dated snapshot is for trying search, item details, and the marketplace handoff. It has no seller photos or copied descriptions, makes no price/availability claim, and is kept separate from the live input. The links can end as the seller moves stock. Linking to a real example does not indicate permission to mirror the catalog or refresh it by scraping.

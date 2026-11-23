@@ -40,9 +40,10 @@ function imagePath(value) {
 }
 function str(value, max) { return typeof value === 'string' ? value.trim().slice(0, max) : ''; }
 
-export function parseCatalog(raw, { fixture = false, now = Date.now() } = {}) {
-  if (!raw || typeof raw !== 'object' || Array.isArray(raw) || (fixture ? raw.fixture !== true : 'fixture' in raw) || !Array.isArray(raw.items)) return { state: 'unavailable', items: [] };
-  const state = fixture ? 'fresh' : snapshotState(raw.updatedAt, now);
+export function parseCatalog(raw, { fixture = false, sample = false, now = Date.now() } = {}) {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw) || !Array.isArray(raw.items)
+      || (fixture ? raw.fixture !== true || 'sample' in raw : 'fixture' in raw || (sample ? raw.sample !== true : 'sample' in raw))) return { state: 'unavailable', items: [] };
+  const state = fixture || (sample && Number.isFinite(validDate(raw.updatedAt)) && validDate(raw.updatedAt) <= now) ? 'fresh' : snapshotState(raw.updatedAt, now);
   if (state !== 'fresh') return { state, items: [] };
   const items = [], seen = new Set();
   for (const row of raw.items.slice(0, 10000)) {
@@ -61,8 +62,8 @@ export function parseCatalog(raw, { fixture = false, now = Date.now() } = {}) {
       brand: str(row.brand, 160),
       size: str(row.size, 100),
       condition: str(row.condition, 360),
-      images: [...new Set([imagePath(row.image), ...(Array.isArray(row.images) ? row.images.slice(0, 24).map(imagePath) : [])].filter(Boolean))].slice(0, 24),
-      price: row.currency === 'USD' && Number.isFinite(row.price) && row.price >= 0 ? row.price : null,
+      images: sample ? [] : [...new Set([imagePath(row.image), ...(Array.isArray(row.images) ? row.images.slice(0, 24).map(imagePath) : [])].filter(Boolean))].slice(0, 24),
+      price: !sample && row.currency === 'USD' && Number.isFinite(row.price) && row.price >= 0 ? row.price : null,
       listedAt: validDate(row.listedAt)
     });
   }
