@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chris McNosky | Problem Solving &amp; Project Delivery</title>
-  <meta name="description" content="Chris McNosky brings problem ownership, informed judgment and careful execution to operations, research and project delivery. Explore the experience and verified results.">
+  <meta name="description" content="Chris McNosky brings problem ownership, informed judgment, and careful execution to operations, research, and project delivery. Explore the experience and verified results.">
   <meta property="og:title" content="Chris McNosky | Problem Solving &amp; Project Delivery">
-  <meta property="og:description" content="Read the Tokio and Grafana case studies, inspect the tests and maintainer reviews, or find Chris McNosky’s experience, résumé and contact details.">
+  <meta property="og:description" content="Read the Tokio and Grafana case studies, inspect the tests and maintainer reviews, or find Chris McNosky’s experience, résumé, and contact details.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmcnosky.github.io/why-hire/">
   <meta property="og:image" content="https://cmcnosky.github.io/why-hire/why-hire-preview-20261122-guide.png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
-  <meta property="og:image:alt" content="Chris McNosky — See the problem. Verify the fix. I make difficult, unfamiliar problems solvable—and carry the work through to a result that holds up. Operations, research and project delivery. Work accepted by Tokio and Grafana.">
+  <meta property="og:image:alt" content="Chris McNosky — See the problem. Verify the fix. I make difficult, unfamiliar problems solvable—and carry the work through to a result that holds up. Operations, research, and project delivery. Work accepted by Tokio and Grafana.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chris McNosky | Problem Solving &amp; Project Delivery">
-  <meta name="twitter:description" content="Read the Tokio and Grafana case studies, inspect the tests and maintainer reviews, or find Chris McNosky’s experience, résumé and contact details.">
+  <meta name="twitter:description" content="Read the Tokio and Grafana case studies, inspect the tests and maintainer reviews, or find Chris McNosky’s experience, résumé, and contact details.">
   <meta name="twitter:image" content="https://cmcnosky.github.io/why-hire/why-hire-preview-20261122-guide.png">
-  <meta name="twitter:image:alt" content="Chris McNosky — See the problem. Verify the fix. I make difficult, unfamiliar problems solvable—and carry the work through to a result that holds up. Operations, research and project delivery. Work accepted by Tokio and Grafana.">
+  <meta name="twitter:image:alt" content="Chris McNosky — See the problem. Verify the fix. I make difficult, unfamiliar problems solvable—and carry the work through to a result that holds up. Operations, research, and project delivery. Work accepted by Tokio and Grafana.">
   <meta name="theme-color" content="#202422">
   <link rel="canonical" href="https://cmcnosky.github.io/why-hire/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%278%27 fill=%27%23202422%27/%3E%3Ctext x=%278%27 y=%2743%27 fill=%27%23f1eee6%27 font-family=%27Georgia%27 font-size=%2730%27%3ECM%3C/text%3E%3C/svg%3E">
@@ -56,7 +56,7 @@
         <p class="eyebrow">Case studies</p>
         <h2 id="proof-heading">Tokio and Grafana contributions</h2>
       </div>
-      <p class="sectionIntro">Both contributions received approving reviews and were merged into the projects’ main codebases. The public records include the reported problem, implementation, tests, review discussion and merged code.</p>
+      <p class="sectionIntro">Both contributions received approving reviews and were merged into the projects’ main codebases. The public records include the reported problem, implementation, tests, review discussion, and merged code.</p>
 
       <div class="featureStack">
         <article class="feature" id="tokio-contribution">
@@ -80,11 +80,11 @@
               <p class="contributionContext"><a href="https://tokio.rs/">Tokio</a> helps Rust programs manage concurrent operations such as network messages and timers. The feature request was opened in July 2021 and labeled E-hard.</p>
               <div>
                 <h4>Implementation</h4>
-                <p>The <code>select!</code> macro accepts one branch-level <code>#[cfg(...)]</code> attribute. Excluded branches are removed during normalization, before storage, branch counts, masks, polling and dispatch are generated. Excluded code need not resolve or type-check, but it must still have valid syntax.</p>
+                <p>The <code>select!</code> macro accepts one branch-level <code>#[cfg(...)]</code> attribute. Excluded branches are removed during normalization, before storage, branch counts, masks, polling, and dispatch are generated. Excluded code need not resolve or type-check, but it must still have valid syntax.</p>
               </div>
               <div>
                 <h4>Regression coverage</h4>
-                <p>Integration and downstream compile tests cover selection fairness, existing syntax, caller features, macro hygiene, preconditions, <code>biased;</code>, <code>else</code>, all-disabled behavior and the 64-branch limit. The project’s automated checks passed.</p>
+                <p>Integration and downstream compile tests cover selection fairness, existing syntax, caller features, macro hygiene, preconditions, <code>biased;</code>, <code>else</code>, all-disabled behavior, and the 64-branch limit. The project’s automated checks passed.</p>
               </div>
               <div>
                 <h4>Expansion concern</h4>
@@ -110,7 +110,7 @@
           <h3>Grafana: repaired shared dashboard links</h3>
           <p class="featureOutcome"><strong>Problem:</strong> A shared link could use the wrong organization identifier, leaving a recipient in the wrong organization or preventing the link from opening.</p>
           <p class="featureOutcome"><strong>Result:</strong> Grafana approved and merged the repair into <code>main</code>, closing the tracked issue. The fix uses the correct organization ID for each supported deployment type, and five Go handler test cases cover the affected configurations.</p>
-          <p class="contributionRole"><strong>My role:</strong> I translated the reported mismatch into required behavior across self-hosted Grafana, Grafana Cloud and configured subpaths. I directed implementation and regression coverage, reviewed the results, and followed the change through upstream review and merge.</p>
+          <p class="contributionRole"><strong>My role:</strong> I translated the reported mismatch into required behavior across self-hosted Grafana, Grafana Cloud, and configured subpaths. I directed implementation and regression coverage, reviewed the results, and followed the change through upstream review and merge.</p>
           <div class="evidenceLinks caseActions">
             <a class="button buttonPrimary" href="https://github.com/grafana/grafana/pull/131070">View Grafana pull request <span aria-hidden="true">↗</span></a>
             <a class="button" href="https://github.com/grafana/grafana/issues/130873">Original issue <span aria-hidden="true">↗</span></a>
@@ -120,7 +120,7 @@
             <div class="detailsBody">
               <div>
                 <h4>Implementation</h4>
-                <p>The compatibility API’s <code>POST /api/short-urls</code> response used a Kubernetes resource namespace, such as <code>default</code> or <code>org-5</code>, where the redirect logic required a numeric organization ID. The merged handler uses the authenticated numeric ID outside Grafana Cloud, omits <code>orgId</code> in Cloud and preserves configured application subpaths.</p>
+                <p>The compatibility API’s <code>POST /api/short-urls</code> response used a Kubernetes resource namespace, such as <code>default</code> or <code>org-5</code>, where the redirect logic required a numeric organization ID. The merged handler uses the authenticated numeric ID outside Grafana Cloud, omits <code>orgId</code> in Cloud, and preserves configured application subpaths.</p>
               </div>
               <div>
                 <h4>Regression coverage</h4>
@@ -147,7 +147,7 @@
         <article class="resumeCopy">
           <p class="status">Updated November 2, 2026 · PDF · 3 pages</p>
           <h3 id="resume-heading">Résumé and contribution case studies</h3>
-          <p>Page one covers experience, skills and education. Pages two and three document the Tokio and Grafana contributions with links to the changes, tests and external review.</p>
+          <p>Page one covers experience, skills, and education. Pages two and three document the Tokio and Grafana contributions with links to the changes, tests, and external review.</p>
           <div class="resumeCompactActions">
             <a class="button buttonPrimary" href="./Chris%20McNosky%20Resume.pdf" download="Chris McNosky Resume.pdf">Download résumé</a>
             <a class="textLink" href="./Chris%20McNosky%20Resume.pdf">View the PDF in your browser</a>
@@ -160,8 +160,8 @@
         <article class="job">
           <div class="jobTitle"><h3>Cleargrain Docs</h3><p class="date">2026 – present</p></div>
           <p class="role">Founder</p>
-          <p>Define scope, deliverables, quality checks and handover requirements for document, research, spreadsheet and website work. Turn unfamiliar requests into expected behavior, failure cases and acceptance criteria; direct implementation and separate review; and require correction when the recorded result does not support acceptance.</p>
-          <p class="small muted">Eight public-source examples and the released Read Shruti website show the work, its checks and its limits.</p>
+          <p>Define scope, deliverables, quality checks, and handover requirements for document, research, spreadsheet, and website work. Turn unfamiliar requests into expected behavior, failure cases, and acceptance criteria; direct implementation and separate review; and require correction when the recorded result does not support acceptance.</p>
+          <p class="small muted">Eight public-source examples and the released Read Shruti website show the work, its checks, and its limits.</p>
           <a class="textLink" href="https://cleargraindocs.com/work">View the business work samples</a>
           <a class="textLink" href="../cleargrain/">View the AI evaluation evidence</a>
         </article>
@@ -169,16 +169,16 @@
         <article class="job" id="high-pie">
           <div class="jobTitle"><h3>High Pie</h3><p class="date">October 2022 – present</p></div>
           <p class="role">Founder / Sole Operator</p>
-          <p>Run sourcing, purchasing, inventory, pricing, fulfillment and customer issue resolution for a hemp-product business. Investigate supplier and delivery discrepancies using order records and maintain compliance documentation.</p>
+          <p>Run sourcing, purchasing, inventory, pricing, fulfillment, and customer issue resolution for a hemp-product business. Investigate supplier and delivery discrepancies using order records and maintain compliance documentation.</p>
         </article>
 
         <article class="job primaryJob" id="lennar">
           <div class="jobTitle"><h3>Lennar</h3><p class="date">May 2018 – October 2022</p></div>
           <p class="role">Purchasing Coordinator</p>
-          <p>Reconciled cost and documentation discrepancies across bids, contracts, budgets and vendor records before field execution.</p>
+          <p>Reconciled cost and documentation discrepancies across bids, contracts, budgets, and vendor records before field execution.</p>
           <ul>
-            <li>Coordinated vendors, trades and internal stakeholders against construction deadlines.</li>
-            <li>Balanced cost, quality, documentation and compliance requirements across concurrent work.</li>
+            <li>Coordinated vendors, trades, and internal stakeholders against construction deadlines.</li>
+            <li>Balanced cost, quality, documentation, and compliance requirements across concurrent work.</li>
           </ul>
         </article>
       </div>
@@ -199,7 +199,7 @@
         <article class="project">
           <p class="status">Independent work · Data and documentation</p>
           <h3>Cleargrain Docs</h3>
-          <p>Eight public-source projects include cleaned spreadsheets, supplier reports, a Census research comparison and a step-by-step file handover procedure.</p>
+          <p>Eight public-source projects include cleaned spreadsheets, supplier reports, a Census research comparison, and a step-by-step file handover procedure.</p>
           <a class="textLink" href="https://cleargraindocs.com/work">Explore the examples and download files</a>
         </article>
 
@@ -214,16 +214,16 @@
         <article class="project">
           <p class="status">Released website</p>
           <h3>Read Shruti</h3>
-          <p>Co-created and released an author website with three book pages, retailer links, search metadata and aggregate counts of page views and retailer clicks.</p>
-          <p class="small muted">Next.js/React, TypeScript, Cloudflare Workers and D1.</p>
+          <p>Co-created and released an author website with three book pages, retailer links, search metadata, and aggregate counts of page views and retailer clicks.</p>
+          <p class="small muted">Next.js/React, TypeScript, Cloudflare Workers, and D1.</p>
           <a class="textLink" href="https://readshruti.com">Visit the live website</a>
         </article>
 
         <article class="project">
           <p class="status">Personal research · Not ready for live trading</p>
           <h3>WASP 2.0</h3>
-          <p>A Rust/Python trading-system research project with documented checks for order handling, record reconciliation and release readiness. The repository separates implemented work from requirements that remain unmet; live trading remains on hold.</p>
-          <a class="textLink" href="https://github.com/cmcnosky/WASP-2.0">Read the design, tests and project status</a>
+          <p>A Rust/Python trading-system research project with documented checks for order handling, record reconciliation, and release readiness. The repository separates implemented work from requirements that remain unmet; live trading remains on hold.</p>
+          <a class="textLink" href="https://github.com/cmcnosky/WASP-2.0">Read the design, tests, and project status</a>
         </article>
       </div>
       <p class="moreWork">More samples: <a href="https://github.com/cmcnosky/side-effects-lab">Side Effects Lab</a> · <a href="../cleargrain/">Cleargrain Docs evaluation records</a> · <a href="../">Full project portfolio</a></p>
@@ -233,15 +233,15 @@
         <div class="capabilityGrid" id="fit">
           <article>
             <h4>Define the result</h4>
-            <p>Clarify the objective, constraints, expected behavior, failure cases and acceptance criteria.</p>
+            <p>Clarify the objective, constraints, expected behavior, failure cases, and acceptance criteria.</p>
           </article>
           <article>
             <h4>Check the evidence</h4>
-            <p>Compare claims with sources, tests, records and relevant expertise. Make discrepancies specific and require correction when the result does not support acceptance.</p>
+            <p>Compare claims with sources, tests, records, and relevant expertise. Make discrepancies specific and require correction when the result does not support acceptance.</p>
           </article>
           <article>
             <h4>Deliver and document</h4>
-            <p>Carry the agreed direction through, coordinate dependencies, verify the result and leave records that others can review and use.</p>
+            <p>Carry the agreed direction through, coordinate dependencies, verify the result, and leave records that others can review and use.</p>
           </article>
         </div>
       </aside>
@@ -250,7 +250,7 @@
     <section class="contact" id="contact" aria-labelledby="contact-heading">
       <p class="eyebrow">Contact</p>
       <h2 id="contact-heading">Discuss a role or assignment</h2>
-      <p>I’m interested in work that needs sound judgment and dependable follow-through: operations, purchasing, research, project coordination, software quality or AI evaluation. Send a job description, an assignment or a problem your team needs help with, and we can discuss where my experience fits.</p>
+      <p>I’m interested in work that needs sound judgment and dependable follow-through: operations, purchasing, research, project coordination, software quality, or AI evaluation. Send a job description, an assignment, or a problem your team needs help with, and we can discuss where my experience fits.</p>
       <a class="emailLink" href="mailto:cmcnosky@gmail.com?subject=Role%20discussion">cmcnosky@gmail.com</a>
       <nav class="socialLinks" aria-label="Profiles and contact">
         <a href="https://www.linkedin.com/in/chris-mcnosky/">LinkedIn</a>
