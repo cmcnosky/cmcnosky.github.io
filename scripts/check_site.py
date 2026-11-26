@@ -11,10 +11,14 @@ from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_HOST = "cmcnosky.github.io"
-PRIMARY_RESUME_NAME = "Chris McNosky Resume.pdf"
+PRIMARY_RESUME_NAME = "Chris-McNosky-Business-Analysis-Resume.pdf"
+CASE_STUDIES = ROOT / "why-hire" / "Chris-McNosky-Tokio-Grafana-Case-Studies.pdf"
 PRIMARY_RESUME = ROOT / "why-hire" / PRIMARY_RESUME_NAME
 RESUME_ALIASES = (
+    ROOT / "why-hire" / "Chris McNosky Resume.pdf",
     ROOT / "why-hire" / "chris-mcnosky-resume.pdf",
+)
+CASE_ALIASES = (
     ROOT / "why-hire" / "assets" / "Chris-McNosky-Grafana-Contribution.pdf",
     ROOT / "why-hire" / "assets" / "Chris-McNosky-Selected-Contributions.pdf",
     ROOT / "why-hire" / "assets" / "Chris-McNosky-Tokio-Contribution.pdf",
@@ -104,6 +108,14 @@ def main() -> int:
                     f"résumé alias differs from primary: {alias.relative_to(ROOT)}"
                 )
 
+    if not CASE_STUDIES.is_file():
+        errors.append("missing case studies PDF")
+    else:
+        case_hash = hashlib.sha256(CASE_STUDIES.read_bytes()).hexdigest()
+        for alias in CASE_ALIASES:
+            if not alias.is_file() or hashlib.sha256(alias.read_bytes()).hexdigest() != case_hash:
+                errors.append(f"case-study alias differs: {alias.relative_to(ROOT)}")
+
     for asset in CLEARGRAIN_ASSETS:
         if not asset.is_file():
             errors.append(f"missing Cleargrain brand asset: {asset.relative_to(ROOT)}")
@@ -157,7 +169,7 @@ def main() -> int:
                 errors.append(f"{rel}: broken local link {href} -> {target.relative_to(ROOT)}")
         for href, has_download, download_name in parser.anchors:
             target = local_target(page, href)
-            if target in RESUME_ALIASES:
+            if target in (*RESUME_ALIASES, *CASE_ALIASES):
                 errors.append(
                     f"{rel}: active résumé link must use {PRIMARY_RESUME_NAME}: {href}"
                 )
