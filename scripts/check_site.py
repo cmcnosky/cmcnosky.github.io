@@ -93,28 +93,15 @@ def local_target(page: Path, href: str) -> Path | None:
 
 def main() -> int:
     errors: list[str] = []
-    resume_files = (PRIMARY_RESUME, *RESUME_ALIASES)
-    resume_hashes: dict[Path, str] = {}
-    for resume_file in resume_files:
-        if not resume_file.is_file():
-            errors.append(f"missing résumé file: {resume_file.relative_to(ROOT)}")
-            continue
-        resume_hashes[resume_file] = hashlib.sha256(resume_file.read_bytes()).hexdigest()
-    if PRIMARY_RESUME in resume_hashes:
-        primary_hash = resume_hashes[PRIMARY_RESUME]
-        for alias in RESUME_ALIASES:
-            if alias in resume_hashes and resume_hashes[alias] != primary_hash:
-                errors.append(
-                    f"résumé alias differs from primary: {alias.relative_to(ROOT)}"
-                )
-
-    if not CASE_STUDIES.is_file():
-        errors.append("missing case studies PDF")
-    else:
-        case_hash = hashlib.sha256(CASE_STUDIES.read_bytes()).hexdigest()
-        for alias in CASE_ALIASES:
-            if not alias.is_file() or hashlib.sha256(alias.read_bytes()).hexdigest() != case_hash:
-                errors.append(f"case-study alias differs: {alias.relative_to(ROOT)}")
+    legacy_pdfs = (*RESUME_ALIASES, *CASE_ALIASES)
+    for pdf in (PRIMARY_RESUME, CASE_STUDIES, *legacy_pdfs):
+        if not pdf.is_file():
+            errors.append(f"missing career PDF: {pdf.relative_to(ROOT)}")
+    if all(pdf.is_file() for pdf in legacy_pdfs):
+        combined_hash = hashlib.sha256(legacy_pdfs[0].read_bytes()).hexdigest()
+        for legacy in legacy_pdfs[1:]:
+            if hashlib.sha256(legacy.read_bytes()).hexdigest() != combined_hash:
+                errors.append(f"legacy combined PDF differs: {legacy.relative_to(ROOT)}")
 
     for asset in CLEARGRAIN_ASSETS:
         if not asset.is_file():
